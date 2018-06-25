@@ -23,6 +23,7 @@ d3.json("ireland.json", function(json) {
       .attr("class", "ireland")
       .attr("d", path)
       .on('mouseover', function(d){
+        // add code for when the mouse hovers over the map
     })
 });
 
