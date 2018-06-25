@@ -3,6 +3,17 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+div.tooltip { 
+          position: absolute;     
+          text-align: center;     
+          width: 80px;          
+          height: 14px;         
+          padding: 2px;       
+          font: 12px sans-serif;    
+          background: #fff; 
+          border: 0px;        
+          pointer-events: none;     
+      }
 .dropbtn {
     background-color: #4CAF50;
     color: white;
@@ -85,13 +96,21 @@ stroke-width: .5px;
 
 /* basic positioning */
 .legend { list-style: none; }
-.legend li { float: left; margin-right: 10px; }
-.legend span { border: 1px solid #ccc; float: left; width: 12px; height: 12px; margin: 2px; }
-/* your colors */
-.legend .lessThan200 { background-color: #ff00ff; }
-.legend .lessThan400 { background-color: #00ffff; }
-.legend .lessThan800 { background-color: #0000ff; }
-.legend .moreThan800 { background-color: #000000; }
+.legend li { margin-right: 10px; }
+.legend span { 
+border: px solid #ccc; 
+float: left; 
+width: 69px; 
+height: 12px; 
+margin: 2px; }
+/* colors */
+.legend .lessThan100 {
+     background-color: #C7E9C0;
+ }
+.legend .lessThan300 { background-color: #74C476; }
+.legend .lessThan600 { background-color: #238B45; }
+.legend .lessThan800 { background-color: #006D2C; }
+.legend .moreThan800 { background-color: #00441B; }
 
 </style>
 <script type="text/javascript" src="http://d3js.org/d3.v2.js"></script>
@@ -118,11 +137,13 @@ stroke-width: .5px;
     <a href="#">Manufacturing</a>
   </div>
 </div>
+
 <ul class="legend">
-        <li><span class="lessThan200"></span> Jobs < 200</li>
-        <li><span class="lessThan400 "></span> 200 > Jobs < 400 </li>
-        <li><span class="lessThan800 "></span> 200 > Jobs < 400</li>
-        <li><span class="moreThan800 "></span> Jobs > 800 </li>
+        <li><span class="lessThan100"></span> < 100 Jobs</li>
+        <li><span class="lessThan300 "></span> 100 < Jobs < 300 </li>
+        <li><span class="lessThan600 "></span> 300 < Jobs < 600 </li>
+        <li><span class="lessThan800"></span> 600 < Jobs < 800 </li>
+        <li><span class="moreThan800 "></span> > 800 Jobs </li>
     </ul>
 <script>
 /* When the user clicks on the button,

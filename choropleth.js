@@ -15,18 +15,37 @@ var svg = d3.select("#chart")
 var counties = svg.append("g")
     .attr("id", "ireland");
 
+// Tooltip
+var tooltip = d3.select("body").append("div") 
+.attr("class", "tooltip")       
+.style("opacity", 0.9);
+
 //modified version of d3js code from the project https://gist.github.com/2183412
 d3.json("ireland.json", function(json) {
   counties.selectAll("path")
       .data(json.features)
-    .enter().append("path")
+      .enter().append("path")
       .attr("class", "ireland")
       .attr("d", path)
-      .on('mouseover', function(d){
-        // add code for when the mouse hovers over the map
-    })
+      .on("mouseover", function(d) {   
+               
+        tooltip.transition()    
+          .duration(200)    
+          .style("opacity", .9);    
+        
+          tooltip.html(d.properties.id)  
+          .style("left", (d3.event.pageX) + "px")   
+          .style("top", (d3.event.pageY - 28) + "px");  
+        })
+
+      .on("mouseout", function(d) {   
+        tooltip.transition()    
+        .duration(500)    
+        .style("opacity", 0); 
+      });
 });
 
+// loading 
 d3.json("county_jobs.json", function(json) {
   data = json;
   counties.selectAll("path")
