@@ -3,7 +3,7 @@ var data; // loaded asynchronously
 //Albers projection values based on playing with ireland.json using D3's Albers Example
 var proj = d3.geo.albers()
           .origin([-7.9,53.3])
-          .scale(10000)// size of the map basically
+          .scale(10005)// size of the map basically
           .translate([450,350]);// position on screen for the map
 
 //path            
