@@ -18,7 +18,7 @@ var counties = svg.append("g")
 // Tooltip
 var tooltip = d3.select("body").append("div") 
 .attr("class", "tooltip")       
-.style("opacity", 0.9);
+.style("opacity", 0);
 
 //modified version of d3js code from the project https://gist.github.com/2183412
 d3.json("ireland.json", function(json) {
@@ -27,17 +27,18 @@ d3.json("ireland.json", function(json) {
       .enter().append("path")
       .attr("class", "ireland")
       .attr("d", path)
+      // show name of the county when mouse hovers
       .on("mouseover", function(d) {   
                
         tooltip.transition()    
           .duration(200)    
           .style("opacity", .9);    
         
-          tooltip.html(d.properties.id)  
+          tooltip.html(d.properties.id)
           .style("left", (d3.event.pageX) + "px")   
           .style("top", (d3.event.pageY - 28) + "px");  
         })
-
+        // transition when mouse moves away
       .on("mouseout", function(d) {   
         tooltip.transition()    
         .duration(500)    
@@ -45,7 +46,7 @@ d3.json("ireland.json", function(json) {
       });
 });
 
-// loading 
+// loading data for the map to use
 d3.json("county_jobs.json", function(json) {
   data = json;
   counties.selectAll("path")
