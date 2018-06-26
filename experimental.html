@@ -5,12 +5,13 @@
 <style>
 /* tooltip displays name of the county when hover over with mouse*/
 div.tooltip { 
-          position: absolute;     
+          position: absolute; 
+          font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
           text-align: center;     
           width: 100px;          
           height: 20px;         
           padding: 2px;       
-          font: 20px sans-serif;    
+          font: 20px ;    
           background: #fff; 
           border: 0px;        
           pointer-events: none;     
@@ -98,7 +99,9 @@ stroke-width: .5px;
 .q8-9{fill:#00441B}
 
 /* basic positioning */
-.legend { list-style: none; }
+.legend { list-style: none;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+         }
 .legend li { margin-right: 10px; }
 .legend span { 
 border: px solid #ccc; 
@@ -122,8 +125,8 @@ margin: 2px; }
 <div id="chart"></div>
 <script type="text/javascript" src="choropleth.js"></script>
 
-<h2>Job Map</h2>
-<p>Choose your field of interest to visualize opportunities</p>
+<h2 style = "font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif "> Job Map </h2>
+<p style = "font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">Choose your field of interest to visualize opportunities</p>
 
 <div class="dropdown">
 <button onclick="myFunction()" class="dropbtn">Choose industry</button>
