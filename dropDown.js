@@ -49,21 +49,21 @@ function info(){    // loading data for the map to use
             .attr("class", quantize);
       });}
 
-      function manufacturing(){    // loading data for the map to use
+function manufacturing(){    // loading data for the map to use
     d3.json("file3.json", function(json) {
         data = json;
         counties.selectAll("path")
             .attr("class", quantize);
       });}
 
-      function education(){    // loading data for the map to use
+function education(){    // loading data for the map to use
     d3.json("file1.json", function(json) {
         data = json;
         counties.selectAll("path")
             .attr("class", quantize);
       });}
 
-      function construction(){   
+function construction(){   
      // loading data for the map to use
     d3.json("file2.json", function(json) {
         data = json;
