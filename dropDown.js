@@ -9,12 +9,13 @@ function myFunction() {
 // Onclick for dropdown 
 function admin(){
     // loading data for the map to use
-d3.json("file1.json", function(json) {
+d3.json("data/Accountancy+Finance.json", function(json) {
     data = json;
     counties.selectAll("path")
         .attr("class", quantize);
   });
 }
+/*
 function arts(){
         // loading data for the map to use
 d3.json("file2.json", function(json) {
@@ -70,7 +71,7 @@ function construction(){
         counties.selectAll("path")
             .attr("class", quantize);
       });}
-
+*/
 // Filter
 function filterFunction() {
     var input, filter, ul, li, a, i;

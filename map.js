@@ -46,14 +46,6 @@ d3.json("ireland.json", function(json) {
       });
 });
 
-// loading data for the map to use
-/*
-d3.json("county_jobs.json", function(json) {
-  data = json;
-  counties.selectAll("path")
-      .attr("class", quantize);
-});
- */
 function quantize(d) {
   if(data[d.properties.id] < 100){
     return "q2-9";
