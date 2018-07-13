@@ -28,8 +28,7 @@ d3.json("ireland.json", function(json) {
       .attr("class", "ireland")
       .attr("d", path)
       // show name of the county when mouse hovers
-      .on("mouseover", function(d) {   
-               
+      .on("mouseover", function(d) {           
         tooltip.transition()    
           .duration(200)    
           .style("opacity", .9);    
@@ -38,6 +37,10 @@ d3.json("ireland.json", function(json) {
           .style("left", (d3.event.pageX) + "px")   
           .style("top", (d3.event.pageY - 28) + "px");  
         })
+        .on("click", function(d){
+          window.location.href = "googleMaps.html";
+            
+          })
         // transition when mouse moves away
       .on("mouseout", function(d) {   
         tooltip.transition()    
