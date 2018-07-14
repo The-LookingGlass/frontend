@@ -38,9 +38,9 @@ d3.json("ireland.json", function(json) {
           .style("top", (d3.event.pageY - 28) + "px");  
         })
         .on("click", function(d){
-          window.location.href = "googleMaps.html";
-            
-          })
+          // launches google maps while sharing the county clicked on
+          window.location.href = "googleMaps.html?county="+d.properties.id;
+        })
         // transition when mouse moves away
       .on("mouseout", function(d) {   
         tooltip.transition()    

@@ -1,0 +1,158 @@
+{
+
+    "Carlow" : {
+        "longitude": -6.92611 ,
+        "latitude": 52.84083,
+        "zoom": 11
+    },
+    
+    "Cavan": {
+        "longitude": -7.36056,
+        "latitude": 53.99083,
+        "zoom": 11
+    },
+
+    "Clare": {
+        "longitude": 8.9811,
+        "latitude": 52.9045,
+        "zoom": 11
+    }, 
+    
+    "Cork": {
+        "longitude": -8.47061,
+        "latitude": 51.89797,
+        "zoom": 11
+    }, 
+
+    "Donegal": {
+        "longitude": -8.1041,
+        "latitude": 54.6549,
+        "zoom": 11  
+    }, 
+
+    "Dublin": {
+        "longitude": -6.266155,
+        "latitude": 53.350140,
+        "zoom": 11
+    }, 
+    
+    "Galway": {
+        "longitude": -9.062691 ,
+        "latitude": 53.270962,
+        "zoom": 11
+    }, 
+    
+    "Kerry": {
+        "longitude": -9.566863 ,
+        "latitude": 52.154461,
+        "zoom": 11
+    }, 
+    
+    "Kildare": {
+        "longitude": -6.91444,
+        "latitude": 53.15611,
+        "zoom": 11
+    }, 
+
+    "Kilkenny": {
+        "longitude": -7.25222,
+        "latitude": 52.65417,
+        "zoom": 11
+    }, 
+
+    "Laois": {
+        "longitude": -7.3323 ,
+        "latitude": 52.9942 ,
+        "zoom": 11
+    },
+
+    "Leitrim": {
+        "longitude": -8.065585,
+        "latitude": 53.992601,
+        "zoom": 11
+    }, 
+
+    "Limerick": {
+    "longitude": -8.630498,
+    "latitude": 52.668018,
+    "zoom": 11
+    }, 
+
+    "Longford": {
+        "longitude": -7.79823,
+        "latitude": 53.72536,
+        "zoom": 11
+    },
+
+    "Louth": {
+        "longitude": -0.00438,
+        "latitude": 53.36664,
+        "zoom": 11
+    },
+
+    "Mayo": {
+        "longitude": -9.4289,
+        "latitude": 54.0153,
+        "zoom": 11  
+    },
+
+    "Meath": {
+        "longitude": -6.6564,
+        "latitude": 53.6055,
+        "zoom": 11  
+    },
+
+    "Monaghan": {
+        "longitude": -6.9683,
+        "latitude": 54.2492,
+        "zoom": 11
+    },
+
+    "Offaly": {
+        "longitude": -7.7122,
+        "latitude": 53.2357,
+        "zoom": 11
+    },
+
+    "Roscommon": {
+        "longitude": -8.2682,
+        "latitude": 53.7593,
+        "zoom": 11
+    },
+
+    "Sligo": {
+        "longitude": -8.6065,
+        "latitude": 54.1553,
+        "zoom": 11
+    },
+     
+    "Tipperary": {
+        "longitude": -8.1619,
+        "latitude": 52.4738,
+        "zoom": 11  
+    },
+
+    "Waterford": {
+        "longitude": -7.6228,
+        "latitude": 52.1944,
+        "zoom": 11
+    },
+
+    "Westmeath": {
+        "longitude": -7.4653,
+        "latitude": 53.5345,
+        "zoom": 11
+    }, 
+
+    "Wexford": {
+        "longitude": -6.5840,
+        "latitude": 52.4794,
+        "zoom": 11
+    }, 
+    
+    "Wicklow": {
+        "longitude": -6.3673,
+        "latitude": 52.9862,
+        "zoom": 11
+    }
+}
