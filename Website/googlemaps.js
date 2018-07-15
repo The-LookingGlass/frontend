@@ -1,48 +1,49 @@
 // google map api key
 var key = "AIzaSyAGiNsd-zPf5pwe6_JN32W5fth_yhLtTt0";
+// main function
+myMap();
 
-var long_county = ["Carlow", 
-"Cavan", 
-"Clare", 
-"Cork", 
-"Donegal", 
-"Dublin", 
-"Galway", 
-"Kerry", 
-"Kildare", 
-"Kilkenny", 
-"Laois", 
-"Leitrim", 
-"Limerick", 
-"Longford", 
-"Louth", 
-"Mayo", 
-"Meath", 
-"Monaghan", 
-"Offaly", 
-"Roscommon", 
-"Sligo", 
-"Tipperary", 
-"Waterford", 
-"Westmeath", 
-"Wexford", 
-"Wicklow"
-];
-function myMap() {
+// loading county data json file
+// code used from https://codepen.io/KryptoniteDove/post/load-json-file-locally-using-pure-javascript
 
-var mapProp= {
-    center:new google.maps.LatLng(52.9808,-6.0446),
-    zoom:11.9,
-};
-// county location
-var location = getAllUrlParams().county
+function myMap(data) {
+    // county location
+    var location = getAllUrlParams().county;
 
-// testing the acccesss
-console.log(location);
 
-var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+// this requests the file and executes a callback with the parsed result once
+//   it is available
+    readTextFile("county_data.json", function(text){
+        var data = JSON.parse(text);
+        
+        // fetching data from the json file
+       var long = data[location].longitude;
+        var lat =  data[location].latitude;
+        var zoom = data[location].zoom;
+
+        
+        var mapProp= {
+            center : new google.maps.LatLng(lat,long),
+            zoom : zoom,
+        };
+        
+        var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+    });
+
+
 }
-
+    
+function readTextFile(file, callback) {
+        var rawFile = new XMLHttpRequest();
+        rawFile.overrideMimeType("application/json");
+        rawFile.open("GET", file, true);
+        rawFile.onreadystatechange = function() {
+            if (rawFile.readyState === 4 && rawFile.status == "200") {
+                callback(rawFile.responseText);
+            }
+        }
+        rawFile.send(null);
+    }
 // accessing data from the URL 
 // Code used from  https://www.sitepoint.com/get-url-parameters-with-javascript/
 function getAllUrlParams(url) {

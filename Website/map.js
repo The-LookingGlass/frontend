@@ -27,6 +27,7 @@ d3.json("ireland.json", function(json) {
       .enter().append("path")
       .attr("class", "ireland")
       .attr("d", path)
+      
       // show name of the county when mouse hovers
       .on("mouseover", function(d) {           
         tooltip.transition()    
@@ -37,10 +38,13 @@ d3.json("ireland.json", function(json) {
           .style("left", (d3.event.pageX) + "px")   
           .style("top", (d3.event.pageY - 28) + "px");  
         })
+        
+        // On click launching stage 2
         .on("click", function(d){
           // launches google maps while sharing the county clicked on
           window.location.href = "googleMaps.html?county="+d.properties.id;
         })
+        
         // transition when mouse moves away
       .on("mouseout", function(d) {   
         tooltip.transition()    
