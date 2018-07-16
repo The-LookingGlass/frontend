@@ -2,19 +2,19 @@
  "carlow":{
         "longitude": -6.92611 ,
         "latitude": 52.84083,
-        "zoom": 11
+        "zoom": 14
     },
     
     "cavan": {
         "longitude": -7.36056,
         "latitude": 53.99083,
-        "zoom": 11
+        "zoom": 14
     },
 
     "clare": {
-        "longitude": 8.9811,
-        "latitude": 52.9045,
-        "zoom": 11
+        "longitude": -8.984866,
+        "latitude": 52.847834,
+        "zoom": 14
     }, 
     
     "cork": {
@@ -32,7 +32,7 @@
     "dublin": {
         "longitude": -6.266155,
         "latitude": 53.350140,
-        "zoom": 11
+        "zoom": 12
     }, 
     
     "galway": {
@@ -74,7 +74,7 @@
     "limerick": {
         "longitude": -8.630498,
         "latitude": 52.668018,
-        "zoom": 11
+        "zoom": 13
     }, 
 
     "longford": {
@@ -90,9 +90,9 @@
     },
 
     "mayo": {
-        "longitude": -9.4289,
-        "latitude": 54.0153,
-        "zoom": 11  
+        "longitude": -9.294851,
+        "latitude": 53.857830,
+        "zoom": 14  
     },
 
     "meath": {

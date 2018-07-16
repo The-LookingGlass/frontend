@@ -21,15 +21,15 @@ function myMap(data) {
         var lat =  data[location].latitude;
         var zoom = data[location].zoom;
 
-        
+        // setting properties for the map 
         var mapProp= {
             center : new google.maps.LatLng(lat,long),
             zoom : zoom,
         };
         
+        // sending properties to load with the map
         var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
     });
-
 
 }
     
