@@ -3,13 +3,15 @@ toggle between hiding and showing the dropdown content */
 
 // Button
 function myFunction() {
+    "use strict";
     document.getElementById("myDropdown").classList.toggle("show");
 }
 
 // Onclick for dropdown 
-function admin(){
+function admin() {
+    "use strict";
     // loading data for the map to use
-d3.json("data/Accountancy+Finance.json", function(json) {
+    d3.json("data/Accountancy+Finance.json", function(json) {
     data = json;
     counties.selectAll("path")
         .attr("class", quantize);

@@ -22,7 +22,7 @@ var tooltip = d3.select("body").append("div")
 
 //modified version of d3js code from the project https://gist.github.com/2183412
 d3.json("ireland.json", function(json) {
-  counties.selectAll("path")
+    counties.selectAll("path")
       .data(json.features)
       .enter().append("path")
       .attr("class", "ireland")
@@ -46,7 +46,7 @@ d3.json("ireland.json", function(json) {
         })
         
         // transition when mouse moves away
-      .on("mouseout", function(d) {   
+      .on("mouseout", function() {   
         tooltip.transition()    
         .duration(500)    
         .style("opacity", 0); 
