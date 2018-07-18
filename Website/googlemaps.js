@@ -1,36 +1,67 @@
+// google map api key
+var key = "AIzaSyAGiNsd-zPf5pwe6_JN32W5fth_yhLtTt0";
+// main function
+myMap();
 
 // loading county data json file
 // code used from https://codepen.io/KryptoniteDove/post/load-json-file-locally-using-pure-javascript
 
+function myMap(data) {
+    // county location
+    var location = getAllUrlParams().county;
 
+
+// this requests the file and executes a callback with the parsed result once
+//   it is available
+    readTextFile("county_data.json", function(text){
+        var data = JSON.parse(text);
+        
+        // fetching data from the json file
+       var long = data[location].longitude;
+        var lat =  data[location].latitude;
+        var zoom = data[location].zoom;
+
+        
+        var mapProp= {
+            center : new google.maps.LatLng(lat,long),
+            zoom : zoom,
+        };
+        
+        var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+    });
+
+
+}
     
 function readTextFile(file, callback) {
-    "use strict";
-    var rawFile = new XMLHttpRequest();
-    rawFile.overrideMimeType("application/json");
-    rawFile.open("GET", file, true);
-    rawFile.onreadystatechange = function () {
-        if (rawFile.readyState === 4 && rawFile.status === "200") {
-            callback(rawFile.responseText);
+        var rawFile = new XMLHttpRequest();
+        rawFile.overrideMimeType("application/json");
+        rawFile.open("GET", file, true);
+        rawFile.onreadystatechange = function() {
+            if (rawFile.readyState === 4 && rawFile.status == "200") {
+                callback(rawFile.responseText);
+            }
         }
-    };
-    rawFile.send(null);
-}
+        rawFile.send(null);
+    }
 // accessing data from the URL 
 // Code used from  https://www.sitepoint.com/get-url-parameters-with-javascript/
 function getAllUrlParams(url) {
-    "use strict";
+
     // get query string from url (optional) or window
-    var queryString = url ? url.split('?')[1] : window.location.search.slice(1), obj = {};
+    var queryString = url ? url.split('?')[1] : window.location.search.slice(1);
+  
+    // we'll store the parameters here
+    var obj = {};
   
     // if query string exists
     if (queryString) {
   
-        // stuff after # is not part of query string, so get rid of it
-        queryString = queryString.split('#')[0];
+      // stuff after # is not part of query string, so get rid of it
+      queryString = queryString.split('#')[0];
   
-        // split our query string into its component parts
-        var arr = queryString.split('&');
+      // split our query string into its component parts
+      var arr = queryString.split('&');
   
       for (var i=0; i<arr.length; i++) {
         // separate the keys and the values
@@ -76,36 +107,4 @@ function getAllUrlParams(url) {
   
     return obj;
   }
-
-function myMap(data) {
-    // county location
-    var location = getAllUrlParams().county;
-
-
-// this requests the file and executes a callback with the parsed result once
-//   it is available
-    readTextFile("county_data.json", function(text){
-        var data = JSON.parse(text);
-        
-        // fetching data from the json file
-       var long = data[location].longitude;
-        var lat =  data[location].latitude;
-        var zoom = data[location].zoom;
-
-        // setting properties for the map 
-        var mapProp= {
-            center : new google.maps.LatLng(lat,long),
-            zoom : zoom,
-        };
-        
-        // sending properties to load with the map
-        var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
-    });
-
-}
-
-// google map api key
-var key = "AIzaSyAGiNsd-zPf5pwe6_JN32W5fth_yhLtTt0";
-// main function
-myMap();
   
