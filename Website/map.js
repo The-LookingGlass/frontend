@@ -16,9 +16,10 @@ var counties = svg.append("g")
     .attr("id", "ireland");
 
 // Tooltip
-var tooltip = d3.select("body").append("div") 
-.attr("class", "tooltip")       
-.style("opacity", 0);
+var tooltip = d3.select("body")
+                .append("div") 
+                .attr("class", "tooltip")       
+                .style("opacity", 0);
 
 //modified version of d3js code from the project https://gist.github.com/2183412
 d3.json("ireland.json", function(json) {
@@ -32,7 +33,7 @@ d3.json("ireland.json", function(json) {
       .on("mouseover", function(d) {           
         tooltip.transition()    
           .duration(200)    
-          .style("opacity", .9);    
+          .style("opacity", 0.9);    
         
           tooltip.html(d.properties.id)
           .style("left", (d3.event.pageX) + "px")   
@@ -42,6 +43,7 @@ d3.json("ireland.json", function(json) {
         // On click launching stage 2
         .on("click", function(d){
           // launches google maps while sharing the county clicked on
+          
           window.location.href = "googleMaps.html?county="+d.properties.id;
         })
         
@@ -52,6 +54,8 @@ d3.json("ireland.json", function(json) {
         .style("opacity", 0); 
       });
 });
+
+
 
 function quantize(d) {
   if(data[d.properties.id] < 100){
