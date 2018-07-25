@@ -2,7 +2,7 @@
 var key = "AIzaSyAGiNsd-zPf5pwe6_JN32W5fth_yhLtTt0";
 
 function myMap(data) {
-    // getting county location from the parameters in URl
+    // getting county location from the parameters in URl5fxhj
     var location = getAllUrlParams().county;
 
     // this requests the file and executes a callback with the parsed result once
