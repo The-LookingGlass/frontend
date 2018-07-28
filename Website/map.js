@@ -42,6 +42,7 @@ d3.json("irelandJsonMap/ireland.json", function(json) {
         
         // On click launching stage 2
         .on("click", function(d){
+          
           // launches google maps while sharing the county clicked on
           window.location.href = "googleMaps.html?county="+d.properties.id;
         })

@@ -52,11 +52,19 @@ function myMap(data) {
                 //add the marker to the markerClusterer
                 markerCluster.addMarker(marker);
 
+                // event listener for when the user hower over's the marker
                 google.maps.event.addListener(marker, 'mouseover', function () {
 
                     this.info.open(map, this);
 
                 });
+
+                // event listener for when the user clicks on the marker
+                google.maps.event.addListener(marker, 'click', function () {
+                    // Test URL
+                    window.location.href = "https://www.jobs.ie/ApplyForJob.aspx?Id=1725507";
+                });
+
                 // event listner for mouseout
                 google.maps.event.addListener(marker, 'mouseout', function () {
                     this.info.close();
