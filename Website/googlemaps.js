@@ -6,63 +6,68 @@ function myMap(data) {
     var location = getAllUrlParams().county;
     // this requests the file and executes a callback with the parsed result once
     //   it is available
-    readTextFile("data/job_data_test.json", function(text) {
+    readTextFile("data/job_data_test.json", function (text) {
 
         var data = JSON.parse(text);
-        
+
         // fetching data from the json file for centering the map
         var long = data[location].longitude;
         var lat = data[location].latitude;
         var zoom = data[location].zoom;
-        
+
         // properties for map 
         var mapProp = {
             center: new google.maps.LatLng(lat, long),
             zoom: zoom
         };
-       
+
         // initializing the map
         var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
 
         // ADDING MARKERS---
-        // markerclusterer
+
+        // initializing marker cluster
         var markerCluster = new MarkerClusterer(map);
         var length = Object.keys(data.ID).length;
+        // initializing marker
         var marker;
 
-        //https://tommcfarlin.com/multiple-infowindows-google-maps/
-        for(var i = 0; i < length ; i++){
-            if(location == data.ID[i].county){
+        // code used from https://tommcfarlin.com/multiple-infowindows-google-maps/ and modified.
+        for (var i = 0; i < length; i++) {
+            if (location == data.ID[i].county) {
 
                 marker = new google.maps.Marker({
 
                     position: new google.maps.LatLng(data.ID[i].lat, data.ID[i].long),
-                    
+
                     map: map,
-                    
-                    info: new google.maps.InfoWindow({content: '<div><strong>' + data.ID[i].name + '</strong><br>' + '<br>' +
-                        data.ID[i].address + '</div>'})
-            
-                    });
 
-                    //add the marker to the markerClusterer
-                    markerCluster.addMarker(marker);
-                    
-                    google.maps.event.addListener( marker, 'mouseover', function() {
-                    
-                        this.info.open(map, this);
-                    
-                    });
-                    // event listner for mouseout
-                     google.maps.event.addListener(marker, 'mouseout', function() {
-                         this.info.close();
-                     });
+                    info: new google.maps.InfoWindow({
+                        content: '<div><strong>' + data.ID[i].name + '</strong><br>' + '<br>' +
+                        data.ID[i].address + '</div>'
+                    })
+
+                });
+
+                //add the marker to the markerClusterer
+                markerCluster.addMarker(marker);
+
+                google.maps.event.addListener(marker, 'mouseover', function () {
+
+                    this.info.open(map, this);
+
+                });
+                // event listner for mouseout
+                google.maps.event.addListener(marker, 'mouseout', function () {
+                    this.info.close();
+                });
+            }
         }
-      }
 
-      });
-    
-    }      
+    });
+
+}
+
 // loading county data json file
 // code used from https://codepen.io/KryptoniteDove/post/load-json-file-locally-using-pure-javascript
 // reading the JSON file
@@ -70,14 +75,15 @@ function readTextFile(file, callback) {
     var rawFile = new XMLHttpRequest();
     rawFile.overrideMimeType("application/json");
     rawFile.open("GET", file, true);
-    rawFile.onreadystatechange = function() {
+    rawFile.onreadystatechange = function () {
         if (rawFile.readyState === 4 && rawFile.status == "200") {
             callback(rawFile.responseText);
         }
     };
     rawFile.send(null);
 }
-// accessing data from the URL 
+
+// accessing data from the URL
 // Code used from  https://www.sitepoint.com/get-url-parameters-with-javascript/
 function getAllUrlParams(url) {
     // get query string from url (optional) or window
@@ -95,7 +101,7 @@ function getAllUrlParams(url) {
             var a = arr[i].split('=');
             // in case params look like: list[]=thing1&list[]=thing2
             var paramNum = undefined;
-            var paramName = a[0].replace(/\[\d*\]/, function(v) {
+            var paramName = a[0].replace(/\[\d*\]/, function (v) {
                 paramNum = v.slice(1, -1);
                 return '';
             });
