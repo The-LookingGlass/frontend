@@ -1,0 +1,197 @@
+
+   {
+        "carlow":{
+               "longitude": -6.92611 ,
+               "latitude": 52.84083,
+               "zoom": 14
+           },
+           
+           "cavan": {
+               "longitude": -7.36056,
+               "latitude": 53.99083,
+               "zoom": 14
+           },
+       
+           "clare": {
+               "longitude": -8.984866,
+               "latitude": 52.847834,
+               "zoom": 14
+           }, 
+           
+           "cork": {
+               "longitude": -8.47061,
+               "latitude": 51.89797,
+               "zoom": 13
+           }, 
+       
+           "donegal": {
+               "longitude": -8.1041,
+               "latitude": 54.6549,
+               "zoom": 14  
+           }, 
+       
+           "dublin": {
+               "longitude": -6.266155,
+               "latitude": 53.350140,
+               "zoom": 12
+           }, 
+           
+           "galway": {
+               "longitude": -9.062691 ,
+               "latitude": 53.270962,
+               "zoom": 13
+           }, 
+           
+           "kerry": {
+               "longitude":  -9.700074 ,
+               "latitude": 52.271018,
+               "zoom": 14
+           }, 
+           
+           "kildare": {
+               "longitude":-6.908961,
+               "latitude": 53.159992,
+               "zoom": 14
+           }, 
+       
+           "kilkenny": {
+               "longitude": -7.25222,
+               "latitude": 52.65417,
+               "zoom": 14
+           }, 
+       
+           "laois": {
+               "longitude": -7.295730,
+               "latitude":53.037269 ,
+               "zoom": 14
+           },
+       
+           "leitrim": {
+               "longitude": -7.866535,
+               "latitude": 53.921766,
+               "zoom": 15
+           }, 
+       
+           "limerick": {
+               "longitude": -8.630498,
+               "latitude": 52.668018,
+               "zoom": 13
+           }, 
+       
+           "longford": {
+               "longitude": -7.79823,
+               "latitude": 53.72536,
+               "zoom": 14
+           },
+       
+           "louth": {
+               "longitude": -0.00438,
+               "latitude": 53.36664,
+               "zoom": 15
+           },
+       
+           "mayo": {
+               "longitude": -9.294851,
+               "latitude": 53.857830,
+               "zoom": 14  
+           },
+       
+           "meath": {
+               "longitude":  -6.687203,
+               "latitude": 53.652193,
+               "zoom": 14 
+           },
+       
+           "monaghan": {
+               "longitude": -6.9683,
+               "latitude": 54.2492,
+               "zoom": 15
+           },
+       
+           "offaly": {
+               "longitude": -7.525162,
+               "latitude": 53.149108,
+               "zoom": 15
+           },
+       
+           "roscommon": {
+               "longitude": -8.103798,
+               "latitude": 53.777770,
+               "zoom": 15
+           },
+       
+           "sligo": {
+               "longitude": -8.602792,
+               "latitude": 54.173332,
+               "zoom": 15
+           },
+            
+           "tipperary": {
+               "longitude": -8.1619,
+               "latitude": 52.4738,
+               "zoom": 15  
+           },
+       
+           "waterford": {
+               "longitude": -7.118057,
+               "latitude": 52.249121,
+               "zoom": 14
+           },
+       
+           "westmeath": {
+               "longitude": -7.338592,
+               "latitude": 53.525484,
+               "zoom": 14
+           }, 
+       
+           "wexford": {
+               "longitude": -6.473146,
+               "latitude": 52.335161,
+               "zoom": 14
+           }, 
+           
+           "wicklow": {
+               "longitude": -6.052948,
+               "latitude": 52.982980,
+               "zoom": 14
+           },
+       
+       "ID":[
+       {
+            "id": 1,
+            "name":"GM",
+            "long":-6.229576,
+            "lat":53.314021,
+            "address": "Company IT, Hello ?",
+            "county": "dublin",
+            "industry":"finance"
+       },
+    
+    
+       {   "id":2,
+        "name":"SD",
+        "long":124123,
+        "lat":2351,
+        "address": "Company Hello, HIt ?",
+        "county": "carlow",
+        "industry":"finance"
+       },
+    {
+        "name":"LOL",
+        "long":124123,
+        "lat":2351,
+        "address": "IDK what am i doing here!",
+        "county": "cork",
+        "industry":"accountancy"
+       },
+       {
+        "id": 4,
+        "name":"GG",
+        "long":-6.227212, 
+        "lat":53.314715,
+        "address": "POSPSOPSOSPSO",
+        "county": "dublin",
+        "industry":"finance"
+          }
+    ]
+}
