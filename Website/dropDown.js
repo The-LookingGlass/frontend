@@ -6,65 +6,46 @@ function myFunction() {
 }
 // Onclick for dropdown 
 function admin() {
-    // loading data for the map to use
-    d3.json("data/jobsData/admin_support.json", function(json) {
-        data = json;
-        counties.selectAll("path").attr("class", quantize);
-    });
+    // launches google maps while sharing the county clicked on
+    window.location.href = "map.html?industry=admin_support&county=dublin";
 }
 
 function arts() {
-    // loading data for the map to use
-    d3.json("data/jobsData/arts_entertainment.json", function(json) {
-        data = json;
-        counties.selectAll("path").attr("class", quantize);
-    });
+    // launches google maps while sharing the county clicked on
+    window.location.href = "map.html?industry=arts_entertainment&county=dublin";
 }
 
 function finance() {
-    // loading data for the map to use
-    d3.json("data/jobsData/finance.json", function(json) {
-        data = json;
-        counties.selectAll("path").attr("class", quantize);
-    });
+    // launches google maps while sharing the county clicked on
+    window.location.href = "map.html?industry=finance&county=dublin";
 }
 
 function health() {
-    // loading data for the map to use
-    d3.json("data/jobsData/health_social.json", function(json) {
-        data = json;
-        counties.selectAll("path").attr("class", quantize);
-    });
+    // launches google maps while sharing the county clicked on
+    window.location.href = "map.html?industry=health_social&county=dublin";
 }
 
-function info() { // loading data for the map to use
-    d3.json("data/jobsData/it.json", function(json) {
-        data = json;
-        counties.selectAll("path").attr("class", quantize);
-    });
+function info() { 
+    // launches google maps while sharing the county clicked on
+    window.location.href = "map.html?industry=it&county=dublin";
 }
 
-function manufacturing() { // loading data for the map to use
-    d3.json("data/jobsData/manufacturing.json", function(json) {
-        data = json;
-        counties.selectAll("path").attr("class", quantize);
-    });
+function manufacturing() { 
+    // launches google maps while sharing the county clicked on
+    window.location.href = "map.html?industry=manufacturing&county=dublin";
 }
 
-function education() { // loading data for the map to use
-    d3.json("data/jobsData/education.json", function(json) {
-        data = json;
-        counties.selectAll("path").attr("class", quantize);
-    });
+function education() { 
+    // launches google maps while sharing the county clicked on
+    window.location.href = "map.html?industry=education&county=dublin";
+    
 }
 
 function construction() {
-    // loading data for the map to use
-    d3.json("data/jobsData/construction.json", function(json) {
-        data = json;
-        counties.selectAll("path").attr("class", quantize);
-    });
+    // launches google maps while sharing the county clicked on
+    window.location.href = "map.html?industry=construction&county=dublin";
 }
+
 // Filter
 function filterFunction() {
     var input, filter, ul, li, a, i;

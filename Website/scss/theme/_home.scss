@@ -1,0 +1,686 @@
+.section-gap {
+	padding: 120px 0;
+}
+.section-title {
+	padding-bottom: 30px;
+	h2 {
+		margin-bottom: 20px;
+	}
+	p {
+		font-size: 16px;
+		margin-bottom: 0;
+		@include media-breakpoint-down (md) {
+			br {
+				display: none;
+			}
+		}
+	}
+}
+
+
+.primary-btn {
+	background-color:$primary-color;
+	line-height: 42px;
+	padding-left: 30px;
+	padding-right: 60px;
+	border-radius: 25px;
+	border:none;
+	color: $white;
+	display: inline-block;
+	font-weight: 500;
+	position: relative;
+	@include transition();
+	cursor: pointer;
+	text-transform: uppercase;
+	position: relative;
+	&:focus {
+		outline: none;
+	}
+	span {
+		color: $white;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-60%);
+		right: 30px;
+		@include transition();
+	}
+	&:hover {
+		color: $white;
+		span {
+			color: $white;
+			right: 20px;
+		}
+	}
+	&.white {
+		border: 1px solid $white;
+		color: $white;
+		span {
+			color: $white;
+		}
+		&:hover {
+			background: $white;
+			color: $primary-color;
+			span {
+				color: $primary-color;
+			}
+		}
+	}
+}
+
+
+.overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+
+//--------- Start Banner Area -------------//
+
+.banner-area {
+	.fullscreen {
+		@include media-breakpoint-down (sm) {
+			height: 700px !important;
+		}
+	}
+
+	.overlay{
+		background:#000;
+		opacity:.65;
+	}
+
+	.primary-btn{
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+
+}
+.banner-content {
+
+		text-align:center;
+
+
+	h1{
+		color:$white;
+		font-size: 72px;
+		font-weight: 700;
+		line-height: 1em;
+		margin-top:20px;
+		margin-bottom:20px;
+		span{
+			font-weight:700;
+		}
+		@include media-breakpoint-down(md) {
+			font-size: 36px;
+		}
+		br {
+			@include media-breakpoint-down (md) {
+				display: none;
+			}
+		}
+
+		@include media-breakpoint-down (lg) {
+				font-size:45px;
+		}	
+
+		@media ( max-width:414px ) {
+			font-size:40px;
+		}
+	}
+	h4{
+		font-weight:400;
+		letter-spacing: 3px;
+	}
+
+
+}
+
+
+.header-btn{
+	background-color:$primary-color;
+	border:1px solid transparent;
+	color:$white;
+	&:hover{
+		border:1px solid $white;
+		background:transparent;
+		color:$white;
+	}
+}
+
+
+//--------- End Banner Area -------------//
+
+
+
+//--------- Start Feature Area -------------//
+
+
+.features-area{
+	
+}
+
+.feature-section{
+	border-bottom: 1px solid #eee;
+	padding-bottom:100px;
+}
+
+@media(max-width:800px){
+	.single-feature{
+		margin-bottom:30px;
+	}
+}
+
+
+//--------- End Feature Area -------------//
+
+
+//--------- Start offered Area -------------//
+
+.single-offered{
+	background-color:$offwhite;
+	padding:20px;
+	@include transition();
+	&:hover{
+		cursor:pointer;
+		background-color:$primary-color;
+		p{
+			color:$black;
+		}
+	}
+}
+
+@media(max-width:800px){
+	.single-offered{
+		text-align:center;
+		margin-bottom:30px;
+		img{
+			width:100%;
+			margin-left:auto !important;
+			margin-right:auto !important;
+			display:block;
+		}
+	}
+}
+
+//--------- End offered Area -------------//
+
+
+//--------- Start Project Area -------------//
+
+.projects-area{
+
+
+	.single-project {
+		height: 575px;
+		color:$black;
+		position: relative;
+		overflow: hidden;
+		margin-top: 30px;
+		background-repeat: no-repeat !important;
+		background-size: cover !important;
+		background-position: center center !important;
+		.overlay-content {
+			background-color:$primary-color;
+			opacity:.8;
+			padding: 30px;
+			@include flexbox();
+			@include flex-direction(column);
+			@include justify-content(end);
+			@include transition();
+			transition-timing-function: cubic-bezier(.39,.92,.69,.65);
+			transform: scaleY(0);
+			transform-origin: top;
+			h1 {
+				color:$black;
+				margin-bottom: 15px;
+				@media(max-width:1024px){
+					font-size: 18px;
+				}
+				@media(max-width:800px){
+					font-size:36px;
+				}
+			}
+		}
+		&:hover {
+			cursor:pointer;
+			.overlay-content {
+				transform: scaleY(1);
+			}
+		}
+	}
+
+	.owl-dots {
+		margin-top: 60px;
+		@include flexbox();
+		@include justify-content(center);
+		position: relative;
+		
+		&:after {
+			content: "";
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			position: absolute;
+			width: 60%;
+			height: 1px;
+			background: #eeeeee;
+			z-index: -1;
+		}
+		.owl-dot {
+			width: 11px;
+			height: 11px;
+			border-radius: 50%;
+			background: #eeeeee;
+			margin: 0 50px;
+			@include media-breakpoint-down(sm) {
+				margin: 0 15px;
+			}
+			&.active {
+				background: $primary-color;
+				box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.2);
+			}
+		}
+	}
+
+
+}
+
+
+
+//--------- End Project Area -------------//
+
+
+//--------- Start Facts Area -------------//
+
+.facts-area{
+	background-color:$primary-color;
+}
+
+.single-fact{
+	h1{
+		font-weight:700;
+		font-size:48px;
+	}
+	p{
+		color:$black;
+	}
+	@media(max-width:800px){
+		margin-bottom:30px;
+	}
+}
+
+
+//--------- End Facts Area -------------//
+
+//--------- Start service Area -------------//
+
+.service-area{
+	.header-text{
+		text-align:center;
+		h1{
+			margin-bottom:20px;
+		}	
+	}
+}
+
+
+.single-service {
+	background-color:$offwhite;
+	padding:30px;
+	@include transition();
+	&:hover{
+		box-shadow: -14.142px 14.142px 20px 0px rgba(157, 157, 157, 0.5);
+		cursor:pointer;
+		background-color:$primary-color;
+		p{
+			color:$black;
+		}
+	}
+	h4{
+		@include transition();
+		margin-top:20px;
+		margin-bottom:20px;
+		.lnr{
+			margin-right:15px;
+		}
+	}
+
+
+	@include media-breakpoint-down(md) {
+		margin-bottom:60px;
+	};
+}
+
+
+//--------- End service Area -------------//
+
+
+//--------- start testimonial area  -------------//
+
+.testimonial-area{	
+	background: url(../img/testimonial-bg.jpg) no-repeat center center;
+	background-size:cover;
+	.overlay-bg{
+		background-color:#000;
+		opacity:.9;
+	}
+
+	.owl-controls{
+		position: absolute;
+		left: 101%;
+		top: 25%;		
+		@media(max-width: 1024px){
+			position:relative;
+			text-align: center;
+			left:0;
+			top:20px;
+			.owl-prev,.owl-next{
+				display: inline-block;
+			}
+		}
+	}
+
+
+	.lnr-arrow-up,.lnr-arrow-down{
+		background-color: rgb(255, 255, 255);
+		box-shadow: -14.142px 14.142px 20px 0px rgba(157, 157, 157, 0.2);
+		padding: 14px;
+		color: #000;
+		font-weight: 500;
+		border: 1px solid #f5f5f5;	
+		display:inline-flex;	
+	}
+
+}
+
+.single-testimonial{
+	background-color: $white;
+	padding: 25px 30px 12px 30px;
+	.thumb{
+		margin-right:30px;
+	}
+	h4{
+		@include transition();
+		margin-bottom:5px;
+		&:hover{
+			color:$primary-color;
+			cursor:pointer;
+		}
+	}
+}
+
+//--------- end testimonial area  -------------//
+
+
+//--------- Start latest blog Area -------------//
+
+
+.single-blog{
+	.desc{
+		padding:0px 10px;
+		h5{
+			padding:20px 0px;
+			text-transform:uppercase; 
+		}
+		.read-more{
+			color:$black;
+			font-weight: 600;
+		}
+	}
+	@media(max-width:800px){
+		.desc{
+			text-align:center;
+		}
+		margin-bottom:40px;	
+	}
+}
+
+
+.blog-right{
+	.single-list{
+		margin-bottom:10px;
+	}
+	.details{
+		padding-left:20px;
+		h6{
+			margin-bottom:10px;
+		}
+
+	}
+	@media(max-width:800px){
+		margin:0 auto;
+		display:block;
+		margin-top:30px;
+	}
+}
+
+//--------- End latest blog Area -------------//
+
+
+//--------- start brand Area -------------//
+
+.single-img{
+	img{
+		@include filter(grayscale, 100%);
+
+		@include transition();
+		&:hover{
+			@include filter(grayscale, 0%);
+		}
+		@media(max-width:800px){
+			margin-bottom:40px;
+		}
+	}
+}
+
+.logo-wrap {
+    padding: 60px 65px;
+    background-color: $offwhite;
+}
+
+//--------- end brand Area -------------//
+
+
+//--------- start contact  area -------------//
+
+
+.single-contact-info{
+	text-align:center;
+	h6{
+		text-transform:uppercase;
+	}
+	@media(max-width:800px){
+		margin-bottom:30px;
+	}
+}
+
+.form-area{
+	input{
+		padding: 15px;		
+	}
+	input,textarea{
+		border-radius:0;
+		font-size:12px;
+	}
+	textarea{
+		height: 180px;
+		margin-top: 0px;
+	}
+}
+
+
+//--------- end contact area  -------------//
+
+
+//-------- Start Footer Style ----------//
+
+.footer-area{
+	background-color:$black;
+	h4{
+		padding-bottom:30px;
+	}
+	.number{
+		color:$primary-color;
+		font-size:24px;
+		font-weight:600;
+		line-height:30px;
+	}
+
+	.genric-btn.arrow span {
+	    padding: 12px 0px;
+	    width: 16px;
+	    margin-left: 0px;
+	}
+
+	.primary-btn{
+		background-color:$primary-color;
+	}
+
+	.primary-btn:hover{
+		.lnr{
+			color:$primary-color;
+		}
+	}
+
+	.footer-bottom{
+		padding-top: 40px;
+		a{
+			color:$primary-color;
+		}
+
+		.footer-social{
+			text-align:right;
+			a{
+				background: #111111;
+				margin:2px;
+				padding: 12px 16px;
+				@include transition();
+				&:hover{
+					background-color:$primary-color;
+				}
+			}
+			i{
+				color:#cccccc;
+				@include transition();
+			}
+			@include media-breakpoint-down(md) {
+				text-align:left;
+			}
+			@media(max-width:768px){
+				margin-top:20px;
+			}
+		}
+	}
+	.single-footer-widget{
+		@media(max-width:768px){
+			.newsletter .primary-btn {
+				right: 2% !important;
+				width: auto;
+				right: 0;
+				top: 5px;
+				transform: translate(0%, 0);
+			}
+		}
+	}
+}
+
+.single-footer-widget{
+	.navbar-form{
+		width:100%;
+		.form-control{
+			border:none;
+			border-radius: 20px;
+			font-size:13px;			
+		}
+		.add-on{
+			background: #fff;
+			border-radius: 20px;			
+		}
+		.genric-btn{
+			&:hover{
+				background-color:$primary-color;
+				.lnr{
+					color:$black;
+				}
+			}
+		}
+		.lnr{
+			font-weight:900;
+			font-size: 18px !important;
+			color:$black;
+		}
+	}
+}
+
+//-------- End Footer Style ----------//
+
+//----------- Start Generic Page -------------//
+
+.whole-wrap{
+	background-color:$white;
+}
+
+
+.generic-banner {
+	background-color:$primary-color;
+	text-align:center;
+	.height {
+		height: 600px;
+		@include media-breakpoint-down (sm) {
+			height: 400px;
+		}
+	}
+	.generic-banner-content {
+		h2 {
+			line-height: 1.2em;
+			margin-bottom: 20px;
+			br {
+				@include media-breakpoint-down (md) {
+					display: none;
+				}
+			}
+		}
+		p {
+			text-align:center;
+			font-size: 16px;
+			br {
+				@include media-breakpoint-down (md) {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+.generic-content{
+	h1{
+		font-weight:600;	
+	}
+}
+
+
+.about-generic-area {
+	background: $white;
+	.border-top-generic {
+
+	}
+	p {
+		margin-bottom: 20px;
+	}
+}
+.white-bg {
+	background: $white;
+}
+.section-top-border {
+	padding: 70px 0;
+	border-top: 1px dotted #eee;
+}
+.switch-wrap {
+	margin-bottom: 10px;
+	p {
+		margin: 0;
+	}
+}
+//----------- End Generic Page -------------//
