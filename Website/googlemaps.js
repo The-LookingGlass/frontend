@@ -9,7 +9,7 @@ function myMap() {
     
         try {
             // reading data 
-            readTextFile("data/job_data_test.json", function (text) {
+            readTextFile("data/job_data.json", function (text) {
         
                 // data from JSON 
                 var data = JSON.parse(text);

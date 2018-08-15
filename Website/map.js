@@ -58,8 +58,7 @@ d3.json("ireland.json", function(json) {
 
 switchDropDown();
 
-
-d3.json("data/county_jobs.json", function(json) {
+d3.json("data/all_county_jobs.json", function(json) {
   data = json;
   counties.selectAll("path").attr("class", quantizeAll);
 });
@@ -104,7 +103,7 @@ function switchDropDown(){
 function admin() {
   
   // loading data for the map to use
-  d3.json("data/jobsData/admin_support.json", function(json) {
+  d3.json("data/jobDataHeatmap/admin_support.json", function(json) {
       data = json;
       counties.selectAll("path").attr("class", quantize);
   });
@@ -113,7 +112,7 @@ function admin() {
 function arts() {
 
   // loading data for the map to use
-  d3.json("data/jobsData/arts_entertainment.json", function(json) {
+  d3.json("data/jobDataHeatmap/arts_entertainment.json", function(json) {
       data = json;
       counties.selectAll("path").attr("class", quantize);
   });
@@ -122,7 +121,7 @@ function arts() {
 function finance() {
 
   // loading data for the map to use
-  d3.json("data/jobsData/finance.json", function(json) {
+  d3.json("data/jobDataHeatmap/finance.json", function(json) {
       data = json;
       counties.selectAll("path").attr("class", quantize);
   });
@@ -131,7 +130,7 @@ function finance() {
 function health() {
   
   // loading data for the map to use
-  d3.json("data/jobsData/health_social.json", function(json) {
+  d3.json("data/jobDataHeatmap/health_social.json", function(json) {
       data = json;
       counties.selectAll("path").attr("class", quantize);
   });
@@ -139,7 +138,7 @@ function health() {
 
 function info() { 
  // loading data for the map to use
-  d3.json("data/jobsData/it.json", function(json) {
+  d3.json("data/jobDataHeatmap/it.json", function(json) {
       data = json;
       counties.selectAll("path").attr("class", quantize);
   });
@@ -148,7 +147,7 @@ function info() {
 function manufacturing() { 
   
   // loading data for the map to use
-  d3.json("data/jobsData/manufacturing.json", function(json) {
+  d3.json("data/jobDataHeatmap/manufacturing.json", function(json) {
       data = json;
       counties.selectAll("path").attr("class", quantize);
   });
@@ -156,7 +155,7 @@ function manufacturing() {
 
 function education() {  
   // loading data for the map to use
-  d3.json("data/jobsData/education.json", function(json) {
+  d3.json("data/jobDataHeatmap/education.json", function(json) {
       data = json;
       counties.selectAll("path").attr("class", quantize);
   });
@@ -164,7 +163,7 @@ function education() {
 
 function construction() {
    // loading data for the map to use
-  d3.json("data/jobsData/construction.json", function(json) {
+  d3.json("data/jobDataHeatmap/construction.json", function(json) {
       data = json;
       counties.selectAll("path").attr("class", quantize);
   });
