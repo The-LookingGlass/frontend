@@ -1,14 +1,6 @@
 {
     "ID":[
         {
-            "lng": -6.9399966,
-            "lat": 52.8233682,
-            "url": "https://www.myhome.ie/rentals/brochure/35-southern-gardens-carlow-town-carlow/4247395",
-            "price": "110",
-            "address": "35 Southern Gardens, Carlow Town, Carlow",
-            "image": "https://photos-a.propertyimages.ie/groups/3/0/5/363503/largelogo.jpg"
-        },
-        {
             "lng": -6.5581765,
             "lat": 52.8660478,
             "url": "https://www.myhome.ie/rentals/brochure/1-mill-street-hacketstown-carlow/4251717",
@@ -17,12 +9,28 @@
             "image": "https://photos-a.propertyimages.ie/groups/3/0/5/363503/largelogo.jpg"
         },
         {
-            "lng": -6.7095826,
-            "lat": 52.8722542,
-            "url": "https://www.myhome.ie/rentals/brochure/new-road-ballyoliver-rathvilly-carlow/4257793",
-            "price": "850",
-            "address": "New Road, Ballyoliver, Rathvilly, Carlow",
+            "lng": -6.9399966,
+            "lat": 52.8233682,
+            "url": "https://www.myhome.ie/rentals/brochure/35-southern-gardens-carlow-town-carlow/4247395",
+            "price": "110",
+            "address": "35 Southern Gardens, Carlow Town, Carlow",
+            "image": "https://photos-a.propertyimages.ie/groups/3/0/5/363503/largelogo.jpg"
+        },
+        {
+            "lng": -6.9175629,
+            "lat": 52.8264814,
+            "url": "https://www.myhome.ie/rentals/brochure/beech-road-rivercourt-ref-59-carlow-town-carlow/4268767",
+            "price": "950",
+            "address": "Beech Road, Rivercourt, (Ref 59), Carlow Town, Carlow",
             "image": "https://photos-a.propertyimages.ie/groups/7/5/3/10357/logo.jpg"
+        },
+        {
+            "lng": -6.6850158,
+            "lat": 52.6812952,
+            "url": "https://www.myhome.ie/rentals/brochure/10-glasheen-kildavin-kildavin-carlow/4268646",
+            "price": "900",
+            "address": "10 Glasheen, Kildavin, Kildavin, Carlow",
+            "image": "https://photos-a.propertyimages.ie/groups/9/4/3/268349/logo.jpg"
         },
         {
             "lng": -6.9303275,
@@ -65,14 +73,6 @@
             "image": "https://photos-a.propertyimages.ie/groups/1/1/7/9711/logo.jpg"
         },
         {
-            "lng": -7.2477907,
-            "lat": 53.97016439999999,
-            "url": "https://www.myhome.ie/rentals/brochure/lavey-stradone-cavan/4267840",
-            "price": "900",
-            "address": "Lavey, Stradone, Cavan",
-            "image": "https://photos-a.propertyimages.ie/groups/1/1/7/9711/logo.jpg"
-        },
-        {
             "lng": -7.352491799999998,
             "lat": 53.9750096,
             "url": "https://www.myhome.ie/rentals/brochure/4-kesh-road-cavan-cavan/4259737",
@@ -89,19 +89,83 @@
             "image": "https://photos-a.propertyimages.ie/groups/2/9/7/5792/logo.jpg"
         },
         {
-            "lng": -8.302178399999999,
-            "lat": 51.777834,
-            "url": "https://www.myhome.ie/rentals/brochure/coast-road-fountainstown-co-cork/4268366",
-            "price": "1000",
-            "address": "Coast Road, Fountainstown, Co. Cork",
+            "lng": -8.4863157,
+            "lat": 51.8968917,
+            "url": "https://www.myhome.ie/rentals/brochure/father-matthew-road-cork-city-co-cork/4263329",
+            "price": "1500",
+            "address": "Father Matthew Road, Cork City, Co. Cork",
             "image": "https://photos-a.propertyimages.ie/groups/9/2/2/7229/logo.jpg"
         },
         {
-            "lng": -8.597387399999999,
-            "lat": 51.89067679999999,
-            "url": "https://www.myhome.ie/rentals/brochure/coopers-grange-ballincollig-co-cork/4268365",
-            "price": "1400",
-            "address": "Coopers Grange, Ballincollig, Co. Cork",
+            "lng": -8.5825053,
+            "lat": 51.8821214,
+            "url": "https://www.myhome.ie/rentals/brochure/limeworth-ballincollig-co-cork/4249774",
+            "price": "2484",
+            "address": "Limeworth, Ballincollig, Co. Cork",
+            "image": "https://photos-a.propertyimages.ie/groups/9/2/2/7229/logo.jpg"
+        },
+        {
+            "lng": -8.403570600000002,
+            "lat": 51.8098149,
+            "url": "https://www.myhome.ie/rentals/brochure/lower-clevedon-kilmoney-road-carrigaline-co-cork/4259994",
+            "price": "1300",
+            "address": "Lower Clevedon, Kilmoney road, Carrigaline, Co. Cork",
+            "image": "https://photos-a.propertyimages.ie/groups/9/2/2/7229/logo.jpg"
+        },
+        {
+            "lng": -8.4324811,
+            "lat": 51.8694497,
+            "url": "https://www.myhome.ie/rentals/brochure/wheatridge-maryborough-woods-douglas-co-cork/4260666",
+            "price": "2000",
+            "address": "Wheatridge, Maryborough Woods, Douglas, Co. Cork",
+            "image": "https://photos-a.propertyimages.ie/groups/9/2/2/7229/logo.jpg"
+        },
+        {
+            "lng": -8.402357700000001,
+            "lat": 51.8681066,
+            "url": "https://www.myhome.ie/rentals/brochure/foxwood-garryduff-rochestown-co-cork/4260883",
+            "price": "1820",
+            "address": "Foxwood, Garryduff, Rochestown, Co. Cork",
+            "image": "https://photos-a.propertyimages.ie/groups/9/2/2/7229/logo.jpg"
+        },
+        {
+            "lng": -8.4398007,
+            "lat": 51.87549199999999,
+            "url": "https://www.myhome.ie/rentals/brochure/douglas-west-village-douglas-co-cork/4261539",
+            "price": "1284",
+            "address": "Douglas West Village, Douglas, Co. Cork",
+            "image": "https://photos-a.propertyimages.ie/groups/9/2/2/7229/logo.jpg"
+        },
+        {
+            "lng": -8.4550399,
+            "lat": 51.89263159999999,
+            "url": "https://www.myhome.ie/rentals/brochure/glenarm-victoria-avenue-cork-city-co-cork/4265416",
+            "price": "2000",
+            "address": "Glenarm, Victoria Avenue, Cork City, Co. Cork",
+            "image": "https://photos-a.propertyimages.ie/groups/9/2/2/7229/logo.jpg"
+        },
+        {
+            "lng": -8.2980471,
+            "lat": 51.8490645,
+            "url": "https://www.myhome.ie/rentals/brochure/the-waterfront-cobh-co-cork/4265418",
+            "price": "1016",
+            "address": "The Waterfront, Cobh, Co. Cork",
+            "image": "https://photos-a.propertyimages.ie/groups/9/2/2/7229/logo.jpg"
+        },
+        {
+            "lng": -8.5220471,
+            "lat": 51.8625869,
+            "url": "https://www.myhome.ie/rentals/brochure/chetwynd-wilton-co-cork/4268362",
+            "price": "1950",
+            "address": "Chetwynd, Wilton, Co. Cork",
+            "image": "https://photos-a.propertyimages.ie/groups/9/2/2/7229/logo.jpg"
+        },
+        {
+            "lng": -8.4032804,
+            "lat": 51.8939598,
+            "url": "https://www.myhome.ie/rentals/brochure/glenarm-victoria-avenue-blackrock-co-cork/4268363",
+            "price": "2000",
+            "address": "Glenarm, Victoria Avenue, Blackrock, Co. Cork",
             "image": "https://photos-a.propertyimages.ie/groups/9/2/2/7229/logo.jpg"
         },
         {
@@ -113,20 +177,36 @@
             "image": "https://photos-a.propertyimages.ie/groups/9/2/2/7229/logo.jpg"
         },
         {
-            "lng": -8.4550399,
-            "lat": 51.89263159999999,
-            "url": "https://www.myhome.ie/rentals/brochure/glenarm-victoria-avenue-blackrock-co-cork/4268363",
-            "price": "2000",
-            "address": "Glenarm, Victoria Avenue, Blackrock, Co. Cork",
+            "lng": -8.597387399999999,
+            "lat": 51.89067679999999,
+            "url": "https://www.myhome.ie/rentals/brochure/coopers-grange-ballincollig-co-cork/4268365",
+            "price": "1400",
+            "address": "Coopers Grange, Ballincollig, Co. Cork",
             "image": "https://photos-a.propertyimages.ie/groups/9/2/2/7229/logo.jpg"
         },
         {
-            "lng": -8.5220471,
-            "lat": 51.8625869,
-            "url": "https://www.myhome.ie/rentals/brochure/chetwynd-wilton-co-cork/4268362",
-            "price": "1950",
-            "address": "Chetwynd, Wilton, Co. Cork",
+            "lng": -8.302178399999999,
+            "lat": 51.777834,
+            "url": "https://www.myhome.ie/rentals/brochure/coast-road-fountainstown-co-cork/4268366",
+            "price": "1000",
+            "address": "Coast Road, Fountainstown, Co. Cork",
             "image": "https://photos-a.propertyimages.ie/groups/9/2/2/7229/logo.jpg"
+        },
+        {
+            "lng": -9.3521951,
+            "lat": 51.5419871,
+            "url": "https://www.myhome.ie/rentals/brochure/church-cross-skibbereen-west-cork/4268608",
+            "price": "750",
+            "address": "Church Cross , Skibbereen, West Cork",
+            "image": "https://photos-a.propertyimages.ie/groups/2/7/8/6872/logo.jpg"
+        },
+        {
+            "lng": -8.418968699999999,
+            "lat": 51.8719391,
+            "url": "https://www.myhome.ie/rentals/brochure/elden-maryborough-hill-douglas-cork/4268563",
+            "price": "1555",
+            "address": "Elden, Maryborough Hill, Douglas, Cork",
+            "image": "https://photos-a.propertyimages.ie/groups/4/0/9/5904/logo.jpg"
         },
         {
             "lng": -8.162699000000002,
@@ -145,78 +225,6 @@
             "image": "https://photos-a.propertyimages.ie/groups/4/0/9/5904/logo.jpg"
         },
         {
-            "lng": -8.2980471,
-            "lat": 51.8490645,
-            "url": "https://www.myhome.ie/rentals/brochure/the-waterfront-cobh-co-cork/4265418",
-            "price": "1016",
-            "address": "The Waterfront, Cobh, Co. Cork",
-            "image": "https://photos-a.propertyimages.ie/groups/9/2/2/7229/logo.jpg"
-        },
-        {
-            "lng": -8.4550399,
-            "lat": 51.89263159999999,
-            "url": "https://www.myhome.ie/rentals/brochure/glenarm-victoria-avenue-cork-city-co-cork/4265416",
-            "price": "2000",
-            "address": "Glenarm, Victoria Avenue, Cork City, Co. Cork",
-            "image": "https://photos-a.propertyimages.ie/groups/9/2/2/7229/logo.jpg"
-        },
-        {
-            "lng": -8.4217639,
-            "lat": 51.8786992,
-            "url": "https://www.myhome.ie/rentals/brochure/kiltegan-crescent-douglas-co-cork/4264085",
-            "price": "1555",
-            "address": "Kiltegan Crescent, Douglas, Co. Cork",
-            "image": "https://photos-a.propertyimages.ie/groups/9/2/2/7229/logo.jpg"
-        },
-        {
-            "lng": -8.4398007,
-            "lat": 51.87549199999999,
-            "url": "https://www.myhome.ie/rentals/brochure/douglas-west-village-douglas-co-cork/4261539",
-            "price": "1284",
-            "address": "Douglas West Village, Douglas, Co. Cork",
-            "image": "https://photos-a.propertyimages.ie/groups/9/2/2/7229/logo.jpg"
-        },
-        {
-            "lng": -8.402357700000001,
-            "lat": 51.8681066,
-            "url": "https://www.myhome.ie/rentals/brochure/foxwood-garryduff-rochestown-co-cork/4260883",
-            "price": "1820",
-            "address": "Foxwood, Garryduff, Rochestown, Co. Cork",
-            "image": "https://photos-a.propertyimages.ie/groups/9/2/2/7229/logo.jpg"
-        },
-        {
-            "lng": -8.4324811,
-            "lat": 51.8694497,
-            "url": "https://www.myhome.ie/rentals/brochure/wheatridge-maryborough-woods-douglas-co-cork/4260666",
-            "price": "2000",
-            "address": "Wheatridge, Maryborough Woods, Douglas, Co. Cork",
-            "image": "https://photos-a.propertyimages.ie/groups/9/2/2/7229/logo.jpg"
-        },
-        {
-            "lng": -8.403570600000002,
-            "lat": 51.8098149,
-            "url": "https://www.myhome.ie/rentals/brochure/lower-clevedon-kilmoney-road-carrigaline-co-cork/4259994",
-            "price": "1300",
-            "address": "Lower Clevedon, Kilmoney road, Carrigaline, Co. Cork",
-            "image": "https://photos-a.propertyimages.ie/groups/9/2/2/7229/logo.jpg"
-        },
-        {
-            "lng": -8.5825053,
-            "lat": 51.8821214,
-            "url": "https://www.myhome.ie/rentals/brochure/limeworth-ballincollig-co-cork/4249774",
-            "price": "2484",
-            "address": "Limeworth, Ballincollig, Co. Cork",
-            "image": "https://photos-a.propertyimages.ie/groups/9/2/2/7229/logo.jpg"
-        },
-        {
-            "lng": -8.4863157,
-            "lat": 51.8968917,
-            "url": "https://www.myhome.ie/rentals/brochure/father-matthew-road-cork-city-co-cork/4263329",
-            "price": "1500",
-            "address": "Father Matthew Road, Cork City, Co. Cork",
-            "image": "https://photos-a.propertyimages.ie/groups/9/2/2/7229/logo.jpg"
-        },
-        {
             "lng": -8.6271507,
             "lat": 51.886972,
             "url": "https://www.myhome.ie/rentals/brochure/the-sycamores-classes-lake-ballincollig-co-cork/4268133",
@@ -228,7 +236,7 @@
             "lng": -9.0043012,
             "lat": 51.56759890000001,
             "url": "https://www.myhome.ie/rentals/brochure/4-cois-farraige-owenahincha-rosscarbery-west-cork/4268078",
-            "price": "950",
+            "price": "925",
             "address": "4 Cois Farraige, Owenahincha, Rosscarbery, West Cork",
             "image": "https://photos-a.propertyimages.ie/groups/4/2/1/11124/logo.jpg"
         },
@@ -257,8 +265,8 @@
             "image": "https://photos-a.propertyimages.ie/groups/9/8/5/9589/logo.jpg"
         },
         {
-            "lng": -8.482881299999999,
-            "lat": 51.89387079999999,
+            "lng": -8.4833898,
+            "lat": 51.8938342,
             "url": "https://www.myhome.ie/rentals/brochure/gilabbey-street-cork/4265750",
             "price": "1300",
             "address": "Gilabbey Street, Cork",
@@ -271,22 +279,6 @@
             "price": "925",
             "address": "Main Street, Kildorrery near, Fermoy, Cork",
             "image": "https://photos-a.propertyimages.ie/groups/2/5/3/7352/logo.jpg"
-        },
-        {
-            "lng": -8.510898599999999,
-            "lat": 51.8959102,
-            "url": "https://www.myhome.ie/rentals/brochure/5-lee-vista-lee-road-cork-city-cork/4265127",
-            "price": "1200",
-            "address": "5 Lee Vista, Lee Road, Cork City, Cork",
-            "image": "https://photos-a.propertyimages.ie/groups/8/6/0/309068/logo.jpg"
-        },
-        {
-            "lng": -8.4269065,
-            "lat": 51.897484,
-            "url": "https://www.myhome.ie/rentals/brochure/4-the-cottages-barringtons-avenue-blackrock-cork/4265126",
-            "price": "1400",
-            "address": "4 The Cottages, Barringtons Avenue, Blackrock, Cork",
-            "image": "https://photos-a.propertyimages.ie/groups/8/6/0/309068/logo.jpg"
         },
         {
             "lng": -8.8262545,
@@ -321,8 +313,8 @@
             "image": "https://photos-a.propertyimages.ie/groups/6/3/5/6536/logo.jpg"
         },
         {
-            "lng": -8.4984393,
-            "lat": 51.890846,
+            "lng": -117.7197785,
+            "lat": 34.0966764,
             "url": "https://www.myhome.ie/rentals/brochure/claremont-5-st-francis-avenue-off-college-road-cork/4262676",
             "price": "2000",
             "address": "Claremont, 5 St. Francis Avenue, Off College Road, Cork",
@@ -334,14 +326,6 @@
             "url": "https://www.myhome.ie/rentals/brochure/main-street-glanworth-cork/4261202",
             "price": "925",
             "address": "Main Street, Glanworth, Cork",
-            "image": "https://photos-a.propertyimages.ie/groups/2/5/3/7352/logo.jpg"
-        },
-        {
-            "lng": -8.2686336,
-            "lat": 52.2600866,
-            "url": "https://www.myhome.ie/rentals/brochure/brigown-mitchelstown-cork/4261199",
-            "price": "925",
-            "address": "Brigown, Mitchelstown, Cork",
             "image": "https://photos-a.propertyimages.ie/groups/2/5/3/7352/logo.jpg"
         },
         {
@@ -375,14 +359,6 @@
             "price": "700",
             "address": "Cahermore, Rosscarbery,   West Cork",
             "image": "https://photos-a.propertyimages.ie/groups/8/8/7/5788/logo.jpg"
-        },
-        {
-            "lng": -8.2713875,
-            "lat": 52.2692189,
-            "url": "https://www.myhome.ie/rentals/brochure/baldwin-street-mitchelstown-cork/4254292",
-            "price": "795",
-            "address": "Baldwin Street, Mitchelstown, Cork",
-            "image": "https://photos-a.propertyimages.ie/groups/2/5/3/7352/logo.jpg"
         },
         {
             "lng": -9.5424405,
@@ -423,14 +399,6 @@
             "price": "1100",
             "address": "Apt 11, Rushbrooke Commerical Centre, Cobh, Cork",
             "image": "https://photos-a.propertyimages.ie/groups/3/2/5/299523/logo.jpg"
-        },
-        {
-            "lng": -9.4382164,
-            "lat": 51.6874739,
-            "url": "https://www.myhome.ie/rentals/brochure/14-cul-na-greine-bantry-west-cork/4233455",
-            "price": "850",
-            "address": "14 Cul Na Greine, Bantry, West Cork",
-            "image": "https://photos-a.propertyimages.ie/groups/1/0/0/9001/logo.jpg"
         },
         {
             "lng": -8.2848676,
@@ -609,6 +577,14 @@
             "image": "https://photos-a.propertyimages.ie/groups/2/5/3/7352/logo.jpg"
         },
         {
+            "lng": -6.1144403,
+            "lat": 53.285843,
+            "url": "https://www.myhome.ie/rentals/brochure/15-sandycove-beach-villas-owenahincha-rosscarbery-cork-west/3329348",
+            "price": "650",
+            "address": "15 Sandycove Beach Villas, Owenahincha, Rosscarbery, Cork West",
+            "image": "https://photos-a.propertyimages.ie/groups/4/2/1/11124/logo.jpg"
+        },
+        {
             "lng": -8.584932499999999,
             "lat": 52.2185016,
             "url": "https://www.myhome.ie/rentals/brochure/the-bridge-lower-masseytown-macroom-cork/3128328",
@@ -625,8 +601,8 @@
             "image": "https://photos-a.propertyimages.ie/groups/0/7/9/303970/logo.jpg"
         },
         {
-            "lng": -8.4784574,
-            "lat": 51.89578849999999,
+            "lng": -8.4786722,
+            "lat": 51.89613809999999,
             "url": "https://www.myhome.ie/rentals/brochure/parking-spaces-to-let-crosses-green-city-centre-sth-cork-city/1611079",
             "price": "150",
             "address": "Parking Spaces to Let - Crosses Green, City Centre Sth, Cork City",
@@ -655,6 +631,14 @@
             "price": "700",
             "address": "Curch Cross, Lisheen, Skibbereen, Cork",
             "image": "https://photos-a.propertyimages.ie/groups/5/6/9/10965/logo.jpg"
+        },
+        {
+            "lng": -8.2767807,
+            "lat": 51.8004244,
+            "url": "https://www.myhome.ie/rentals/brochure/the-helm-weavers-point-crosshaven-cork/2313324",
+            "price": "1200",
+            "address": "The Helm, Weavers Point, Crosshaven, Cork",
+            "image": "https://photos-a.propertyimages.ie/groups/5/0/0/11005/logo.jpg"
         },
         {
             "lng": -7.729976199999999,
@@ -745,14 +729,6 @@
             "image": "https://photos-a.propertyimages.ie/groups/6/2/1/11126/logo.jpg"
         },
         {
-            "lng": -7.733788,
-            "lat": 54.9501832,
-            "url": "https://www.myhome.ie/rentals/brochure/35-glenveagh-court-letterkenny-donegal/4245475",
-            "price": "800",
-            "address": "35 Glenveagh Court , Letterkenny, Donegal",
-            "image": "https://photos-a.propertyimages.ie/groups/6/2/1/11126/logo.jpg"
-        },
-        {
             "lng": -7.6350788,
             "lat": 55.2056262,
             "url": "https://www.myhome.ie/rentals/brochure/cottage-322-portsalon-donegal/3099580",
@@ -783,6 +759,14 @@
             "price": "POA",
             "address": "Mill Court Mews, Donegal Town, Donegal",
             "image": "https://photos-a.propertyimages.ie/groups/5/8/5/10585/logo.jpg"
+        },
+        {
+            "lng": -7.787548099999999,
+            "lat": 54.7968244,
+            "url": "https://www.myhome.ie/rentals/brochure/altnapaste-mill-ballybofey-donegal/4004337",
+            "price": "1250",
+            "address": "Altnapaste mill, Ballybofey, Donegal",
+            "image": "https://photos-a.propertyimages.ie/groups/6/2/1/11126/logo.jpg"
         },
         {
             "lng": -7.7233483,
@@ -857,19 +841,51 @@
             "image": "https://photos-a.propertyimages.ie/groups/6/2/1/11126/logo.jpg"
         },
         {
-            "lng": -6.2650419,
-            "lat": 53.33416219999999,
-            "url": "https://www.myhome.ie/rentals/brochure/harcourt-mews-camden-street-dublin-2-dublin/4268426",
-            "price": "1800",
-            "address": "Harcourt Mews, Camden Street, Dublin 2, Dublin",
-            "image": "https://photos-a.propertyimages.ie/groups/1/8/5/5581/logo.jpg"
+            "lng": -6.1860274,
+            "lat": 53.2947292,
+            "url": "https://www.myhome.ie/rentals/brochure/avoca-hall-avoca-park-blackrock-county-dublin/4267022",
+            "price": "2100",
+            "address": "Avoca Hall, Avoca Park, Blackrock, County Dublin",
+            "image": "https://photos-a.propertyimages.ie/groups/3/0/5/363503/largelogo.jpg"
         },
         {
-            "lng": -6.186528099999999,
-            "lat": 53.3034021,
-            "url": "https://www.myhome.ie/rentals/brochure/sion-hill-rock-road-blackrock-county-dublin/4263552",
-            "price": "3950",
-            "address": "Sion Hill, Rock Road, Blackrock, County Dublin",
+            "lng": -6.234364999999999,
+            "lat": 53.3803154,
+            "url": "https://www.myhome.ie/rentals/brochure/collins-avenue-whitehall-dublin-9/4061498",
+            "price": "2950",
+            "address": "Collins Avenue, Whitehall, Dublin 9",
+            "image": ""
+        },
+        {
+            "lng": -6.143350799999999,
+            "lat": 53.40173859999999,
+            "url": "https://www.myhome.ie/rentals/brochure/red-arches-the-coast-dublin-13/4256884",
+            "price": "1800",
+            "address": "Red Arches, The Coast, Dublin 13",
+            "image": "https://photos-a.propertyimages.ie/groups/3/0/5/363503/largelogo.jpg"
+        },
+        {
+            "lng": -6.246070899999999,
+            "lat": 53.26887929999999,
+            "url": "https://www.myhome.ie/rentals/brochure/8-oldfield-hall-ticknock-hill-ticknock-dublin-18/4030958",
+            "price": "1900",
+            "address": "8 Oldfield Hall, Ticknock Hill, Ticknock, Dublin 18",
+            "image": "https://photos-a.propertyimages.ie/groups/3/0/5/363503/largelogo.jpg"
+        },
+        {
+            "lng": -6.205627700000001,
+            "lat": 53.2069166,
+            "url": "https://www.myhome.ie/rentals/brochure/bridge-road-glencullen-dublin-18/4265972",
+            "price": "3600",
+            "address": "Bridge Road, Glencullen, Dublin 18",
+            "image": "https://photos-a.propertyimages.ie/groups/3/0/5/363503/largelogo.jpg"
+        },
+        {
+            "lng": -6.1149485,
+            "lat": 53.2650114,
+            "url": "https://www.myhome.ie/rentals/brochure/killiney-county-dublin/4256578",
+            "price": "1000",
+            "address": "Killiney, County Dublin",
             "image": "https://photos-a.propertyimages.ie/groups/3/0/5/363503/largelogo.jpg"
         },
         {
@@ -881,44 +897,12 @@
             "image": ""
         },
         {
-            "lng": -6.2892677,
-            "lat": 53.3361729,
-            "url": "https://www.myhome.ie/rentals/brochure/2-huxley-crescent-off-cork-street-dublin-8/4257316",
-            "price": "1500",
-            "address": "2 Huxley Crescent, Off Cork Street, Dublin 8",
-            "image": ""
-        },
-        {
-            "lng": -6.1860274,
-            "lat": 53.2947292,
-            "url": "https://www.myhome.ie/rentals/brochure/avoca-hall-avoca-park-blackrock-county-dublin/4267022",
-            "price": "2100",
-            "address": "Avoca Hall, Avoca Park, Blackrock, County Dublin",
+            "lng": -6.186528099999999,
+            "lat": 53.3034021,
+            "url": "https://www.myhome.ie/rentals/brochure/sion-hill-rock-road-blackrock-county-dublin/4263552",
+            "price": "3950",
+            "address": "Sion Hill, Rock Road, Blackrock, County Dublin",
             "image": "https://photos-a.propertyimages.ie/groups/3/0/5/363503/largelogo.jpg"
-        },
-        {
-            "lng": -6.245539399999999,
-            "lat": 53.34950689999999,
-            "url": "https://www.myhome.ie/rentals/brochure/mayor-street-ifsc-dublin-1/4268417",
-            "price": "230",
-            "address": "Mayor Street, IFSC, Dublin 1",
-            "image": "https://photos-a.propertyimages.ie/groups/1/1/0/387011/logo.jpg"
-        },
-        {
-            "lng": -6.143350799999999,
-            "lat": 53.40173859999999,
-            "url": "https://www.myhome.ie/rentals/brochure/red-arches-the-coast-dublin-13/4256884",
-            "price": "1800",
-            "address": "Red Arches, The Coast, Dublin 13",
-            "image": "https://photos-a.propertyimages.ie/groups/3/0/5/363503/largelogo.jpg"
-        },
-        {
-            "lng": -6.3181125,
-            "lat": 53.367796,
-            "url": "https://www.myhome.ie/rentals/brochure/kinvara-avenue-navan-road-dublin-7/2072879",
-            "price": "1800",
-            "address": "Kinvara Avenue, Navan Road,   Dublin 7",
-            "image": ""
         },
         {
             "lng": -6.2132955,
@@ -945,8 +929,8 @@
             "image": "https://photos-a.propertyimages.ie/groups/2/3/6/337632/logo.jpg"
         },
         {
-            "lng": -6.252869899999999,
-            "lat": 53.3328024,
+            "lng": -6.252536999999999,
+            "lat": 53.3352086,
             "url": "https://www.myhome.ie/rentals/brochure/fitzwilliam-place-south-city-centre-dublin-2/3847178",
             "price": "2600",
             "address": "Fitzwilliam Place, South City Centre, Dublin 2",
@@ -969,20 +953,108 @@
             "image": "https://photos-a.propertyimages.ie/groups/2/3/6/337632/logo.jpg"
         },
         {
-            "lng": -6.234364999999999,
-            "lat": 53.3803154,
-            "url": "https://www.myhome.ie/rentals/brochure/collins-avenue-whitehall-dublin-9/4061498",
-            "price": "2950",
-            "address": "Collins Avenue, Whitehall, Dublin 9",
+            "lng": -6.2766815,
+            "lat": 53.3453122,
+            "url": "https://www.myhome.ie/rentals/brochure/apartment-14-6-ushers-quay-dublin-8-dublin/4268769",
+            "price": "2200",
+            "address": "Apartment 14, 6 Ushers Quay, Dublin 8, Dublin",
+            "image": "https://photos-a.propertyimages.ie/groups/9/3/9/5939/logo.jpg"
+        },
+        {
+            "lng": -6.2421374,
+            "lat": 53.329486,
+            "url": "https://www.myhome.ie/rentals/brochure/63-wellington-road-ballsbridge-dublin-4/4268746",
+            "price": "10000",
+            "address": "63 Wellington Road, Ballsbridge, Dublin 4",
+            "image": "https://photos-a.propertyimages.ie/groups/5/8/8/5885/logo.jpg"
+        },
+        {
+            "lng": -6.2543402,
+            "lat": 53.3691835,
+            "url": "https://www.myhome.ie/rentals/brochure/5-all-hallows-green-drumcondra-dublin-9/4265475",
+            "price": "2200",
+            "address": "5 ALL HALLOWS GREEN, Drumcondra, Dublin 9",
+            "image": "https://photos-a.propertyimages.ie/groups/2/8/3/7382/logo.jpg"
+        },
+        {
+            "lng": -6.371444299999999,
+            "lat": 53.2866673,
+            "url": "https://www.myhome.ie/rentals/brochure/57-the-square-santry-dublin-9/4267709",
+            "price": "1470",
+            "address": "57 THE SQUARE, , Santry, Dublin 9",
+            "image": "https://photos-a.propertyimages.ie/groups/2/8/3/7382/logo.jpg"
+        },
+        {
+            "lng": -6.257452499999999,
+            "lat": 53.3967417,
+            "url": "https://www.myhome.ie/rentals/brochure/49-the-court-larchill-santry-dublin-9/4268305",
+            "price": "1850",
+            "address": "49 THE COURT, LARCHILL, Santry, Dublin 9",
+            "image": "https://photos-a.propertyimages.ie/groups/2/8/3/7382/logo.jpg"
+        },
+        {
+            "lng": -6.3181125,
+            "lat": 53.367796,
+            "url": "https://www.myhome.ie/rentals/brochure/kinvara-avenue-navan-road-dublin-7/2072879",
+            "price": "1800",
+            "address": "Kinvara Avenue, Navan Road,   Dublin 7",
             "image": ""
         },
         {
-            "lng": -6.205627700000001,
-            "lat": 53.2069166,
-            "url": "https://www.myhome.ie/rentals/brochure/bridge-road-glencullen-dublin-18/4265972",
-            "price": "3600",
-            "address": "Bridge Road, Glencullen, Dublin 18",
-            "image": "https://photos-a.propertyimages.ie/groups/3/0/5/363503/largelogo.jpg"
+            "lng": -6.2619399,
+            "lat": 53.3195543,
+            "url": "https://www.myhome.ie/rentals/brochure/70-seven-oaks-sarsfield-road-ballyfermot-dublin-10/4268710",
+            "price": "1600",
+            "address": "70 Seven Oaks, Sarsfield Road, Ballyfermot,   Dublin 10",
+            "image": "https://photos-a.propertyimages.ie/groups/4/4/7/5744/logo.jpg"
+        },
+        {
+            "lng": -6.2892677,
+            "lat": 53.3361729,
+            "url": "https://www.myhome.ie/rentals/brochure/2-huxley-crescent-off-cork-street-dublin-8/4257316",
+            "price": "1500",
+            "address": "2 Huxley Crescent, Off Cork Street, Dublin 8",
+            "image": ""
+        },
+        {
+            "lng": -6.2151041,
+            "lat": 53.328975,
+            "url": "https://www.myhome.ie/rentals/brochure/gilford-pines-gilford-road-sandymount-dublin-4/4268685",
+            "price": "2400",
+            "address": "Gilford Pines, Gilford Road, Sandymount, Dublin 4",
+            "image": "https://photos-a.propertyimages.ie/groups/9/3/9/5939/logo.jpg"
+        },
+        {
+            "lng": -6.285791499999999,
+            "lat": 53.3381282,
+            "url": "https://www.myhome.ie/rentals/brochure/cork-street-dublin-8-dublin/4268664",
+            "price": "1760",
+            "address": "Cork Street, Dublin 8, Dublin",
+            "image": "https://photos-a.propertyimages.ie/groups/9/3/0/334039/logo.jpg"
+        },
+        {
+            "lng": -6.1454379,
+            "lat": 53.2871928,
+            "url": "https://www.myhome.ie/rentals/brochure/engleberg-court-lower-mounttown-road-dun-laoghaire-dublin/4268655",
+            "price": "1775",
+            "address": "Engleberg Court, Lower Mounttown Road, Dun Laoghaire, Dublin",
+            "image": "https://photos-a.propertyimages.ie/groups/9/3/0/334039/logo.jpg"
+        },
+        {
+            "lng": -6.275799699999999,
+            "lat": 53.3289437,
+            "url": "https://www.myhome.ie/rentals/brochure/harold-s-cross-road-harold-s-cross-dublin-6w/4268624",
+            "price": "2100",
+            "address": "Harold's Cross Road, Harold's Cross, Dublin 6W",
+            "image": "https://photos-a.propertyimages.ie/groups/7/0/4/10407/logo.jpg"
+        },
+        {
+            "lng": -6.2423125,
+            "lat": 53.27272,
+            "url": "https://www.myhome.ie/rentals/brochure/college-park-way-dundrum-dublin-16/4266103",
+            "price": "3400",
+            "address": "College Park Way, Dundrum, Dublin 16",
+            "image": "https://photos-a.propertyimages.ie/groups/8/6/7/5768/logo.jpg"
         },
         {
             "lng": -6.2502784,
@@ -1025,43 +1097,99 @@
             "image": ""
         },
         {
-            "lng": -6.246070899999999,
-            "lat": 53.26887929999999,
-            "url": "https://www.myhome.ie/rentals/brochure/8-oldfield-hall-ticknock-hill-ticknock-dublin-18/4030958",
+            "lng": -6.299044899999999,
+            "lat": 53.3343098,
+            "url": "https://www.myhome.ie/rentals/brochure/grand-canal-court-rialto-dublin-8/4268585",
+            "price": "1450",
+            "address": "Grand Canal Court, Rialto, Dublin 8",
+            "image": "https://photos-a.propertyimages.ie/groups/8/5/9/10958/logo.jpg"
+        },
+        {
+            "lng": -6.2502784,
+            "lat": 53.3313536,
+            "url": "https://www.myhome.ie/rentals/brochure/mespil-estate-sussex-road-donnybrook-dublin-4/299886",
+            "price": "2595",
+            "address": "Mespil Estate,Sussex road, Donnybrook,   Dublin 4",
+            "image": ""
+        },
+        {
+            "lng": -6.208074,
+            "lat": 53.370834,
+            "url": "https://www.myhome.ie/rentals/brochure/150-howth-road-clontarf-dublin-3/3325949",
+            "price": "3640",
+            "address": "150 Howth Road, Clontarf, Dublin 3",
+            "image": "https://photos-a.propertyimages.ie/groups/9/9/3/344399/logo.jpg"
+        },
+        {
+            "lng": -6.210415299999999,
+            "lat": 53.3770895,
+            "url": "https://www.myhome.ie/rentals/brochure/abbey-park-killester-dublin-5/4268239",
+            "price": "2100",
+            "address": "Abbey Park, Killester, Dublin 5",
+            "image": "https://photos-a.propertyimages.ie/groups/9/9/3/344399/logo.jpg"
+        },
+        {
+            "lng": -6.2902995,
+            "lat": 53.2959397,
+            "url": "https://www.myhome.ie/rentals/brochure/butterfield-drive-rathfarnham-dublin-14/4238680",
+            "price": "6500",
+            "address": "Butterfield Drive, Rathfarnham, Dublin 14",
+            "image": "https://photos-a.propertyimages.ie/groups/3/1/5/6513/logo.jpg"
+        },
+        {
+            "lng": -6.2731844,
+            "lat": 53.3027044,
+            "url": "https://www.myhome.ie/rentals/brochure/woodside-drive-rathfarnham-dublin-14/3476056",
+            "price": "6000",
+            "address": "Woodside Drive, Rathfarnham, Dublin 14",
+            "image": "https://photos-a.propertyimages.ie/groups/3/1/5/6513/logo.jpg"
+        },
+        {
+            "lng": -6.168163799999999,
+            "lat": 53.4361319,
+            "url": "https://www.myhome.ie/rentals/brochure/9b-connolly-avenue-kinsealy-lane-malahide-county-dublin/4264528",
             "price": "1900",
-            "address": "8 Oldfield Hall, Ticknock Hill, Ticknock, Dublin 18",
-            "image": "https://photos-a.propertyimages.ie/groups/3/0/5/363503/largelogo.jpg"
+            "address": "9b Connolly Avenue, Kinsealy Lane, Malahide, County Dublin",
+            "image": "https://photos-a.propertyimages.ie/groups/6/0/4/6406/logo.jpg"
         },
         {
-            "lng": -6.2423125,
-            "lat": 53.27272,
-            "url": "https://www.myhome.ie/rentals/brochure/college-park-way-dundrum-dublin-16/4266103",
-            "price": "3400",
-            "address": "College Park Way, Dundrum, Dublin 16",
-            "image": "https://photos-a.propertyimages.ie/groups/8/6/7/5768/logo.jpg"
+            "lng": -6.286814,
+            "lat": 53.377982,
+            "url": "https://www.myhome.ie/rentals/brochure/rose-cottage-mill-lane-palmerstown-dublin-20/4221623",
+            "price": "2800",
+            "address": "Rose Cottage, Mill Lane, Palmerstown, Dublin 20",
+            "image": "https://photos-a.propertyimages.ie/groups/6/9/5/5596/logo.jpg"
         },
         {
-            "lng": -6.1149485,
-            "lat": 53.2650114,
-            "url": "https://www.myhome.ie/rentals/brochure/killiney-county-dublin/4256578",
-            "price": "1000",
-            "address": "Killiney, County Dublin",
-            "image": "https://photos-a.propertyimages.ie/groups/3/0/5/363503/largelogo.jpg"
+            "lng": -6.2746669,
+            "lat": 53.3395123,
+            "url": "https://www.myhome.ie/rentals/brochure/swift-hall-deans-street-the-coombe-dublin-8/4261553",
+            "price": "1560",
+            "address": "Swift Hall, Deans Street, The Coombe, Dublin 8",
+            "image": "https://photos-a.propertyimages.ie/groups/2/5/5/9552/logo.jpg"
         },
         {
-            "lng": -6.3609285,
-            "lat": 53.2804935,
-            "url": "https://www.myhome.ie/rentals/brochure/7-pine-lawn-old-bawn-tallaght-dublin-24/4268374",
-            "price": "2000",
-            "address": "7 Pine Lawn, Old Bawn, Tallaght, Dublin 24",
-            "image": "https://photos-a.propertyimages.ie/groups/2/6/1/11162/logo.jpg"
+            "lng": -6.228281099999999,
+            "lat": 53.3414626,
+            "url": "https://www.myhome.ie/rentals/brochure/3-fitzwilliam-quay-ringsend-dublin-4/4258032",
+            "price": "2600",
+            "address": "3 Fitzwilliam Quay, Ringsend, Dublin 4",
+            "image": "https://photos-a.propertyimages.ie/groups/2/5/5/9552/logo.jpg"
         },
         {
-            "lng": -6.270235899999999,
-            "lat": 53.3125689,
-            "url": "https://www.myhome.ie/rentals/brochure/hillcourt-highfield-road-rathgar-dublin-6/4268369",
-            "price": "1950",
-            "address": "Hillcourt, Highfield Road, Rathgar, Dublin 6",
+            "lng": -6.2477187,
+            "lat": 53.3454917,
+            "url": "https://www.myhome.ie/rentals/brochure/trinity-square-townsend-street-dublin-2-dublin/4257112",
+            "price": "2200",
+            "address": "Trinity Square, Townsend Street, Dublin 2, Dublin",
+            "image": "https://photos-a.propertyimages.ie/groups/2/5/5/9552/logo.jpg"
+        },
+        {
+            "lng": -6.276906599999999,
+            "lat": 53.3135899,
+            "url": "https://www.myhome.ie/rentals/brochure/frankfort-court-rathgar-ave-rathgar-dublin-6/4268075",
+            "price": "1352",
+            "address": "Frankfort Court, Rathgar Ave, Rathgar, Dublin 6",
             "image": "https://photos-a.propertyimages.ie/groups/2/5/5/9552/logo.jpg"
         },
         {
@@ -1073,6 +1201,110 @@
             "image": "https://photos-a.propertyimages.ie/groups/2/5/5/9552/logo.jpg"
         },
         {
+            "lng": -6.270235899999999,
+            "lat": 53.3125689,
+            "url": "https://www.myhome.ie/rentals/brochure/hillcourt-highfield-road-rathgar-dublin-6/4268369",
+            "price": "1950",
+            "address": "Hillcourt, Highfield Road, Rathgar, Dublin 6",
+            "image": "https://photos-a.propertyimages.ie/groups/2/5/5/9552/logo.jpg"
+        },
+        {
+            "lng": -6.2384422,
+            "lat": 53.4669774,
+            "url": "https://www.myhome.ie/rentals/brochure/rathbeale-road-swords-county-dublin/4265304",
+            "price": "1450",
+            "address": "Rathbeale Road, Swords, County Dublin",
+            "image": "https://photos-a.propertyimages.ie/groups/6/2/6/289626/logo.jpg"
+        },
+        {
+            "lng": -6.393220599999999,
+            "lat": 53.38796989999999,
+            "url": "https://www.myhome.ie/rentals/brochure/amberfiled-verdemont-blanchardstown-dublin-15/4267846",
+            "price": "1700",
+            "address": "Amberfiled, Verdemont, Blanchardstown, Dublin 15",
+            "image": "https://photos-a.propertyimages.ie/groups/6/2/6/289626/logo.jpg"
+        },
+        {
+            "lng": -6.1968144,
+            "lat": 53.50637589999999,
+            "url": "https://www.myhome.ie/rentals/brochure/corduff-cottage-blakes-cross-lusk-county-dublin/4267860",
+            "price": "1850",
+            "address": "Corduff Cottage, Blakes Cross, Lusk, County Dublin",
+            "image": "https://photos-a.propertyimages.ie/groups/6/2/6/289626/logo.jpg"
+        },
+        {
+            "lng": -6.3767821,
+            "lat": 53.37398839999999,
+            "url": "https://www.myhome.ie/rentals/brochure/bracken-view-carpenterstown-road-castleknock-dublin-15/4268490",
+            "price": "2075",
+            "address": "Bracken View, Carpenterstown Road, Castleknock, Dublin 15",
+            "image": "https://photos-a.propertyimages.ie/groups/1/8/2/10281/logo.jpg"
+        },
+        {
+            "lng": -6.2093842,
+            "lat": 53.2535849,
+            "url": "https://www.myhome.ie/rentals/brochure/92-stepaside-park-stepaside-dublin-18/4268467",
+            "price": "4500",
+            "address": "92 Stepaside Park, Stepaside, Dublin 18",
+            "image": "https://photos-a.propertyimages.ie/groups/8/0/7/386708/logo.jpg"
+        },
+        {
+            "lng": -6.2381639,
+            "lat": 53.3376154,
+            "url": "https://www.myhome.ie/rentals/brochure/northumberland-ballsbridge-dublin-4/3850811",
+            "price": "795",
+            "address": "Northumberland, Ballsbridge, Dublin 4",
+            "image": "https://photos-a.propertyimages.ie/groups/3/1/9/332913/logo.jpg"
+        },
+        {
+            "lng": -6.236948,
+            "lat": 53.342861,
+            "url": "https://www.myhome.ie/rentals/brochure/charlotte-quay-grand-canal-dk-dublin-2/3082070",
+            "price": "3100",
+            "address": "Charlotte Quay, Grand Canal Dk,   Dublin 2",
+            "image": "https://photos-a.propertyimages.ie/groups/3/1/9/332913/logo.jpg"
+        },
+        {
+            "lng": -6.236948,
+            "lat": 53.342861,
+            "url": "https://www.myhome.ie/rentals/brochure/charlotte-quay-grand-canal-dk-dublin-2/3082074",
+            "price": "875",
+            "address": "Charlotte Quay, Grand Canal Dk,   Dublin 2",
+            "image": "https://photos-a.propertyimages.ie/groups/3/1/9/332913/logo.jpg"
+        },
+        {
+            "lng": -6.243885199999999,
+            "lat": 53.3447787,
+            "url": "https://www.myhome.ie/rentals/brochure/hanover-street-east-dublin-2-dublin/4213463",
+            "price": "1295",
+            "address": "Hanover Street East , Dublin 2, Dublin",
+            "image": "https://photos-a.propertyimages.ie/groups/3/1/9/332913/logo.jpg"
+        },
+        {
+            "lng": -6.2650311,
+            "lat": 53.3342246,
+            "url": "https://www.myhome.ie/rentals/brochure/harcourt-mews-camden-street-dublin-2-dublin/4268426",
+            "price": "1800",
+            "address": "Harcourt Mews, Camden Street, Dublin 2, Dublin",
+            "image": "https://photos-a.propertyimages.ie/groups/1/8/5/5581/logo.jpg"
+        },
+        {
+            "lng": -6.2431793,
+            "lat": 53.34881739999999,
+            "url": "https://www.myhome.ie/rentals/brochure/mayor-street-ifsc-dublin-1/4268417",
+            "price": "230",
+            "address": "Mayor Street, IFSC, Dublin 1",
+            "image": "https://photos-a.propertyimages.ie/groups/1/1/0/387011/logo.jpg"
+        },
+        {
+            "lng": -6.3609285,
+            "lat": 53.2804935,
+            "url": "https://www.myhome.ie/rentals/brochure/7-pine-lawn-old-bawn-tallaght-dublin-24/4268374",
+            "price": "2000",
+            "address": "7 Pine Lawn, Old Bawn, Tallaght, Dublin 24",
+            "image": "https://photos-a.propertyimages.ie/groups/2/6/1/11162/logo.jpg"
+        },
+        {
             "lng": -6.254181,
             "lat": 53.4589316,
             "url": "https://www.myhome.ie/rentals/brochure/parkview-brackenstown-road-swords-co-dublin/4268355",
@@ -1081,8 +1313,8 @@
             "image": "https://photos-a.propertyimages.ie/groups/8/7/3/10378/logo.jpg"
         },
         {
-            "lng": -6.2383676,
-            "lat": 53.3453636,
+            "lng": -6.2390153,
+            "lat": 53.3429414,
             "url": "https://www.myhome.ie/rentals/brochure/gallery-quay-block-3-grand-canal-dk-dublin-2/4224397",
             "price": "950",
             "address": "Gallery Quay Block 3, Grand Canal Dk, Dublin 2",
@@ -1129,52 +1361,12 @@
             "image": "https://photos-a.propertyimages.ie/groups/1/8/5/5581/logo.jpg"
         },
         {
-            "lng": -6.2542734,
-            "lat": 53.3398938,
-            "url": "https://www.myhome.ie/rentals/brochure/temple-court-hogan-place-south-city-centre-dublin-2/4268271",
-            "price": "1144",
-            "address": "Temple Court, Hogan Place, South City Centre, Dublin 2",
-            "image": "https://photos-a.propertyimages.ie/groups/1/7/8/6871/logo.jpg"
-        },
-        {
             "lng": -6.4407008,
             "lat": 53.3590877,
             "url": "https://www.myhome.ie/rentals/brochure/chapel-view-lucan-dublin/4268275",
             "price": "1560",
             "address": "Chapel View, Lucan, Dublin",
             "image": "https://photos-a.propertyimages.ie/groups/1/7/8/6871/logo.jpg"
-        },
-        {
-            "lng": -6.257452499999999,
-            "lat": 53.3967417,
-            "url": "https://www.myhome.ie/rentals/brochure/49-the-court-larchill-santry-dublin-9/4268305",
-            "price": "1850",
-            "address": "49 THE COURT, LARCHILL, Santry, Dublin 9",
-            "image": "https://photos-a.propertyimages.ie/groups/2/8/3/7382/logo.jpg"
-        },
-        {
-            "lng": -6.2902995,
-            "lat": 53.2959397,
-            "url": "https://www.myhome.ie/rentals/brochure/butterfield-drive-rathfarnham-dublin-14/4238680",
-            "price": "6500",
-            "address": "Butterfield Drive, Rathfarnham, Dublin 14",
-            "image": "https://photos-a.propertyimages.ie/groups/3/1/5/6513/logo.jpg"
-        },
-        {
-            "lng": -6.2731844,
-            "lat": 53.3027044,
-            "url": "https://www.myhome.ie/rentals/brochure/woodside-drive-rathfarnham-dublin-14/3476056",
-            "price": "6000",
-            "address": "Woodside Drive, Rathfarnham, Dublin 14",
-            "image": "https://photos-a.propertyimages.ie/groups/3/1/5/6513/logo.jpg"
-        },
-        {
-            "lng": -6.2394433,
-            "lat": 53.3501316,
-            "url": "https://www.myhome.ie/rentals/brochure/hill-of-down-ifsc-dublin-1/4268266",
-            "price": "POA",
-            "address": "Hill of Down, IFSC, Dublin 1",
-            "image": "https://photos-a.propertyimages.ie/groups/0/8/6/9680/logo.jpg"
         },
         {
             "lng": -6.3016156,
@@ -1201,22 +1393,6 @@
             "image": "https://photos-a.propertyimages.ie/groups/0/8/6/9680/logo.jpg"
         },
         {
-            "lng": -6.208074,
-            "lat": 53.370834,
-            "url": "https://www.myhome.ie/rentals/brochure/150-howth-road-clontarf-dublin-3/3325949",
-            "price": "3640",
-            "address": "150 Howth Road, Clontarf, Dublin 3",
-            "image": "https://photos-a.propertyimages.ie/groups/9/9/3/344399/logo.jpg"
-        },
-        {
-            "lng": -6.210415299999999,
-            "lat": 53.3770895,
-            "url": "https://www.myhome.ie/rentals/brochure/abbey-park-killester-dublin-5/4268239",
-            "price": "2100",
-            "address": "Abbey Park, Killester, Dublin 5",
-            "image": "https://photos-a.propertyimages.ie/groups/9/9/3/344399/logo.jpg"
-        },
-        {
             "lng": -6.2342708,
             "lat": 53.637306,
             "url": "https://www.myhome.ie/rentals/brochure/st-martins-road-gormanston-meath/4268240",
@@ -1233,52 +1409,12 @@
             "image": "https://photos-a.propertyimages.ie/groups/4/0/5/255504/logo.jpg"
         },
         {
-            "lng": -6.1968144,
-            "lat": 53.50637589999999,
-            "url": "https://www.myhome.ie/rentals/brochure/corduff-cottage-blakes-cross-lusk-county-dublin/4267860",
-            "price": "1850",
-            "address": "Corduff Cottage, Blakes Cross, Lusk, County Dublin",
-            "image": "https://photos-a.propertyimages.ie/groups/6/2/6/289626/logo.jpg"
-        },
-        {
             "lng": -6.2679845,
             "lat": 53.3398785,
             "url": "https://www.myhome.ie/rentals/brochure/adelaide-square-whitefriar-street-south-city-centre-dublin-8/4268114",
             "price": "2200",
             "address": "Adelaide square Whitefriar Street, South City Centre, Dublin 8",
             "image": "https://photos-a.propertyimages.ie/groups/5/0/0/6005/logo.jpg"
-        },
-        {
-            "lng": -6.276906599999999,
-            "lat": 53.3135899,
-            "url": "https://www.myhome.ie/rentals/brochure/frankfort-court-rathgar-ave-rathgar-dublin-6/4268075",
-            "price": "1352",
-            "address": "Frankfort Court, Rathgar Ave, Rathgar, Dublin 6",
-            "image": "https://photos-a.propertyimages.ie/groups/2/5/5/9552/logo.jpg"
-        },
-        {
-            "lng": -6.2477187,
-            "lat": 53.3454917,
-            "url": "https://www.myhome.ie/rentals/brochure/trinity-square-townsend-street-dublin-2-dublin/4257112",
-            "price": "2200",
-            "address": "Trinity Square, Townsend Street, Dublin 2, Dublin",
-            "image": "https://photos-a.propertyimages.ie/groups/2/5/5/9552/logo.jpg"
-        },
-        {
-            "lng": -6.228281099999999,
-            "lat": 53.3414626,
-            "url": "https://www.myhome.ie/rentals/brochure/3-fitzwilliam-quay-ringsend-dublin-4/4258032",
-            "price": "2600",
-            "address": "3 Fitzwilliam Quay, Ringsend, Dublin 4",
-            "image": "https://photos-a.propertyimages.ie/groups/2/5/5/9552/logo.jpg"
-        },
-        {
-            "lng": -6.2746669,
-            "lat": 53.3395123,
-            "url": "https://www.myhome.ie/rentals/brochure/swift-hall-deans-street-the-coombe-dublin-8/4261553",
-            "price": "1560",
-            "address": "Swift Hall, Deans Street, The Coombe, Dublin 8",
-            "image": "https://photos-a.propertyimages.ie/groups/2/5/5/9552/logo.jpg"
         },
         {
             "lng": -6.2218386,
@@ -1353,14 +1489,6 @@
             "image": "https://photos-a.propertyimages.ie/groups/6/4/0/11046/logo.jpg"
         },
         {
-            "lng": -6.393220599999999,
-            "lat": 53.38796989999999,
-            "url": "https://www.myhome.ie/rentals/brochure/amberfiled-verdemont-blanchardstown-dublin-15/4267846",
-            "price": "1700",
-            "address": "Amberfiled, Verdemont, Blanchardstown, Dublin 15",
-            "image": "https://photos-a.propertyimages.ie/groups/6/2/6/289626/logo.jpg"
-        },
-        {
             "lng": -6.397212800000001,
             "lat": 53.37337849999999,
             "url": "https://www.myhome.ie/rentals/brochure/riverwood-grove-castleknock-dublin-15/4267848",
@@ -1409,19 +1537,11 @@
             "image": "https://photos-a.propertyimages.ie/groups/5/5/9/6955/logo.jpg"
         },
         {
-            "lng": -6.1872774,
-            "lat": 53.2989775,
+            "lng": -6.1888467,
+            "lat": 53.30072089999999,
             "url": "https://www.myhome.ie/rentals/brochure/woodview-mount-merrion-avenue-blackrock-county-dublin/4263205",
             "price": "4000",
             "address": "Woodview, Mount Merrion Avenue, Blackrock, County Dublin",
-            "image": "https://photos-a.propertyimages.ie/groups/9/2/3/10329/logo.jpg"
-        },
-        {
-            "lng": -6.2289563,
-            "lat": 53.3338161,
-            "url": "https://www.myhome.ie/rentals/brochure/lansdowne-wood-lansdowne-road-ballsbridge-dublin-4/4266166",
-            "price": "2750",
-            "address": "Lansdowne Wood, Lansdowne Road, Ballsbridge, Dublin 4",
             "image": "https://photos-a.propertyimages.ie/groups/9/2/3/10329/logo.jpg"
         },
         {
@@ -1439,14 +1559,6 @@
             "price": "1741",
             "address": "Pugin House,  Loretto Abbey,  Rathfarnham,  Dublin 14.",
             "image": "https://photos-a.propertyimages.ie/groups/8/7/3/10378/logo.jpg"
-        },
-        {
-            "lng": -6.371444299999999,
-            "lat": 53.2866673,
-            "url": "https://www.myhome.ie/rentals/brochure/57-the-square-santry-dublin-9/4267709",
-            "price": "1470",
-            "address": "57 THE SQUARE, , Santry, Dublin 9",
-            "image": "https://photos-a.propertyimages.ie/groups/2/8/3/7382/logo.jpg"
         },
         {
             "lng": -6.253214100000001,
@@ -1569,19 +1681,19 @@
             "image": "https://photos-a.propertyimages.ie/groups/9/0/4/6409/logo.jpg"
         },
         {
-            "lng": -6.268828999999999,
-            "lat": 53.296875,
-            "url": "https://www.myhome.ie/rentals/brochure/4-castle-avenue-churchtown-dublin-south-city/4262394",
-            "price": "559203",
-            "address": "4 Castle Avenue, Churchtown, Dublin South City",
-            "image": "https://photos-a.propertyimages.ie/groups/9/0/4/6409/logo.jpg"
-        },
-        {
             "lng": -6.3164571,
             "lat": 53.2799499,
             "url": "https://www.myhome.ie/rentals/brochure/12-ros-mor-view-knocklyon-dublin-south-city/4265172",
             "price": "1950",
             "address": "12 Ros Mor View, Knocklyon, Dublin South City",
+            "image": "https://photos-a.propertyimages.ie/groups/9/0/4/6409/logo.jpg"
+        },
+        {
+            "lng": -6.2308081,
+            "lat": 53.3292313,
+            "url": "https://www.myhome.ie/rentals/brochure/118-the-links-merrion-road-dublin-south-city-ballsbridge-dublin-4/4265533",
+            "price": "2750",
+            "address": "118 The Links, Merrion Road, Dublin South City, Ballsbridge, Dublin 4",
             "image": "https://photos-a.propertyimages.ie/groups/9/0/4/6409/logo.jpg"
         },
         {
@@ -1609,8 +1721,8 @@
             "image": "https://photos-a.propertyimages.ie/groups/6/6/9/10966/logo.jpg"
         },
         {
-            "lng": -6.233139299999999,
-            "lat": 53.2890039,
+            "lng": -6.2251096,
+            "lat": 53.2854363,
             "url": "https://www.myhome.ie/rentals/brochure/hazelbrook-upper-kilmacud-road-dundrum-dublin-14/4267649",
             "price": "2100",
             "address": "Hazelbrook, Upper Kilmacud Road, Dundrum, Dublin 14",
@@ -1865,52 +1977,12 @@
             "image": "https://photos-a.propertyimages.ie/groups/3/2/2/6223/logo.jpg"
         },
         {
-            "lng": -6.243885199999999,
-            "lat": 53.3447787,
-            "url": "https://www.myhome.ie/rentals/brochure/hanover-street-east-dublin-2-dublin/4213463",
-            "price": "1295",
-            "address": "Hanover Street East , Dublin 2, Dublin",
-            "image": "https://photos-a.propertyimages.ie/groups/3/1/9/332913/logo.jpg"
-        },
-        {
-            "lng": -6.236948,
-            "lat": 53.342861,
-            "url": "https://www.myhome.ie/rentals/brochure/charlotte-quay-grand-canal-dk-dublin-2/3082074",
-            "price": "875",
-            "address": "Charlotte Quay, Grand Canal Dk,   Dublin 2",
-            "image": "https://photos-a.propertyimages.ie/groups/3/1/9/332913/logo.jpg"
-        },
-        {
-            "lng": -6.236948,
-            "lat": 53.342861,
-            "url": "https://www.myhome.ie/rentals/brochure/charlotte-quay-grand-canal-dk-dublin-2/3082070",
-            "price": "3100",
-            "address": "Charlotte Quay, Grand Canal Dk,   Dublin 2",
-            "image": "https://photos-a.propertyimages.ie/groups/3/1/9/332913/logo.jpg"
-        },
-        {
-            "lng": -6.2381639,
-            "lat": 53.3376154,
-            "url": "https://www.myhome.ie/rentals/brochure/northumberland-ballsbridge-dublin-4/3850811",
-            "price": "795",
-            "address": "Northumberland, Ballsbridge, Dublin 4",
-            "image": "https://photos-a.propertyimages.ie/groups/3/1/9/332913/logo.jpg"
-        },
-        {
             "lng": -6.243653999999999,
             "lat": 53.349523,
             "url": "https://www.myhome.ie/rentals/brochure/custom-house-square-lower-mayor-street-ifsc-dublin-1/4266918",
             "price": "1620",
             "address": "Custom House Square, Lower Mayor Street, IFSC, Dublin 1",
             "image": "https://photos-a.propertyimages.ie/groups/4/4/8/5844/logo.jpg"
-        },
-        {
-            "lng": -6.286814,
-            "lat": 53.377982,
-            "url": "https://www.myhome.ie/rentals/brochure/rose-cottage-mill-lane-palmerstown-dublin-20/4221623",
-            "price": "2800",
-            "address": "Rose Cottage, Mill Lane, Palmerstown, Dublin 20",
-            "image": "https://photos-a.propertyimages.ie/groups/6/9/5/5596/logo.jpg"
         },
         {
             "lng": -6.2342151,
@@ -1921,8 +1993,8 @@
             "image": "https://photos-a.propertyimages.ie/groups/8/5/9/10958/logo.jpg"
         },
         {
-            "lng": -6.2935482,
-            "lat": 53.33500429999999,
+            "lng": -6.2701596,
+            "lat": 53.3323774,
             "url": "https://www.myhome.ie/rentals/brochure/st-kevins-scr-portobello-portobello-dublin-8/4266421",
             "price": "1800",
             "address": "St Kevins SCR Portobello, Portobello, Dublin 8",
@@ -1977,14 +2049,6 @@
             "image": "https://photos-a.propertyimages.ie/groups/8/5/9/10958/logo.jpg"
         },
         {
-            "lng": -6.2323521,
-            "lat": 53.3268543,
-            "url": "https://www.myhome.ie/rentals/brochure/the-pines-herbert-park-lane-dublin-4-dublin/4266180",
-            "price": "3750",
-            "address": "The Pines, Herbert Park Lane, Dublin 4, Dublin",
-            "image": "https://photos-a.propertyimages.ie/groups/9/2/3/10329/logo.jpg"
-        },
-        {
             "lng": -6.2447174,
             "lat": 53.3490556,
             "url": "https://www.myhome.ie/rentals/brochure/clarion-quay-ifsc-dublin-1/4266091",
@@ -1998,14 +2062,6 @@
             "url": "https://www.myhome.ie/rentals/brochure/longmeadow-conyngham-road-south-city-centre-d8-dublin-8/4253397",
             "price": "2250",
             "address": "Longmeadow, conyngham Road, South City Centre - D8, Dublin 8",
-            "image": "https://photos-a.propertyimages.ie/groups/7/5/4/345457/logo.jpg"
-        },
-        {
-            "lng": -6.1382078,
-            "lat": 53.29025439999999,
-            "url": "https://www.myhome.ie/rentals/brochure/patrick-street-dun-laoghaire-county-dublin/4251008",
-            "price": "2450",
-            "address": "Patrick Street, Dun Laoghaire, County Dublin",
             "image": "https://photos-a.propertyimages.ie/groups/7/5/4/345457/logo.jpg"
         },
         {
@@ -2089,14 +2145,6 @@
             "image": "https://photos-a.propertyimages.ie/groups/6/4/0/11046/logo.jpg"
         },
         {
-            "lng": -6.2491391,
-            "lat": 53.370233,
-            "url": "https://www.myhome.ie/rentals/brochure/5-all-hallows-green-drumcondra-dublin-9/4265475",
-            "price": "2200",
-            "address": "5 ALL HALLOWS GREEN, Drumcondra, Dublin 9",
-            "image": "https://photos-a.propertyimages.ie/groups/2/8/3/7382/logo.jpg"
-        },
-        {
             "lng": -6.4659067,
             "lat": 53.3475541,
             "url": "https://www.myhome.ie/rentals/brochure/shackelton-grove-shackelton-park-lucan-dublin/4265466",
@@ -2153,14 +2201,6 @@
             "image": "https://photos-a.propertyimages.ie/groups/1/8/5/5581/logo.jpg"
         },
         {
-            "lng": -6.2756503,
-            "lat": 53.3360281,
-            "url": "https://www.myhome.ie/rentals/brochure/warrenmount-place-blackpits-dublin-8/4193165",
-            "price": "2850",
-            "address": "Warrenmount Place, Blackpits, Dublin 8",
-            "image": "https://photos-a.propertyimages.ie/groups/5/3/4/9435/logo.jpg"
-        },
-        {
             "lng": -6.2707476,
             "lat": 53.3306437,
             "url": "https://www.myhome.ie/rentals/brochure/15-avenue-road-portobello-dublin-8/4265520",
@@ -2190,6 +2230,14 @@
             "url": "https://www.myhome.ie/rentals/brochure/redwood-hollystown-dublin-15/4265454",
             "price": "2200",
             "address": "Redwood, Hollystown, Dublin 15",
+            "image": "https://photos-a.propertyimages.ie/groups/8/5/9/10958/logo.jpg"
+        },
+        {
+            "lng": -6.153029699999999,
+            "lat": 53.4205692,
+            "url": "https://www.myhome.ie/rentals/brochure/the-fairways-seabrook-manor-portmarnock-co-dublin/4265453",
+            "price": "1650",
+            "address": "The Fairways, Seabrook Manor, Portmarnock, Co. Dublin",
             "image": "https://photos-a.propertyimages.ie/groups/8/5/9/10958/logo.jpg"
         },
         {
@@ -2231,14 +2279,6 @@
             "price": "1400",
             "address": "Chapel Hill, Chapelizod, Dublin 20",
             "image": "https://photos-a.propertyimages.ie/groups/9/0/3/10309/logo.jpg"
-        },
-        {
-            "lng": -6.2384422,
-            "lat": 53.4669774,
-            "url": "https://www.myhome.ie/rentals/brochure/rathbeale-road-swords-county-dublin/4265304",
-            "price": "1450",
-            "address": "Rathbeale Road, Swords, County Dublin",
-            "image": "https://photos-a.propertyimages.ie/groups/6/2/6/289626/logo.jpg"
         },
         {
             "lng": -6.2320552,
@@ -2321,8 +2361,8 @@
             "image": "https://photos-a.propertyimages.ie/groups/2/3/0/6032/logo.jpg"
         },
         {
-            "lng": -6.279116500000001,
-            "lat": 53.2901839,
+            "lng": -6.273359600000001,
+            "lat": 53.3309921,
             "url": "https://www.myhome.ie/rentals/brochure/longwood-dublin-14/4261264",
             "price": "3750",
             "address": "Longwood, Dublin 14",
@@ -2425,16 +2465,16 @@
             "image": "https://photos-a.propertyimages.ie/groups/6/8/8/386886/logo.jpg"
         },
         {
-            "lng": -6.296602,
-            "lat": 53.3017671,
+            "lng": -6.2742249,
+            "lat": 53.3074659,
             "url": "https://www.myhome.ie/rentals/brochure/202-bushy-park-terenure-dublin-6w/4261068",
             "price": "4500",
             "address": "202 bushy park , Terenure,   Dublin 6W",
             "image": "https://photos-a.propertyimages.ie/groups/2/6/4/6462/logo.jpg"
         },
         {
-            "lng": -6.1180986,
-            "lat": 53.5809302,
+            "lng": -6.1208664,
+            "lat": 53.5796937,
             "url": "https://www.myhome.ie/rentals/brochure/the-avenue-skerries-rock-skerries-co-dublin/4264351",
             "price": "1850",
             "address": "The Avenue, Skerries Rock, Skerries, Co. Dublin",
@@ -2545,14 +2585,6 @@
             "image": "https://photos-a.propertyimages.ie/groups/0/3/4/386430/logo.jpg"
         },
         {
-            "lng": -6.2441172,
-            "lat": 53.3268357,
-            "url": "https://www.myhome.ie/rentals/brochure/morehampton-square-donnybrook-dublin/3723442",
-            "price": "2360",
-            "address": "Morehampton Square, Donnybrook, Dublin",
-            "image": "https://photos-a.propertyimages.ie/groups/9/3/0/334039/logo.jpg"
-        },
-        {
             "lng": -6.2688589,
             "lat": 53.3407133,
             "url": "https://www.myhome.ie/rentals/brochure/castle-way-golden-lane-south-city-centre-dublin-8/4258407",
@@ -2601,24 +2633,24 @@
             "image": "https://photos-a.propertyimages.ie/groups/8/7/3/10378/logo.jpg"
         },
         {
-            "lng": -6.2515299,
-            "lat": 53.32380209999999,
+            "lng": -6.2631149,
+            "lat": 53.3086206,
             "url": "https://www.myhome.ie/rentals/brochure/103-ranelagh-village-ranelagh-dublin-6/4250767",
             "price": "POA",
             "address": "103 Ranelagh Village, Ranelagh, Dublin 6",
             "image": "https://photos-a.propertyimages.ie/groups/4/7/8/5874/logo.jpg"
         },
         {
-            "lng": -6.2515299,
-            "lat": 53.32380209999999,
+            "lng": -6.2631149,
+            "lat": 53.3086206,
             "url": "https://www.myhome.ie/rentals/brochure/103-ranelagh-village-ranelagh-dublin-6/4254571",
             "price": "POA",
             "address": "103 Ranelagh Village, Ranelagh, Dublin 6",
             "image": "https://photos-a.propertyimages.ie/groups/4/7/8/5874/logo.jpg"
         },
         {
-            "lng": -6.2515299,
-            "lat": 53.32380209999999,
+            "lng": -6.2631149,
+            "lat": 53.3086206,
             "url": "https://www.myhome.ie/rentals/brochure/103-ranelagh-village-ranelagh-dublin-6/4254621",
             "price": "POA",
             "address": "103 Ranelagh Village, Ranelagh, Dublin 6",
@@ -2657,8 +2689,8 @@
             "image": "https://photos-a.propertyimages.ie/groups/9/4/7/5749/logo.jpg"
         },
         {
-            "lng": -6.2504575,
-            "lat": 53.3139984,
+            "lng": -6.249419,
+            "lat": 53.31276159999999,
             "url": "https://www.myhome.ie/rentals/brochure/ramleh-hall-mount-st-annes-milltown-dublin-6/4263033",
             "price": "2875",
             "address": "Ramleh Hall, Mount St Annes, Milltown, Dublin 6",
@@ -2681,8 +2713,8 @@
             "image": "https://photos-a.propertyimages.ie/groups/7/7/0/9077/logo.jpg"
         },
         {
-            "lng": -6.1770812,
-            "lat": 53.43600259999999,
+            "lng": -88.2825668,
+            "lat": 42.0354084,
             "url": "https://www.myhome.ie/rentals/brochure/elgin-house-malahide-road-malahide-dublin/4262867",
             "price": "6200",
             "address": "Elgin House, Malahide Road, Malahide, Dublin",
@@ -2849,8 +2881,8 @@
             "image": "https://photos-a.propertyimages.ie/groups/2/2/0/294022/logo.jpg"
         },
         {
-            "lng": -6.426143499999999,
-            "lat": 53.4042074,
+            "lng": -6.304725899999999,
+            "lat": 53.3391811,
             "url": "https://www.myhome.ie/rentals/brochure/the-paddocks-blackhorse-avenue-dublin-7-dublin/4261847",
             "price": "2600",
             "address": "The Paddocks, Blackhorse Avenue, Dublin 7, Dublin",
@@ -2905,8 +2937,8 @@
             "image": ""
         },
         {
-            "lng": -6.264814200000001,
-            "lat": 53.344183,
+            "lng": -6.2669865,
+            "lat": 53.3440497,
             "url": "https://www.myhome.ie/rentals/brochure/dame-street-dublin-2-dublin/4251683",
             "price": "1850",
             "address": "Dame Street,, Dublin 2, Dublin",
@@ -3177,8 +3209,8 @@
             "image": "https://photos-a.propertyimages.ie/groups/6/1/7/324716/logo.jpg"
         },
         {
-            "lng": -6.227242599999999,
-            "lat": 53.2642689,
+            "lng": -6.2244889,
+            "lat": 53.26328969999999,
             "url": "https://www.myhome.ie/rentals/brochure/clon-brugh-aitkens-village-sandyford-dublin-18/4256335",
             "price": "2800",
             "address": "Clon Brugh, Aitkens Village, Sandyford, Dublin 18",
@@ -3529,8 +3561,8 @@
             "image": "https://photos-a.propertyimages.ie/groups/7/5/7/349757/logo.jpg"
         },
         {
-            "lng": -6.225627200000001,
-            "lat": 53.3412751,
+            "lng": -6.2194009,
+            "lat": 53.3375107,
             "url": "https://www.myhome.ie/rentals/brochure/40a-the-bottleworks-irishtown-dublin-4/4247392",
             "price": "2250",
             "address": "40A The Bottleworks, Irishtown, Dublin 4",
@@ -3601,8 +3633,8 @@
             "image": "https://photos-a.propertyimages.ie/groups/8/7/3/10378/logo.jpg"
         },
         {
-            "lng": -6.2805104,
-            "lat": 53.3386388,
+            "lng": -6.2803456,
+            "lat": 53.3387143,
             "url": "https://www.myhome.ie/rentals/brochure/brabazon-hall-cork-street-dublin-8-dublin/4242362",
             "price": "3300",
             "address": "Brabazon Hall, Cork Street, Dublin 8, Dublin",
@@ -3633,8 +3665,8 @@
             "image": "https://photos-a.propertyimages.ie/groups/2/0/1/382102/logo.jpg"
         },
         {
-            "lng": -6.3088362,
-            "lat": 53.3829332,
+            "lng": -6.3067215,
+            "lat": 53.3822816,
             "url": "https://www.myhome.ie/rentals/brochure/dunsink-drive-finglas-dublin-11/4239847",
             "price": "1700",
             "address": "Dunsink Drive, Finglas, Dublin 11",
@@ -3657,8 +3689,8 @@
             "image": ""
         },
         {
-            "lng": -6.235905,
-            "lat": 53.3035481,
+            "lng": -6.2359883,
+            "lat": 53.30359379999999,
             "url": "https://www.myhome.ie/rentals/brochure/white-oaks-clonskeagh-dublin-14/4237798",
             "price": "1950",
             "address": "White Oaks, Clonskeagh, Dublin 14",
@@ -4313,8 +4345,8 @@
             "image": "https://photos-a.propertyimages.ie/groups/4/4/8/5844/logo.jpg"
         },
         {
-            "lng": -6.2638269,
-            "lat": 53.31325469999999,
+            "lng": -6.2691877,
+            "lat": 53.3128073,
             "url": "https://www.myhome.ie/rentals/brochure/highfield-road-rathgar-dublin-6/2905725",
             "price": "9000",
             "address": "Highfield Road, Rathgar,   Dublin 6",
@@ -4383,6 +4415,14 @@
             "price": "2600",
             "address": "19 Cashelmara, Salthill, Galway",
             "image": "https://photos-a.propertyimages.ie/groups/2/3/6/337632/logo.jpg"
+        },
+        {
+            "lng": -9.0740032,
+            "lat": 53.26577870000001,
+            "url": "https://www.myhome.ie/rentals/brochure/old-devon-park-salthill-galway-city/4267133",
+            "price": "1800",
+            "address": "Old Devon Park, Salthill, Galway City",
+            "image": "https://photos-a.propertyimages.ie/groups/5/7/5/10575/logo.jpg"
         },
         {
             "lng": -10.072433,
@@ -4465,8 +4505,8 @@
             "image": ""
         },
         {
-            "lng": -9.0567905,
-            "lat": 53.270668,
+            "lng": -9.1814776,
+            "lat": 53.3387481,
             "url": "https://www.myhome.ie/rentals/brochure/unit-5-coille-rainne-moycullen-galway/4090852",
             "price": "400",
             "address": "Unit 5 Coille Rainne, Moycullen, Galway",
@@ -4529,12 +4569,44 @@
             "image": "https://photos-a.propertyimages.ie/groups/9/4/9/5949/logo.jpg"
         },
         {
-            "lng": -6.8106849,
-            "lat": 53.1720483,
-            "url": "https://www.myhome.ie/rentals/brochure/207-the-oaks-newbridge-kildare/4268321",
+            "lng": -6.6673346,
+            "lat": 53.2162132,
+            "url": "https://www.myhome.ie/rentals/brochure/9-harbour-view-naas-kildare/4268766",
             "price": "1200",
-            "address": "207 The Oaks, Newbridge, Kildare",
-            "image": "https://photos-a.propertyimages.ie/groups/2/7/0/6072/logo.jpg"
+            "address": "9 Harbour View, Naas, Kildare",
+            "image": "https://photos-a.propertyimages.ie/groups/9/9/9/6999/logo.jpg"
+        },
+        {
+            "lng": -6.5534892,
+            "lat": 53.345392,
+            "url": "https://www.myhome.ie/rentals/brochure/26-the-paddocks-oldtown-mill-celbridge-kildare/4268761",
+            "price": "1600",
+            "address": "26 The Paddocks, Oldtown Mill, Celbridge, Kildare",
+            "image": "https://photos-a.propertyimages.ie/groups/2/3/7/6732/logo.jpg"
+        },
+        {
+            "lng": -6.65755,
+            "lat": 53.2088767,
+            "url": "https://www.myhome.ie/rentals/brochure/72-the-way-craddockstown-park-naas-kildare/4268725",
+            "price": "1450",
+            "address": "72 The Way, Craddockstown Park, Naas, Kildare",
+            "image": "https://photos-a.propertyimages.ie/groups/2/3/7/6732/logo.jpg"
+        },
+        {
+            "lng": -6.5532534,
+            "lat": 53.3297514,
+            "url": "https://www.myhome.ie/rentals/brochure/15-abbey-court-abbeyfarm-celbridge-kildare/4268651",
+            "price": "2500",
+            "address": "15 Abbey Court, Abbeyfarm, Celbridge, Kildare",
+            "image": "https://photos-a.propertyimages.ie/groups/8/1/2/6218/logo.jpg"
+        },
+        {
+            "lng": -6.448036399999999,
+            "lat": 53.360316,
+            "url": "https://www.myhome.ie/rentals/brochure/4-weirview-ardclough-road-celbridge-co-kildare-celbridge-kildare/3299281",
+            "price": "2022",
+            "address": "4 Weirview, Ardclough Road, Celbridge, Co. Kildare, Celbridge, Kildare",
+            "image": "https://photos-a.propertyimages.ie/groups/9/2/7/322729/logo.jpg"
         },
         {
             "lng": -6.9228136,
@@ -4543,6 +4615,30 @@
             "price": "1100",
             "address": "Moyvalley hotel and Golf Resort, Enfield, Kildare",
             "image": "https://photos-a.propertyimages.ie/groups/9/2/7/322729/logo.jpg"
+        },
+        {
+            "lng": -6.618549199999999,
+            "lat": 53.3026397,
+            "url": "https://www.myhome.ie/rentals/brochure/ladycastle-the-k-club-straffan-co-kildare/4256770",
+            "price": "3450",
+            "address": "Ladycastle, The K Club, Straffan, Co. Kildare",
+            "image": "https://photos-a.propertyimages.ie/groups/6/9/5/5596/logo.jpg"
+        },
+        {
+            "lng": -6.6094294,
+            "lat": 53.31389009999999,
+            "url": "https://www.myhome.ie/rentals/brochure/coarse-moore-straffan-co-kildare/4037679",
+            "price": "1750",
+            "address": "Coarse Moore, Straffan, Co. Kildare",
+            "image": "https://photos-a.propertyimages.ie/groups/6/9/5/5596/logo.jpg"
+        },
+        {
+            "lng": -6.907713999999999,
+            "lat": 53.1691114,
+            "url": "https://www.myhome.ie/rentals/brochure/ashfield-kilcloon-maynooth-kildare/3778568",
+            "price": "1950",
+            "address": "Ashfield, Kilcloon, Maynooth, Kildare",
+            "image": "https://photos-a.propertyimages.ie/groups/6/9/5/5596/logo.jpg"
         },
         {
             "lng": -6.6641201,
@@ -4559,54 +4655,6 @@
             "price": "1100",
             "address": "6 Meadow Court, Kilcullen, Kildare",
             "image": "https://photos-a.propertyimages.ie/groups/1/6/9/10961/logo.jpg"
-        },
-        {
-            "lng": -6.985728099999999,
-            "lat": 52.9918336,
-            "url": "https://www.myhome.ie/rentals/brochure/34-fairfield-athy-co-kildare/4267623",
-            "price": "800",
-            "address": "34 Fairfield, Athy, Co Kildare",
-            "image": "https://photos-a.propertyimages.ie/groups/8/4/6/5648/logo.jpg"
-        },
-        {
-            "lng": -6.907713999999999,
-            "lat": 53.1691114,
-            "url": "https://www.myhome.ie/rentals/brochure/ashfield-kilcloon-maynooth-kildare/3778568",
-            "price": "1950",
-            "address": "Ashfield, Kilcloon, Maynooth, Kildare",
-            "image": "https://photos-a.propertyimages.ie/groups/6/9/5/5596/logo.jpg"
-        },
-        {
-            "lng": -6.6094294,
-            "lat": 53.31389009999999,
-            "url": "https://www.myhome.ie/rentals/brochure/coarse-moore-straffan-co-kildare/4037679",
-            "price": "1750",
-            "address": "Coarse Moore, Straffan, Co. Kildare",
-            "image": "https://photos-a.propertyimages.ie/groups/6/9/5/5596/logo.jpg"
-        },
-        {
-            "lng": -6.618549199999999,
-            "lat": 53.3026397,
-            "url": "https://www.myhome.ie/rentals/brochure/ladycastle-the-k-club-straffan-co-kildare/4256770",
-            "price": "3450",
-            "address": "Ladycastle, The K Club, Straffan, Co. Kildare",
-            "image": "https://photos-a.propertyimages.ie/groups/6/9/5/5596/logo.jpg"
-        },
-        {
-            "lng": -6.6770516,
-            "lat": 53.2132006,
-            "url": "https://www.myhome.ie/rentals/brochure/arconagh-naas-co-kildare/4262294",
-            "price": "1700",
-            "address": "Arconagh, Naas, Co. Kildare",
-            "image": "https://photos-a.propertyimages.ie/groups/6/9/5/5596/logo.jpg"
-        },
-        {
-            "lng": -6.6855034,
-            "lat": 53.2906056,
-            "url": "https://www.myhome.ie/rentals/brochure/the-abbey-cois-abhainne-clane-co-kildare/4265989",
-            "price": "1242",
-            "address": "The Abbey, Cois Abhainne, Clane, Co. Kildare",
-            "image": "https://photos-a.propertyimages.ie/groups/6/9/5/5596/logo.jpg"
         },
         {
             "lng": -6.5176672,
@@ -4726,14 +4774,6 @@
             "url": "https://www.myhome.ie/rentals/brochure/no-40-rathevan-portlaoise-co-laois/4267857",
             "price": "900",
             "address": "No. 40 Rathevan, Portlaoise, Co. Laois",
-            "image": "https://photos-a.propertyimages.ie/groups/7/0/1/259107/logo.jpg"
-        },
-        {
-            "lng": -7.3201524,
-            "lat": 53.0480916,
-            "url": "https://www.myhome.ie/rentals/brochure/11-carmody-square-fairgreen-portlaoise-co-laois/4267856",
-            "price": "900",
-            "address": "11 Carmody Square, Fairgreen, Portlaoise, Co. Laois",
             "image": "https://photos-a.propertyimages.ie/groups/7/0/1/259107/logo.jpg"
         },
         {
@@ -4881,8 +4921,8 @@
             "image": "https://photos-a.propertyimages.ie/groups/9/7/3/265379/logo.jpg"
         },
         {
-            "lng": -9.0637201,
-            "lat": 52.4941233,
+            "lng": -7.696219999999999,
+            "lat": 53.67106,
             "url": "https://www.myhome.ie/rentals/brochure/ardagh-ardagh-limerick/4259783",
             "price": "540",
             "address": "Ardagh, Ardagh, Limerick",
@@ -4895,14 +4935,6 @@
             "price": "1000",
             "address": "Carrig East, Clarina, Co. Limerick",
             "image": "https://photos-a.propertyimages.ie/groups/9/7/3/265379/logo.jpg"
-        },
-        {
-            "lng": -8.5808997,
-            "lat": 52.6712046,
-            "url": "https://www.myhome.ie/rentals/brochure/33-college-close-castletroy-limerick/4249853",
-            "price": "900",
-            "address": "33 College Close , Castletroy, Limerick",
-            "image": "https://photos-a.propertyimages.ie/groups/6/8/2/305286/logo.jpg"
         },
         {
             "lng": -8.55975,
@@ -5012,7 +5044,7 @@
             "lng": -6.370079,
             "lat": 53.7204809,
             "url": "https://www.myhome.ie/rentals/brochure/93-fountain-hill-mell-drogheda-louth/4268268",
-            "price": "1600",
+            "price": "1800",
             "address": "93 Fountain Hill, Mell, Drogheda, Louth",
             "image": "https://photos-a.propertyimages.ie/groups/2/6/7/6762/logo.jpg"
         },
@@ -5057,8 +5089,8 @@
             "image": "https://photos-a.propertyimages.ie/groups/6/7/4/9476/logo.jpg"
         },
         {
-            "lng": -6.388925299999999,
-            "lat": 53.9816128,
+            "lng": -6.388889,
+            "lat": 53.981764,
             "url": "https://www.myhome.ie/rentals/brochure/second-floor-apt-greenpark-student-accommodation-dundalk-louth/2870806",
             "price": "100",
             "address": "Second Floor Apt, Greenpark Student Accommodation, Dundalk, Louth",
@@ -5087,6 +5119,14 @@
             "price": "1600",
             "address": "BlackHall, Termonfeckin, Louth",
             "image": "https://photos-a.propertyimages.ie/groups/2/6/7/6762/logo.jpg"
+        },
+        {
+            "lng": -6.3898427,
+            "lat": 54.0047271,
+            "url": "https://www.myhome.ie/rentals/brochure/sutton-court-dundalk-louth/4220754",
+            "price": "800",
+            "address": "Sutton Court, Dundalk, Louth",
+            "image": "https://photos-a.propertyimages.ie/groups/8/7/7/256778/logo.jpg"
         },
         {
             "lng": -6.388889,
@@ -5193,6 +5233,14 @@
             "image": "https://photos-a.propertyimages.ie/groups/2/3/6/337632/logo.jpg"
         },
         {
+            "lng": -9.6597913,
+            "lat": 53.7599117,
+            "url": "https://www.myhome.ie/rentals/brochure/sea-view-croagh-patrick-westport-mayo/4062528",
+            "price": "1595",
+            "address": "Sea View Croagh Patrick, Westport, Mayo",
+            "image": "https://photos-a.propertyimages.ie/groups/3/9/0/11093/logo.jpg"
+        },
+        {
             "lng": -9.2844283,
             "lat": 53.8498678,
             "url": "https://www.myhome.ie/rentals/brochure/apartment-no-2068-the-residences-breaffy-castlebar-mayo/4267902",
@@ -5231,14 +5279,6 @@
             "price": "700",
             "address": "20 Woodville, Killala Road, Ballina, Co Mayo, F26 H3K4",
             "image": "https://photos-a.propertyimages.ie/groups/7/5/6/5657/logo.jpg"
-        },
-        {
-            "lng": -9.6597913,
-            "lat": 53.7599117,
-            "url": "https://www.myhome.ie/rentals/brochure/sea-view-croagh-patrick-westport-mayo/4062528",
-            "price": "1595",
-            "address": "Sea View Croagh Patrick, Westport, Mayo",
-            "image": "https://photos-a.propertyimages.ie/groups/3/9/0/11093/logo.jpg"
         },
         {
             "lng": -8.9963812,
@@ -5281,12 +5321,20 @@
             "image": "https://photos-a.propertyimages.ie/groups/2/8/6/363682/logo.jpg"
         },
         {
-            "lng": -6.6911605,
-            "lat": 53.64024980000001,
-            "url": "https://www.myhome.ie/rentals/brochure/31-balreask-village-navan-meath/4267534",
-            "price": "1450",
-            "address": "31 Balreask Village, Navan, Meath",
-            "image": "https://photos-a.propertyimages.ie/groups/3/0/5/363503/largelogo.jpg"
+            "lng": -6.9228136,
+            "lat": 53.4188649,
+            "url": "https://www.myhome.ie/rentals/brochure/moyvalley-hotel-and-golf-resort-balyna-house-enfield-meath/4139785",
+            "price": "1200",
+            "address": "moyvalley Hotel And Golf Resort Balyna House, Enfield, Meath",
+            "image": "https://photos-a.propertyimages.ie/groups/9/2/7/322729/logo.jpg"
+        },
+        {
+            "lng": -6.9228136,
+            "lat": 53.4188649,
+            "url": "https://www.myhome.ie/rentals/brochure/moyvalley-hotel-and-golf-resort-balyna-house-enfield-meath/4139730",
+            "price": "1400",
+            "address": "moyvalley Hotel And Golf Resort Balyna House, Enfield, Meath",
+            "image": "https://photos-a.propertyimages.ie/groups/9/2/7/322729/logo.jpg"
         },
         {
             "lng": -6.542866699999999,
@@ -5303,22 +5351,6 @@
             "price": "980",
             "address": "St.Martins Road, Gormanston, Meath",
             "image": "https://photos-a.propertyimages.ie/groups/2/6/0/263062/logo.jpg"
-        },
-        {
-            "lng": -6.9228136,
-            "lat": 53.4188649,
-            "url": "https://www.myhome.ie/rentals/brochure/moyvalley-hotel-and-golf-resort-balyna-house-enfield-meath/4139730",
-            "price": "1400",
-            "address": "moyvalley Hotel And Golf Resort Balyna House, Enfield, Meath",
-            "image": "https://photos-a.propertyimages.ie/groups/9/2/7/322729/logo.jpg"
-        },
-        {
-            "lng": -6.9228136,
-            "lat": 53.4188649,
-            "url": "https://www.myhome.ie/rentals/brochure/moyvalley-hotel-and-golf-resort-balyna-house-enfield-meath/4139785",
-            "price": "1200",
-            "address": "moyvalley Hotel And Golf Resort Balyna House, Enfield, Meath",
-            "image": "https://photos-a.propertyimages.ie/groups/9/2/7/322729/logo.jpg"
         },
         {
             "lng": -6.6634017,
@@ -5425,8 +5457,8 @@
             "image": "https://photos-a.propertyimages.ie/groups/8/0/7/5708/logo.jpg"
         },
         {
-            "lng": -6.7449908,
-            "lat": 53.570813,
+            "lng": -5.7006399,
+            "lat": 54.649368,
             "url": "https://www.myhome.ie/rentals/brochure/kilcooley-trim-co-meath-c15ekh2/4154355",
             "price": "1200",
             "address": "Kilcooley, Trim, Co Meath, C15EKH2",
@@ -5455,14 +5487,6 @@
             "price": "1250",
             "address": "37 The Alders, Avourwen, Drogheda, Meath",
             "image": "https://photos-a.propertyimages.ie/groups/2/6/7/6762/logo.jpg"
-        },
-        {
-            "lng": -6.900049699999999,
-            "lat": 54.1249512,
-            "url": "https://www.myhome.ie/rentals/brochure/15-loch-more-ave-ballybay-monaghan/4265015",
-            "price": "650",
-            "address": "15 Loch More Ave, Ballybay, Monaghan",
-            "image": "https://photos-a.propertyimages.ie/groups/2/8/4/9482/logo.jpg"
         },
         {
             "lng": -6.719805000000001,
@@ -5569,8 +5593,8 @@
             "image": "https://photos-a.propertyimages.ie/groups/7/1/3/6317/logo.jpg"
         },
         {
-            "lng": -8.4565285,
-            "lat": 54.2763645,
+            "lng": -8.4591206,
+            "lat": 54.2792354,
             "url": "https://www.myhome.ie/rentals/brochure/1-glencarraig-ballinode-sligo/4246754",
             "price": "1300",
             "address": "1 Glencarraig, Ballinode, Sligo",
@@ -5681,8 +5705,8 @@
             "image": "https://photos-a.propertyimages.ie/groups/8/4/2/355248/logo.jpg"
         },
         {
-            "lng": -7.0851335,
-            "lat": 52.2476493,
+            "lng": -7.0850922,
+            "lat": 52.2483637,
             "url": "https://www.myhome.ie/rentals/brochure/apt-7-the-sycamores-dunmore-road-ardkeen-waterford-city-co-waterford/4267323",
             "price": "800",
             "address": "Apt 7, The Sycamores, Dunmore Road, Ardkeen, Waterford City, Co. Waterford",
@@ -5737,8 +5761,8 @@
             "image": "https://photos-a.propertyimages.ie/groups/3/1/5/9513/logo.jpg"
         },
         {
-            "lng": -7.111820199999999,
-            "lat": 52.2517617,
+            "lng": -7.1125906,
+            "lat": 52.25402039999999,
             "url": "https://www.myhome.ie/rentals/brochure/2-link-road-poleberry-waterford-city-waterford/4233799",
             "price": "599",
             "address": "2 Link Road, Poleberry, Waterford City, Waterford",
@@ -5841,14 +5865,6 @@
             "image": "https://photos-a.propertyimages.ie/groups/0/2/2/262220/logo.jpg"
         },
         {
-            "lng": -6.4595482,
-            "lat": 52.329842,
-            "url": "https://www.myhome.ie/rentals/brochure/cromwells-fort-house-wexford-town-wexford/4265611",
-            "price": "650",
-            "address": "Cromwells Fort House , Wexford Town, Wexford",
-            "image": "https://photos-a.propertyimages.ie/groups/0/2/2/262220/logo.jpg"
-        },
-        {
             "lng": -6.5662069,
             "lat": 52.4984723,
             "url": "https://www.myhome.ie/rentals/brochure/riverview-court-enniscorthy-wexford/4264263",
@@ -5889,8 +5905,8 @@
             "image": "https://photos-a.propertyimages.ie/groups/4/1/5/7514/logo.jpg"
         },
         {
-            "lng": -6.570368999999999,
-            "lat": 52.501658,
+            "lng": -6.5722467,
+            "lat": 52.5016957,
             "url": "https://www.myhome.ie/rentals/brochure/unit-1-ground-floor-gonzaga-house-23-weafer-street-enniscorthy-co-wexford/4248318",
             "price": "20000",
             "address": "Unit 1 Ground Floor, Gonzaga House, 23 Weafer Street, Enniscorthy, Co. Wexford",
@@ -5913,12 +5929,12 @@
             "image": "https://photos-a.propertyimages.ie/groups/9/4/3/268349/logo.jpg"
         },
         {
-            "lng": -6.066813499999999,
-            "lat": 52.99619380000001,
-            "url": "https://www.myhome.ie/rentals/brochure/luxury-lodge-tinakilly-rathnew-wicklow/3851971",
-            "price": "12000",
-            "address": "Luxury Lodge Tinakilly, Rathnew, Wicklow",
-            "image": "https://photos-a.propertyimages.ie/groups/2/3/6/337632/logo.jpg"
+            "lng": -6.331018800000001,
+            "lat": 52.23601,
+            "url": "https://www.myhome.ie/rentals/brochure/castlegardens-kilrane-wexford/4107049",
+            "price": "750",
+            "address": "Castlegardens, Kilrane, Wexford",
+            "image": "https://photos-a.propertyimages.ie/groups/0/2/2/262220/logo.jpg"
         },
         {
             "lng": -6.1110741,
@@ -5927,6 +5943,14 @@
             "price": "250",
             "address": "Bray, Wicklow",
             "image": "https://photos-a.propertyimages.ie/groups/3/0/5/363503/largelogo.jpg"
+        },
+        {
+            "lng": -6.066813499999999,
+            "lat": 52.99619380000001,
+            "url": "https://www.myhome.ie/rentals/brochure/luxury-lodge-tinakilly-rathnew-wicklow/3851971",
+            "price": "12000",
+            "address": "Luxury Lodge Tinakilly, Rathnew, Wicklow",
+            "image": "https://photos-a.propertyimages.ie/groups/2/3/6/337632/logo.jpg"
         },
         {
             "lng": -6.5305406,
