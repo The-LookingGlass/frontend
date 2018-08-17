@@ -1,5 +1,8 @@
 // array to store markers
 var markers = [];
+// array to store house markers
+var aMarkers = [];
+
 var markerCluster;
 
 function myMap() {
@@ -343,7 +346,7 @@ function markerpPlacement(data, map, location){
                 // position of the selected job 
                 var lat = e.latLng.lat();
                 var lng = e.latLng.lng();
-    
+                
                 // display housing data
                 placeHomeMarker( map, lat, lng, location);
                 
@@ -386,6 +389,105 @@ function markerpPlacement(data, map, location){
     }
 }      
 
+// placing home markers and initializing circle boundary automatically 
+function autoDistance(min, max, data, map, location, houseThreshold, lat, lng){
+
+    var radius;
+    var cirleColor;
+
+    // clear already stored markers in array
+    aMarkers = [];
+    var center = {lat: lat, lng: lng};
+
+    // length of data array        
+    var length = Object.keys(data.ID).length;
+
+    // switching radius of cicle according to range provided
+    switch(max){
+        
+        case 5: radius = 5000; 
+        cicleColor= "#228b22";// dark green
+        break;
+        
+        case 10: radius = 10000; 
+        cirleColor = "#ffe200"; // dark yellow
+        break;
+        
+        case 20: radius = 20000;
+        cirleColor = "#ff0000"; // dark red
+        break;
+        
+        default: radius = 5000;
+        cicleColor= "#228b22"; 
+
+    }
+    
+    // custom house marker 
+    var customMarker = 'images/home.svg';
+    
+    // code used from https://tommcfarlin.com/multiple-infowindows-google-maps/ and modified.
+    for (var i = 0; i < length; i++) {
+        
+        // address of the house
+        var address = data.ID[i].address;            
+
+        // check if the house is in the same county as the job else skip
+        if(address.toUpperCase().includes(location.toUpperCase())){
+
+            // calculating distance between job location and this house
+            var distance = calculateDistance(lat , lng, data.ID[i].lat, data.ID[i].lng);
+        
+            // cost of house
+            var price = data.ID[i].price;
+
+            // draw circle for the specified radius around the selected job
+            var circle = new google.maps.Circle({
+                strokeColor: cirleColor,
+                strokeOpacity: 0.2,
+                strokeWeight: 2,
+                fillOpacity: 0,
+                map: map,
+                center: center,
+                radius: radius
+            });
+            
+            // hardcoded for testing before implementing the working dropdown
+            var minPrice = 1000, maxPrice = 2000;
+
+            // make marker only if it comes under the defined price and distance range 
+            if(price > minPrice && price < maxPrice && distance > min && distance < max){  
+                
+                // increment everytime a house marker is placed
+                houseThreshold = houseThreshold + 1;
+                
+                // format for infowindow
+                var format = "<div id='img' style='float:left'><img src='http://i.stack.imgur.com/g672i.png'></div>" + 
+                    "<div style = 'float:right; padding: 10px; font-size:18px'><strong>" + "COST: "+ price + "€"+ 
+                    '</strong><br>' + '<br>' +'<strong>' + "ADDRESS: " +'</stong>'+ address + '</div>';
+
+                // getting the link from record
+                var web = data.ID[i].url;
+    
+                // add marker
+                var markerObj = addMarker(data, map, i, format, customMarker, web);
+
+                aMarkers.push(markerObj);
+    
+                // event listener for when the user clicks on the marker
+                google.maps.event.addListener(markerObj, 'click', function () {
+                // launches google maps while sharing the county clicked on
+                    window.open(this.url, "_blank");
+                });
+
+
+            }
+        }
+
+    }
+
+    return houseThreshold;
+}
+
 // place house markers 
 function placeHomeMarker(map, lat, lng, location){
      // remove all markers in the map
@@ -393,157 +495,40 @@ function placeHomeMarker(map, lat, lng, location){
     try{ 
     readTextFile("data/coordinates_myhome.json", function (text) {
 
+        // object reference for the file
         var data = JSON.parse(text);
 
-        // place markers after loading the map        
-        var length = Object.keys(data.ID).length;
-
-        //initializing house threshold
+        // default distance for markers ie 5km
+        var minDistance = 0, maxDistance = 5; 
+        
+        // initializing
         var houseThreshold = 0;
         
-        // array to store markers
-        var aMarkers = [];
-        
-        var customMarker = 'images/home.svg';
-        
-        var center = {lat: lat, lng: lng};
-
-        // code used from https://tommcfarlin.com/multiple-infowindows-google-maps/ and modified.
-        for (var i = 0; i < length; i++) {
-
-            var address = data.ID[i].address;            
-
-            if(address.toUpperCase().includes(location.toUpperCase())){
-
-            // calculating distance between job location and this house
-            var distance = calculateDistance(lat,lng,data.ID[i].lat,data.ID[i].lng);
-            var price = data.ID[i].price;
-           // var image = data.ID[i].image;
+        // getting the 
+        houseThreshold = autoDistance(minDistance, maxDistance, data, map, location, houseThreshold, lat, lng);
+          
+        // if less that 3 houses are being shown then search for more by increasin the distance to 10km
+        if(houseThreshold <3){
             
-            if( distance < 5 ){
-                houseThreshold = houseThreshold + 1;
-                
-                var circle5 = new google.maps.Circle({
-                    strokeColor: '#FF4444',
-                    strokeOpacity: 0.2,
-                    strokeWeight: 2,
-                    //fillColor: '#FF0000',
-                    fillOpacity: 0,
-                    map: map,
-                    center: center,
-                    radius: 5000
-                  });
-        
+            minDistance = 5;
+            maxDistance = 10;
             
-                var format = "<div id='img' style='float:left'><img src='http://i.stack.imgur.com/g672i.png'></div>" + 
-                "<div style = 'float:right; padding: 10px; font-size:18px'><strong>" + "COST: "+ price + "€"+ 
-                '</strong><br>' + '<br>' +'<strong>' + "ADDRESS: " +'</stong>'+ address + '</div>';
-
-                // getting the link from record
-                var web = data.ID[i].url;
-                
-                // add marker
-                var markerObj = addMarker(data,map, i, format,customMarker,web);
-                
-                aMarkers.push(markerObj);
-                
-                // event listener for when the user clicks on the marker
-                google.maps.event.addListener(markerObj, 'click', function () {
-                    // launches google maps while sharing the county clicked on
-                   window.open(this.url, "_blank");
-                });
-            }
-          }
-        }
-        // if less that 4 houses are being shown then search for more by increasin the distance to 10km
-    if(houseThreshold <3){
-       
-        for (var i = 0; i < length; i++) {
-
-        var address = data.ID[i].address;
-        
-        if((address.toUpperCase()).includes(location.toUpperCase())){
-
-        // calculating distance between job location and this house
-        var distance = calculateDistance(lat,lng,data.ID[i].lat,data.ID[i].lng);
-        
-        if( distance > 5 && distance < 10){
-            houseThreshold = houseThreshold + 1;
-
-            var circle10 = new google.maps.Circle({
-                strokeColor: '#000000',
-                strokeOpacity: 0.2,
-                strokeWeight: 1,
-                //fillColor: '#FF0000',
-                fillOpacity: 0,
-                map: map,
-                center: center,
-                radius: 10000
-              });
-
-            var format =  '<div><strong>' + "Home" + '</strong><br>' + '<br>' +
-            data.ID[i].address + '</div>';
-
-            // getting the link from record
-            var web = data.ID[i].url;
-            
-            // add marker
-            var markerObj = addMarker(data,map, i, format,customMarker,web);
-
-            aMarkers.push(markerObj);
-            
-            // event listener for when the user clicks on the marker
-            google.maps.event.addListener(markerObj, 'click', function() {
-                // launches google maps while sharing the county clicked on
-                window.open(this.url);
-                });
-            }}}
+            houseThreshold = autoDistance(minDistance, maxDistance, data, map, location, houseThreshold, lat, lng);
         }
 
-            // if less that 4 houses are being shown then search for more by increasin the distance to 10km
-    if(houseThreshold < 3){
-       
-        for (var i = 0; i < length; i++) {
-
-        var address = data.ID[i].address;
-        
-        if((address.toUpperCase()).includes(location.toUpperCase())){
-
-        // calculating distance between job location and this house
-        var distance = calculateDistance(lat,lng,data.ID[i].lat,data.ID[i].lng);
-        
-        if( distance > 10 && distance < 20){
-
-            var circle20 = new google.maps.Circle({
-                strokeColor: '#ff0000',
-                strokeOpacity: 0.2,
-                strokeWeight: 1,
-                //fillColor: '#FF0000',
-                fillOpacity: 0,
-                map: map,
-                center: center,
-                radius: 20000
-              });
-
-            var format =  '<div><strong>' + "Home" + '</strong><br>' + '<br>' +
-            data.ID[i].address + '</div>';
-
-            // getting the link from record
-            var web = data.ID[i].url;
+        // if its still less than 3 houses then increase the range to 20km
+        if(houseThreshold < 3){
+            minDistance = 10;
+            maxDistance = 20;
             
-            // add marker
-            var markerObj = addMarker(data, map, i, format, customMarker, web);
-
-            aMarkers.push(markerObj);
-            
-            // event listener for when the user clicks on the marker
-            google.maps.event.addListener(markerObj, 'click', function() {
-                // launches google maps while sharing the county clicked on
-                window.open(this.url);
-                });
-            }}}
+            houseThreshold = autoDistance(minDistance, maxDistance, data, map, location, houseThreshold, lat, lng);
         }
 
+        // if there are still less houses then 3 then there is no hope for the county seriously.
+        if(houseThreshold < 3){ 
+            console.log("this county is doomed!");
+        }        
+        
         // images to load when multiple markers are presented 
         var options = {
             imagePath: 'images/m'
