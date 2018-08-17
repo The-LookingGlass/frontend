@@ -26,11 +26,11 @@ function myMap() {
                 //setup markers
                 setMapOnAll(map);
         
-                  // reseting the code
-                  var app = new Vue({
+                // reseting the code
+                var app = new Vue({
                     el: "#floating-panel",
                     methods: {
-                      changeCenter: function(){
+                        changeCenter: function(){
 
                             location = getAllUrlParams().county;
 
@@ -52,8 +52,6 @@ function myMap() {
                             
                             // marking cluster only applicable for dublin
                             if(location.toUpperCase() == "DUBLIN"){
-                
-                                //console.log("still inside");
                                 // images to load when multiple markers are presented 
                                 var options = {
                                    imagePath: 'images/m'
@@ -61,40 +59,40 @@ function myMap() {
                         
                                // initializing marker cluster
                                markerCluster = new MarkerClusterer(map, markers, options); 
-                            }
-                            
-                }
-            }
-        });
+                            } 
+                        }
+                    }
+                });
 
-        // change county
-    var app2 = new Vue({
-    el: "#floating-panel2",
-    methods: {
-      changeCenter: function(){
+                // change county
+                var app2 = new Vue({
+                    el: "#floating-panel2",
+                    methods: {
+                        changeCenter: function(){
 
-            var location = getAllUrlParams().county;
+                            var location = getAllUrlParams().county;
   
-            // clean the storing array and remove all markers
-            setMapOnAll(null);
-            markers = [];
+                            // clean the storing array and remove all markers
+                            setMapOnAll(null);
+                            markers = [];
             
-            // create the map again
-            var map = initMap(data, location);
+                            // create the map again
+                            var map = initMap(data, location);
 
-            // create markers for the county
-            markerpPlacement(data, map, location);
+                            // create markers for the county
+                            markerpPlacement(data, map, location);
             
-            //setup markers
-            setMapOnAll(map);
-      }
+                            //setup markers
+                            setMapOnAll(map);
+                        }
+                    }
+                });
+  
+            });
         }
-        });
-  
-        });
-            }catch(err){
-                console.log(err.message);
-            }
+        catch(err){
+            console.log(err.message);
+        }
     
 }
 
@@ -135,6 +133,7 @@ function calculateDistance(lat1, lng1, lat2, lng2){
 }
 
 // initialize map
+
 function initMap(data, location){
 
     // fetching data from the json file for centering the map
@@ -389,6 +388,61 @@ function markerpPlacement(data, map, location){
     }
 }      
 
+// place house markers 
+function placeHomeMarker(map, lat, lng, location){
+     // remove all markers in the map
+     
+    try{ 
+    readTextFile("data/coordinates_myhome.json", function (text) {
+
+        // object reference for the file
+        var data = JSON.parse(text);
+
+        // default distance for markers ie 5km
+        var minDistance = 0, maxDistance = 5; 
+        
+        // initializing
+        var houseThreshold = 0;
+        
+        // getting the 
+        houseThreshold = autoDistance(minDistance, maxDistance, data, map, location, houseThreshold, lat, lng);
+          
+        // if less that 3 houses are being shown then search for more by increasin the distance to 10km
+        if(houseThreshold <3){
+            
+            minDistance = 5;
+            maxDistance = 10;
+            
+            houseThreshold = autoDistance(minDistance, maxDistance, data, map, location, houseThreshold, lat, lng);
+        }
+
+        // if its still less than 3 houses then increase the range to 20km
+        if(houseThreshold < 3){
+            minDistance = 10;
+            maxDistance = 20;
+            
+            houseThreshold = autoDistance(minDistance, maxDistance, data, map, location, houseThreshold, lat, lng);
+        }
+
+        // if there are still less houses then 3 then there is no hope for the county seriously.
+        if(houseThreshold < 3){ 
+            console.log("this county is doomed!");
+        }        
+        
+        // images to load when multiple markers are presented 
+        var options = {
+            imagePath: 'images/m'
+        };
+
+        // initializing marker cluster
+        var markerCluster = new MarkerClusterer(map, aMarkers, options);
+
+            });
+        }catch(err){
+            console.log(err.message);
+        }
+}
+
 // placing home markers and initializing circle boundary automatically 
 function autoDistance(min, max, data, map, location, houseThreshold, lat, lng){
 
@@ -486,61 +540,6 @@ function autoDistance(min, max, data, map, location, houseThreshold, lat, lng){
     }
 
     return houseThreshold;
-}
-
-// place house markers 
-function placeHomeMarker(map, lat, lng, location){
-     // remove all markers in the map
-     
-    try{ 
-    readTextFile("data/coordinates_myhome.json", function (text) {
-
-        // object reference for the file
-        var data = JSON.parse(text);
-
-        // default distance for markers ie 5km
-        var minDistance = 0, maxDistance = 5; 
-        
-        // initializing
-        var houseThreshold = 0;
-        
-        // getting the 
-        houseThreshold = autoDistance(minDistance, maxDistance, data, map, location, houseThreshold, lat, lng);
-          
-        // if less that 3 houses are being shown then search for more by increasin the distance to 10km
-        if(houseThreshold <3){
-            
-            minDistance = 5;
-            maxDistance = 10;
-            
-            houseThreshold = autoDistance(minDistance, maxDistance, data, map, location, houseThreshold, lat, lng);
-        }
-
-        // if its still less than 3 houses then increase the range to 20km
-        if(houseThreshold < 3){
-            minDistance = 10;
-            maxDistance = 20;
-            
-            houseThreshold = autoDistance(minDistance, maxDistance, data, map, location, houseThreshold, lat, lng);
-        }
-
-        // if there are still less houses then 3 then there is no hope for the county seriously.
-        if(houseThreshold < 3){ 
-            console.log("this county is doomed!");
-        }        
-        
-        // images to load when multiple markers are presented 
-        var options = {
-            imagePath: 'images/m'
-        };
-
-        // initializing marker cluster
-        var markerCluster = new MarkerClusterer(map, aMarkers, options);
-
-            });
-        }catch(err){
-            console.log(err.message);
-        }
 }
 
 // loading county data json file
