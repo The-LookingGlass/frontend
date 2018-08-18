@@ -87,7 +87,19 @@ function myMap() {
                         }
                     }
                 });
-  
+
+                var app3 = new Vue({
+                    el: "#dropDownVue",
+                    data:{
+                        range:{}
+                    },
+                    methods:{
+                        test: function(){
+                            
+                        
+                        }
+                    }
+                });
             });
         }
         catch(err){
@@ -304,71 +316,75 @@ function markerpPlacement(data, map, location){
                 var homepage = data.ID[i].homepage;  
                 
                 if(homepage !== null){
-                // format for info window
-             var format = "<div style='float:left'><img src='http://i.stack.imgur.com/g672i.png'></div>" + 
-             "<div style = 'float:right; padding:10px; font-size:18px'><strong>" + data.ID[i].title+'</strong><br>'+ 
-             '<br>'+'<strong>' + "COMPANY: "+ '</strong>' + data.ID[i].company.toUpperCase() +
-             '<br>'+ '<strong>' + "SALARY: "+ '</strong>' + salary +
-             '<br>'+ '<strong>' + "HOMEPAGE: "+ '</strong>'+ homepage +'</div>';
-                }
+                    // format for info window
+                    var format = "<div style='float:left'><img src='http://i.stack.imgur.com/g672i.png'></div>" + 
+                        "<div style = 'float:right; padding:10px; font-size:18px'><strong>" + data.ID[i].title+'</strong><br>'+ 
+                        '<br>'+'<strong>' + "COMPANY: "+ '</strong>' + data.ID[i].company.toUpperCase() +
+                        '<br>'+ '<strong>' + "SALARY: "+ '</strong>' + salary +
+                        '<br>'+ '<strong>' + "HOMEPAGE: "+ '</strong>'+ homepage +'</div>';
+                    }
                 else{
                         // format for info window
-             var format = "<div style='float:left'><img src='http://i.stack.imgur.com/g672i.png'></div>" + 
-             "<div style = 'float:right; padding:10px; font-size:18px'><strong>" + data.ID[i].title+'</strong><br>'+ 
-             '<br>' +'<strong>' + "COMPANY: "+ '</strong>'+ data.ID[i].company.toUpperCase() +
-             '<br>'+ '<strong>' + "SALARY: "+ '</strong>' + salary + '</div>';
-                }
-             var customMarker = 'images/standardMarker.svg';
+                    var format = "<div style='float:left'><img src='http://i.stack.imgur.com/g672i.png'></div>" + 
+                        "<div style = 'float:right; padding:10px; font-size:18px'><strong>" + data.ID[i].title+'</strong><br>'+ 
+                        '<br>' +'<strong>' + "COMPANY: "+ '</strong>'+ data.ID[i].company.toUpperCase() +
+                        '<br>'+ '<strong>' + "SALARY: "+ '</strong>' + salary + '</div>';
+                    }
+                
+                    var customMarker = 'images/standardMarker.svg';
              
-             // adding markers to the array 
-             var markerObj = addMarker(data, map, i, format, customMarker, jobLink);
+                // adding markers to the array 
+                var markerObj = addMarker(data, map, i, format, customMarker, jobLink);
     
-              // push marker on to the array    
+                // push marker on to the array    
                 markers.push(markerObj);
                 
                 // setting variable to false as there the marker is still not clicked
                 var singleClick = false;
     
-            // event listener for when the user clicks on the marker
-            google.maps.event.addListener(markerObj,'click', function (e) {
+                // event listener for when the user clicks on the marker
+                google.maps.event.addListener(markerObj,'click', function (e) {
                 
                 /* Recreate the map to display 1 company and nearby houses */
                 
                 // if marker has been clicked once then show website for job the next click 
-                if(!singleClick){
-                map = initMap(data,location);
-                // map properties            
+                    if(!singleClick){
+                        
+                        // initialize map again
+                        map = initMap(data,location);           
     
-                // leave the company's marker while presenting housing data
-                this.setMap(map);
+                        // leave the company's marker while presenting housing data
+                        this.setMap(map);
     
-                // position of the selected job 
-                var lat = e.latLng.lat();
-                var lng = e.latLng.lng();
+                        // position of the selected job 
+                        var jobLocation ={ 
+                            lat: e.latLng.lat(), 
+                            lng: e.latLng.lng()
+                        };
                 
-                // display housing data
-                placeHomeMarker( map, lat, lng, location);
-                
-                singleClick = true;
+                        // display housing data
+                        placeHomeMarker(map, jobLocation, location);
+                        
+                        // checking if the user made first click or not
+                        singleClick = true;
     
-            }else{
+                    }else{
                 
-                if(this.url == undefined || this.url == "null"){
-                    console.log("error");
-                }
+                        if(this.url == undefined || this.url == "null"){
+                            console.log("error");
+                        }
                 
-                else{
+                        else{
                     
-                    window.open(this.url);
-            }
+                            window.open(this.url);
+                        }
     
-            // reset click back to show houses
-            singleClick = false;
+                    // reset click back to show houses
+                    singleClick = false;
+                    }
+                });
             }
-            });
-           }
 
-        
         }
          catch(err) {
              console.log(err.message);
@@ -389,7 +405,7 @@ function markerpPlacement(data, map, location){
 }      
 
 // place house markers 
-function placeHomeMarker(map, lat, lng, location){
+function placeHomeMarker(map, jobLocation, location, priceRange){
      // remove all markers in the map
      
     try{ 
@@ -403,25 +419,43 @@ function placeHomeMarker(map, lat, lng, location){
         
         // initializing
         var houseThreshold = 0;
-        
-        // getting the 
-        houseThreshold = autoDistance(minDistance, maxDistance, data, map, location, houseThreshold, lat, lng);
+
+        // json object to transfer
+        var homeProperties = {
+            minDistance: minDistance,
+            maxDistance: maxDistance,
+            data: data,
+            houseThreshold: houseThreshold
+        };
+
+        // if price range is provided in the parameter then use it else provide default range
+        if(priceRange == undefined){
+            // default price range
+            priceRange = {
+                max:1000,
+                min:2000
+            };
+        }
+    
+        // getting the current number of houses  
+        houseThreshold = autoDistance(homeProperties, map, location, jobLocation, priceRange);
           
         // if less that 3 houses are being shown then search for more by increasin the distance to 10km
         if(houseThreshold <3){
             
-            minDistance = 5;
-            maxDistance = 10;
+            homeProperties.minDistance = 5;
+            homeProperties.maxDistance = 10;
             
-            houseThreshold = autoDistance(minDistance, maxDistance, data, map, location, houseThreshold, lat, lng);
+            houseThreshold = autoDistance(homeProperties, map, location, jobLocation, priceRange);
         }
 
         // if its still less than 3 houses then increase the range to 20km
         if(houseThreshold < 3){
-            minDistance = 10;
-            maxDistance = 20;
+
+            homeProperties.minDistance = 10;
+            homeProperties.maxDistance = 20;
             
-            houseThreshold = autoDistance(minDistance, maxDistance, data, map, location, houseThreshold, lat, lng);
+            houseThreshold = autoDistance(homeProperties, map, location, jobLocation, priceRange);
         }
 
         // if there are still less houses then 3 then there is no hope for the county seriously.
@@ -444,35 +478,38 @@ function placeHomeMarker(map, lat, lng, location){
 }
 
 // placing home markers and initializing circle boundary automatically 
-function autoDistance(min, max, data, map, location, houseThreshold, lat, lng){
+function autoDistance(prop, map, location, jobLocation, price){
 
     var radius;
     var cirleColor;
 
     // clear already stored markers in array
     aMarkers = [];
-    var center = {lat: lat, lng: lng};
 
     // length of data array        
     var length = Object.keys(data.ID).length;
 
     // switching radius of cicle according to range provided
-    switch(max){
+    switch(prop.maxDistance){
         
-        case 5: radius = 5000; 
-        cicleColor= "#228b22";// dark green
-        break;
+        case 5: 
+            radius = 5000; 
+            cicleColor= "#228b22";// dark green
+            break;
         
-        case 10: radius = 10000; 
-        cirleColor = "#ffe200"; // dark yellow
-        break;
+        case 10: 
+            radius = 10000; 
+            cirleColor = "#ffe200"; // dark yellow
+            break;
         
-        case 20: radius = 20000;
-        cirleColor = "#ff0000"; // dark red
-        break;
+        case 20:
+            radius = 20000;
+            cirleColor = "#ff0000"; // dark red
+            break;
         
-        default: radius = 5000;
-        cicleColor= "#228b22"; 
+        default: 
+            radius = 5000;
+            cicleColor= "#228b22"; 
 
     }
     
@@ -483,16 +520,16 @@ function autoDistance(min, max, data, map, location, houseThreshold, lat, lng){
     for (var i = 0; i < length; i++) {
         
         // address of the house
-        var address = data.ID[i].address;            
+        var address = prop.data.ID[i].address;            
 
         // check if the house is in the same county as the job else skip
         if(address.toUpperCase().includes(location.toUpperCase())){
 
             // calculating distance between job location and this house
-            var distance = calculateDistance(lat , lng, data.ID[i].lat, data.ID[i].lng);
+            var distance = calculateDistance(jobLocation.lat , jobLocation.lng, prop.data.ID[i].lat, prop.data.ID[i].lng);
         
             // cost of house
-            var price = data.ID[i].price;
+            var costOfHouse = prop.data.ID[i].price;
 
             // draw circle for the specified radius around the selected job
             var circle = new google.maps.Circle({
@@ -501,15 +538,12 @@ function autoDistance(min, max, data, map, location, houseThreshold, lat, lng){
                 strokeWeight: 2,
                 fillOpacity: 0,
                 map: map,
-                center: center,
+                center: jobLocation,
                 radius: radius
             });
-            
-            // hardcoded for testing before implementing the working dropdown
-            var minPrice = 1000, maxPrice = 2000;
 
             // make marker only if it comes under the defined price and distance range 
-            if(price > minPrice && price < maxPrice && distance > min && distance < max){  
+            if(costOfHouse > price.min && costOfHouse < price.max && distance > prop.minDistance && distance < prop.maxDistance){  
                 
                 // increment everytime a house marker is placed
                 houseThreshold = houseThreshold + 1;

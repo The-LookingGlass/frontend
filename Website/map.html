@@ -48,6 +48,24 @@
                         border-radius: 15px ;
                         cursor: pointer;
       }
+      #dropDownVue {
+        position: absolute;
+        top: 150px;
+        left: 20%;
+        z-index: 5;
+       
+        border: 1px solid #999;
+        text-align: center;
+        font-family: 'Roboto','sans-serif';
+        line-height: 0px;
+        padding-left: 5px;
+        background-color: #4CAF50;
+                        color: white;
+                        padding: 10px;
+                        font-size: 30px;
+                        border-radius: 15px ;
+                        cursor: pointer;
+      }
 
     </style>
 
@@ -103,6 +121,22 @@
             <div id="floating-panel2">
                 <button v-on:click="changeCenter">change county</button>
             </div>
+            <div id = "dropDownVue">
+                <select v-model= "range" @change="test">
+                    <option value = "500">apples</option>
+                    <option value = "1000">oranges</option>
+                    <option value = "2000">pine</option>
+                       <!--
+                           <a href="#" onclick="test()">under 500</a>
+                        <a href="#" onclick="test()">500-999</a>
+                        <a href="#" onclick="test()">1000-1499</a>
+                        <a href="#" onclick="test()">1500-1999</a>
+                        <a href="#" onclick="test()">1999-3000</a>
+                    
+                    -->
+                </select>
+
+            </div>
             <script type="text/javascript" src="googleMaps.js"></script>
         
         <div id="googleMap"></div>
@@ -129,53 +163,5 @@
 </div>
 
 </main>
-<!--<footer class="site-footer footer">
-    <div class="columns">
-        <div class="column is-one-fifth">
-            <div class="columns">
-                <div class="contact column">
-                    <p><strong>Contact</strong></p>
-                    <p><a href="tel:+33603351963">+33&nbsp;(0)6&nbsp;03&nbsp;35&nbsp;19&nbsp;63</a></p>
-                </div>
-
-                <div class="siret column">
-                    <p><strong>SIRET</strong></p>
-                    <p>75068729500014</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="column column-right has-text-right is-hidden-mobile">
-            <div class="content">
-                
-                <a href="https://github.com/fbnlsr/primative.net"><i class="fab fa-github"></i></a>
-                <a href="https://twitter.com/fbnlsr" rel="me"><i class="fab fa-twitter"></i></a>
-                <a href="/blog/index.xml"><i class="fas fa-rss"></i></a>
-            </div>
-        </div>
-    </div>
-</footer>
-
-<div class="modal is-comment-modal">
-    <div class="modal-background"></div>
-    <div class="modal-card">
-        <header class="modal-card-head">
-            <p class="modal-card-title">Thank you!</p>
-            <button class="delete" aria-label="close"></button>
-        </header>
-        <section class="modal-card-body">
-            <p>Your comment was successfully sent. It&#39;ll appear on the website once it&#39;s approved.</p>
-            <p>If you&#39;ve liked this article, consider sharing it on Twitter!</p>
-            <div class="btn is-twitter-share">
-                <a href="https://twitter.com/share?url=https%3a%2f%2fwww.primative.net%2f&text=Fabien%20Lasserre%20-%20Full%20stack%20web%20developer%20from%20Bordeaux%2c%20France&via=fbnlsr"><i class="fab fa-twitter"></i> Share it on Twitter!</a>
-            </div>
-        </section>
-    </div>
-  </div>
-
-<script defer src='https://d33wubrfki0l68.cloudfront.net/js/bdc1c5ffb57d83a5791fdd7c807531d6b6e82abf/js/main.js'></script>
-
-
 </body>
 </html>
-
