@@ -5,10 +5,13 @@ var aMarkers = [];
 
 var markerCluster;
 
+// to store current selected marker
+var markerObjGlobal;
+
 function myMap() {
    
     // getting county location from the parameters in URl5fxhj
-    var location = getAllUrlParams().county;
+    var county = getAllUrlParams().county;
     
         try {
             // reading data 
@@ -18,10 +21,10 @@ function myMap() {
                 var data = JSON.parse(text);
         
                 // Init map and get map object
-                var map = initMap(data, location);
+                var map = initMap(data, county);
                 
                 // place markers after loading the map
-                markerpPlacement(data, map, location);
+                markerpPlacement(data, map, county);
         
                 //setup markers
                 setMapOnAll(map);
@@ -32,7 +35,7 @@ function myMap() {
                     methods: {
                         changeCenter: function(){
 
-                            location = getAllUrlParams().county;
+                            county = getAllUrlParams().county;
 
                             // cache previous results
                             var tempArray = markers;
@@ -42,7 +45,7 @@ function myMap() {
                             markers = [];
                             
                             // create the map again
-                            var map = initMap(data, location);
+                            var map = initMap(data, county);
                             
                             // restoring data without processing again
                             markers = tempArray;
@@ -51,7 +54,7 @@ function myMap() {
                             setMapOnAll(map);
                             
                             // marking cluster only applicable for dublin
-                            if(location.toUpperCase() == "DUBLIN"){
+                            if(county.toUpperCase() == "DUBLIN"){
                                 // images to load when multiple markers are presented 
                                 var options = {
                                    imagePath: 'images/m'
@@ -70,17 +73,17 @@ function myMap() {
                     methods: {
                         changeCenter: function(){
 
-                            var location = getAllUrlParams().county;
+                            var county = getAllUrlParams().county;
   
                             // clean the storing array and remove all markers
                             setMapOnAll(null);
                             markers = [];
             
                             // create the map again
-                            var map = initMap(data, location);
+                            var map = initMap(data, county);
 
                             // create markers for the county
-                            markerpPlacement(data, map, location);
+                            markerpPlacement(data, map, county);
             
                             //setup markers
                             setMapOnAll(map);
@@ -96,7 +99,80 @@ function myMap() {
                     methods:{
                         test: function(){
                             
-                        
+                            // initializing
+                            var currentJob;
+                            
+                            // get params from  URL
+                            county = getAllUrlParams().county;
+
+                            // initialize map again
+                            map = initMap(data,county);           
+                            
+                            if(markerObjGlobal == undefined){
+                                resetMap(data);
+                            }
+                            else{
+                                
+                                var priceRange;
+                                
+                                // store global variable in local variable
+                                 currentJob = markerObjGlobal;
+                                
+                                // clear global variable for reuse
+                                //markerObjGlobal = undefined;
+
+                                // leave the company's marker while presenting housing data
+                                currentJob.setMap(map);
+                                
+                                // position of the selected job 
+                                var jobLocation ={ 
+                                    lat: currentJob.getPosition().lat(), 
+                                    lng: currentJob.getPosition().lng()
+                                };
+
+                                switch(this.range){
+
+                                    case 500:
+                                        priceRange = {
+                                            max: 499,
+                                            min: 0
+                                        };
+                                        break;
+                                    
+                                    case 1000:
+                                        priceRange = {
+                                            max: 999,
+                                            min: 500
+                                        };
+                                        break;
+                                    
+                                    case 1500:
+                                        priceRange = {
+                                            max: 1499,
+                                            min: 1000
+                                        };
+                                        break;
+
+                                    case 2000:
+                                        priceRange = {
+                                            max: 2000,
+                                            min: 1500
+                                        };
+                                        break;
+                                    
+                                    default: 
+                                        priceRange = {
+                                            max: 1000,
+                                            min: 0
+                                        };
+                                        break;    
+
+                                }
+
+                                // placing the markers
+                                placeHomeMarker(map, jobLocation, county, priceRange);
+                                
+                            }
                         }
                     }
                 });
@@ -145,13 +221,12 @@ function calculateDistance(lat1, lng1, lat2, lng2){
 }
 
 // initialize map
-
-function initMap(data, location){
+function initMap(data, county){
 
     // fetching data from the json file for centering the map
-    var long = data[location].longitude;
-    var lat = data[location].latitude;
-    var zoom = data[location].zoom;
+    var long = data[county].longitude;
+    var lat = data[county].latitude;
+    var zoom = data[county].zoom;
     //var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
 
     var mapStyle = [
@@ -290,10 +365,10 @@ function setMapOnAll(map) {
         for (var i = 0; i < markers.length; i++) {
           markers[i].setMap(map);
         }
-      }      
+}      
 
 // change center as well as place marker cluster
-function markerpPlacement(data, map, location){
+function markerpPlacement(data, map, county, priceRange){
 
     var length = Object.keys(data.ID).length;
     var industry = getAllUrlParams().industry;
@@ -301,13 +376,13 @@ function markerpPlacement(data, map, location){
         // code used from https://tommcfarlin.com/multiple-infowindows-google-maps/ and modified.
     for (var i = 0; i < length; i++) {
 
-        var county = data.ID[i].county;
+        var countyFromData = data.ID[i].county;
         var industryData =  data.ID[i].industry;
         try {
-            if (county !== undefined && 
+            if (countyFromData !== undefined && 
                 industry == industryData &&
-                (county.toUpperCase() == location.toUpperCase() || 
-                (county.toUpperCase()).includes(location.toUpperCase())
+                (countyFromData.toUpperCase() == county.toUpperCase() || 
+                (countyFromData.toUpperCase()).includes(county.toUpperCase())
                 )
             ){  
                 
@@ -347,11 +422,14 @@ function markerpPlacement(data, map, location){
                 
                 /* Recreate the map to display 1 company and nearby houses */
                 
+                // storing currently selected marker in a variable to use for filtering
+                markerObjGlobal = this;
+                
                 // if marker has been clicked once then show website for job the next click 
                     if(!singleClick){
                         
                         // initialize map again
-                        map = initMap(data,location);           
+                        map = initMap(data,county);           
     
                         // leave the company's marker while presenting housing data
                         this.setMap(map);
@@ -361,9 +439,18 @@ function markerpPlacement(data, map, location){
                             lat: e.latLng.lat(), 
                             lng: e.latLng.lng()
                         };
+
+                         // if price range is provided in the parameter then use it else provide default range        
+                         if(priceRange == undefined){
+                        // default price range
+                            priceRange = {
+                                max:2000,
+                                min:1000
+                            };
+                        }
                 
                         // display housing data
-                        placeHomeMarker(map, jobLocation, location);
+                        placeHomeMarker(map, jobLocation, county, priceRange);
                         
                         // checking if the user made first click or not
                         singleClick = true;
@@ -391,7 +478,7 @@ function markerpPlacement(data, map, location){
         }
      }  
 
-     if(location.toUpperCase() == "DUBLIN"){
+     if(county.toUpperCase() == "DUBLIN"){
                 
         //console.log("still inside");
         // images to load when multiple markers are presented 
@@ -405,7 +492,7 @@ function markerpPlacement(data, map, location){
 }      
 
 // place house markers 
-function placeHomeMarker(map, jobLocation, location, priceRange){
+function placeHomeMarker(map, jobLocation, county, priceRange){
      // remove all markers in the map
      
     try{ 
@@ -425,37 +512,28 @@ function placeHomeMarker(map, jobLocation, location, priceRange){
             minDistance: minDistance,
             maxDistance: maxDistance,
             data: data,
-            houseThreshold: houseThreshold
         };
-
-        // if price range is provided in the parameter then use it else provide default range
-        if(priceRange == undefined){
-            // default price range
-            priceRange = {
-                max:1000,
-                min:2000
-            };
-        }
     
         // getting the current number of houses  
-        houseThreshold = autoDistance(homeProperties, map, location, jobLocation, priceRange);
+        houseThreshold = autoDistance(homeProperties, map, county, jobLocation, priceRange);
           
         // if less that 3 houses are being shown then search for more by increasin the distance to 10km
         if(houseThreshold <3){
-            
+            houseThreshold = houseThreshold;
             homeProperties.minDistance = 5;
             homeProperties.maxDistance = 10;
             
-            houseThreshold = autoDistance(homeProperties, map, location, jobLocation, priceRange);
+            houseThreshold = autoDistance(homeProperties, map, county, jobLocation, priceRange);
         }
 
         // if its still less than 3 houses then increase the range to 20km
         if(houseThreshold < 3){
-
+            
+            houseThreshold = houseThreshold;
             homeProperties.minDistance = 10;
             homeProperties.maxDistance = 20;
             
-            houseThreshold = autoDistance(homeProperties, map, location, jobLocation, priceRange);
+            houseThreshold = autoDistance(homeProperties, map, county, jobLocation, priceRange);
         }
 
         // if there are still less houses then 3 then there is no hope for the county seriously.
@@ -478,7 +556,7 @@ function placeHomeMarker(map, jobLocation, location, priceRange){
 }
 
 // placing home markers and initializing circle boundary automatically 
-function autoDistance(prop, map, location, jobLocation, price){
+function autoDistance(prop, map, county, jobLocation, price){
 
     var radius;
     var cirleColor;
@@ -487,7 +565,7 @@ function autoDistance(prop, map, location, jobLocation, price){
     aMarkers = [];
 
     // length of data array        
-    var length = Object.keys(data.ID).length;
+    var length = Object.keys(prop.data.ID).length;
 
     // switching radius of cicle according to range provided
     switch(prop.maxDistance){
@@ -523,7 +601,7 @@ function autoDistance(prop, map, location, jobLocation, price){
         var address = prop.data.ID[i].address;            
 
         // check if the house is in the same county as the job else skip
-        if(address.toUpperCase().includes(location.toUpperCase())){
+        if(address.toUpperCase().includes(county.toUpperCase())){
 
             // calculating distance between job location and this house
             var distance = calculateDistance(jobLocation.lat , jobLocation.lng, prop.data.ID[i].lat, prop.data.ID[i].lng);
@@ -546,18 +624,18 @@ function autoDistance(prop, map, location, jobLocation, price){
             if(costOfHouse > price.min && costOfHouse < price.max && distance > prop.minDistance && distance < prop.maxDistance){  
                 
                 // increment everytime a house marker is placed
-                houseThreshold = houseThreshold + 1;
+                prop.houseThreshold = prop.houseThreshold + 1;
                 
                 // format for infowindow
                 var format = "<div id='img' style='float:left'><img src='http://i.stack.imgur.com/g672i.png'></div>" + 
-                    "<div style = 'float:right; padding: 10px; font-size:18px'><strong>" + "COST: "+ price + "€"+ 
+                    "<div style = 'float:right; padding: 10px; font-size:18px'><strong>" + "COST: "+ costOfHouse + "€"+ 
                     '</strong><br>' + '<br>' +'<strong>' + "ADDRESS: " +'</stong>'+ address + '</div>';
 
                 // getting the link from record
-                var web = data.ID[i].url;
+                var web = prop.data.ID[i].url;
     
                 // add marker
-                var markerObj = addMarker(data, map, i, format, customMarker, web);
+                var markerObj = addMarker(prop.data, map, i, format, customMarker, web);
 
                 aMarkers.push(markerObj);
     
@@ -566,16 +644,47 @@ function autoDistance(prop, map, location, jobLocation, price){
                 // launches google maps while sharing the county clicked on
                     window.open(this.url, "_blank");
                 });
-
-
             }
         }
 
     }
 
-    return houseThreshold;
+    return prop.houseThreshold;
 }
 
+// resets the map to the last set count and industry
+function resetMap(data){
+    
+    county = getAllUrlParams().county;
+
+    // cache previous results
+    var tempArray = markers;
+
+    // clean the storing array and remove all markers
+    setMapOnAll(null);
+    markers = [];
+    
+    // create the map again
+    var map = initMap(data, county);
+    
+    // restoring data without processing again
+    markers = tempArray;
+
+    //setup markers
+    setMapOnAll(map);
+    
+    // marking cluster only applicable for dublin
+    if(county.toUpperCase() == "DUBLIN"){
+        // images to load when multiple markers are presented 
+        var options = {
+           imagePath: 'images/m'
+       };
+
+       // initializing marker cluster
+       markerCluster = new MarkerClusterer(map, markers, options); 
+    } 
+
+}
 // loading county data json file
 
 // code used from https://codepen.io/KryptoniteDove/post/load-json-file-locally-using-pure-javascript
