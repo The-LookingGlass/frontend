@@ -94,7 +94,7 @@ function myMap() {
                 var app3 = new Vue({
                     el: "#dropDownVue",
                     data:{
-                        range:{}
+                        range:"default"
                     },
                     methods:{
                         test: function(){
@@ -112,7 +112,6 @@ function myMap() {
                                 resetMap(data);
                             }
                             else{
-                                
                                 var priceRange;
                                 
                                 // store global variable in local variable
@@ -132,28 +131,28 @@ function myMap() {
 
                                 switch(this.range){
 
-                                    case 500:
+                                    case "500":
                                         priceRange = {
                                             max: 499,
                                             min: 0
                                         };
                                         break;
                                     
-                                    case 1000:
+                                    case "1000" :
                                         priceRange = {
                                             max: 999,
                                             min: 500
                                         };
                                         break;
                                     
-                                    case 1500:
+                                    case "1500":
                                         priceRange = {
                                             max: 1499,
                                             min: 1000
                                         };
                                         break;
 
-                                    case 2000:
+                                    case "2000":
                                         priceRange = {
                                             max: 2000,
                                             min: 1500
@@ -491,7 +490,7 @@ function markerpPlacement(data, map, county, priceRange){
     }
 }      
 
-// place house markers 
+//place house markers 
 function placeHomeMarker(map, jobLocation, county, priceRange){
      // remove all markers in the map
      

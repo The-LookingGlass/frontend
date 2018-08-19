@@ -33,7 +33,7 @@
       #floating-panel2 {
         position: absolute;
         top: 150px;
-        left: 30%;
+        left: 35%;
         z-index: 5;
        
         border: 1px solid #999;
@@ -123,9 +123,12 @@
             </div>
             <div id = "dropDownVue">
                 <select v-model= "range" @change="test">
-                    <option value = "500">500</option>
-                    <option value = "1000">1000</option>
-                    <option value = "2000">2000</option>
+                    <option disabled value = "default" > Price Range for Accomodation</option>
+                    <option value = 500>under 500€</option>
+                    <option value = 1000>500€ - 1000€</option>
+                    <option value = 1500>1000€ - 1500€</option>
+                    <option value = 2000>1500€ - 2000€</option>
+
                        <!--
                            <a href="#" onclick="test()">under 500</a>
                         <a href="#" onclick="test()">500-999</a>
