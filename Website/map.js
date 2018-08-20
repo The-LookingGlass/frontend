@@ -63,12 +63,12 @@ d3.json("ireland.json", function(json) {
 });
 
 // loading data for the map to use
-  d3.json("data/job_data_heatmap.json", function(json) {
+d3.json("data/job_data_heatmap.json", function(json) {
     
-    // choose the industry specific data from json file
-  data = json[industry];
-  
-  counties.selectAll("path").attr("class", quantize);
+  // choose the industry specific data from json file
+data = json[industry];
+
+counties.selectAll("path").attr("class", quantize);
 });
 
 // normal color codes for normal maps

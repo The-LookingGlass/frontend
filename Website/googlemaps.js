@@ -624,7 +624,7 @@ function autoDistance(prop, map, county, jobLocation, price, houseThreshold){
                 
                 // format for infowindow
                 var format = "<div id='img' style='float:left'><img src='http://i.stack.imgur.com/g672i.png'></div>" + 
-                    "<div style = 'float:right; padding: 10px; font-size:18px'><strong>" + "COST: "+ costOfHouse + "€"+ 
+                    "<div style = 'float:right; padding: 10px; font-size:18px'><strong>" + "COST: "+ costOfHouse + "&euro;"+ 
                     '</strong><br>' + '<br>' +'<strong>' + "ADDRESS: " +'</stong>'+ address + '</div>';
 
                 // getting the link from record
