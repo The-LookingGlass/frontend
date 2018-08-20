@@ -5,7 +5,7 @@ var aMarkers = [];
 
 var markerCluster;
 
-// to store current selected marker
+// to store current selected job marker
 var markerObjGlobal;
 
 function myMap() {
@@ -116,9 +116,6 @@ function myMap() {
                                 
                                 // store global variable in local variable
                                  currentJob = markerObjGlobal;
-                                
-                                // clear global variable for reuse
-                                //markerObjGlobal = undefined;
 
                                 // leave the company's marker while presenting housing data
                                 currentJob.setMap(map);
@@ -514,7 +511,7 @@ function placeHomeMarker(map, jobLocation, county, priceRange){
         };
     
         // getting the current number of houses  
-        houseThreshold = autoDistance(homeProperties, map, county, jobLocation, priceRange);
+        houseThreshold = autoDistance(homeProperties, map, county, jobLocation, priceRange, houseThreshold);
           
         // if less that 3 houses are being shown then search for more by increasin the distance to 10km
         if(houseThreshold <3){
@@ -522,7 +519,7 @@ function placeHomeMarker(map, jobLocation, county, priceRange){
             homeProperties.minDistance = 5;
             homeProperties.maxDistance = 10;
             
-            houseThreshold = autoDistance(homeProperties, map, county, jobLocation, priceRange);
+            houseThreshold = autoDistance(homeProperties, map, county, jobLocation, priceRange, houseThreshold);
         }
 
         // if its still less than 3 houses then increase the range to 20km
@@ -532,7 +529,7 @@ function placeHomeMarker(map, jobLocation, county, priceRange){
             homeProperties.minDistance = 10;
             homeProperties.maxDistance = 20;
             
-            houseThreshold = autoDistance(homeProperties, map, county, jobLocation, priceRange);
+            houseThreshold = autoDistance(homeProperties, map, county, jobLocation, priceRange, houseThreshold);
         }
 
         // if there are still less houses then 3 then there is no hope for the county seriously.
@@ -555,7 +552,7 @@ function placeHomeMarker(map, jobLocation, county, priceRange){
 }
 
 // placing home markers and initializing circle boundary automatically 
-function autoDistance(prop, map, county, jobLocation, price){
+function autoDistance(prop, map, county, jobLocation, price, houseThreshold){
 
     var radius;
     var cirleColor;
@@ -623,7 +620,7 @@ function autoDistance(prop, map, county, jobLocation, price){
             if(costOfHouse > price.min && costOfHouse < price.max && distance > prop.minDistance && distance < prop.maxDistance){  
                 
                 // increment everytime a house marker is placed
-                prop.houseThreshold = prop.houseThreshold + 1;
+                houseThreshold = houseThreshold + 1;
                 
                 // format for infowindow
                 var format = "<div id='img' style='float:left'><img src='http://i.stack.imgur.com/g672i.png'></div>" + 
@@ -648,7 +645,7 @@ function autoDistance(prop, map, county, jobLocation, price){
 
     }
 
-    return prop.houseThreshold;
+    return houseThreshold;
 }
 
 // resets the map to the last set count and industry
