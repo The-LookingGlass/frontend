@@ -20,7 +20,14 @@ var tooltip = d3.select("body").append("div")
 .attr("class", "tooltip")       
 .style("opacity", 0);
 
-//modified version of d3js code from the project https://gist.github.com/2183412
+// get industry from parameters 
+var industry = getAllUrlParams().industry;
+
+/*
+*modified version of d3js code from the project https://gist.github.com/2183412
+*/
+
+// load ireland map as heatmap
 d3.json("ireland.json", function(json) {
     counties.selectAll("path")
       .data(json.features)
@@ -41,11 +48,10 @@ d3.json("ireland.json", function(json) {
         
         // On click launching stage 2
         .on("click", function(d){
-          console.log("i am in " + d.properties.id);
           var industry = getAllUrlParams().industry;
+          
           // launches google maps while sharing the county clicked on
           window.history.replaceState(null, null, "map.html?industry="+industry+"&county="+d.properties.id);
-          //window.location.reload();
         })
         
         // transition when mouse moves away
@@ -56,136 +62,13 @@ d3.json("ireland.json", function(json) {
       });
 });
 
-switchDropDown();
-
-d3.json("data/all_county_jobs.json", function(json) {
-  data = json;
-  counties.selectAll("path").attr("class", quantizeAll);
+// loading data for the map to use
+  d3.json("data/job_data_heatmap.json", function(json) {
+    // choose the industry specific data from json file
+  data = json[industry];
+  counties.selectAll("path").attr("class", quantize);
 });
 
-function switchDropDown(){
-  var industry = getAllUrlParams().industry;
-
-  switch(industry){
-
-    case "admin_support" : admin();
-    break;
-    
-    case "arts_entertainment": arts();
-    break;
-    
-    case "finance": finance();
-     break;
-    
-    case "health_social": health();
-    break;
-    
-    case "it": info(); 
-    break;
-    
-    case "manufacturing": manufacturing(); 
-    break;
-    
-    case "education": education();
-    break;
-    
-    case "construction": construction(); 
-    break;
-
-    default : var str = "check switch case name or dropDown.js";
-    console.log(str);
-    break;
-
-  }
-}
-
-// Onclick for dropdown 
-function admin() {
-  
-  // loading data for the map to use
-  d3.json("data/jobDataHeatmap/admin_support.json", function(json) {
-      data = json;
-      counties.selectAll("path").attr("class", quantize);
-  });
-}
-
-function arts() {
-
-  // loading data for the map to use
-  d3.json("data/jobDataHeatmap/arts_entertainment.json", function(json) {
-      data = json;
-      counties.selectAll("path").attr("class", quantize);
-  });
-}
-
-function finance() {
-
-  // loading data for the map to use
-  d3.json("data/jobDataHeatmap/finance.json", function(json) {
-      data = json;
-      counties.selectAll("path").attr("class", quantize);
-  });
-}
-
-function health() {
-  
-  // loading data for the map to use
-  d3.json("data/jobDataHeatmap/health_social.json", function(json) {
-      data = json;
-      counties.selectAll("path").attr("class", quantize);
-  });
-}
-
-function info() { 
- // loading data for the map to use
-  d3.json("data/jobDataHeatmap/it.json", function(json) {
-      data = json;
-      counties.selectAll("path").attr("class", quantize);
-  });
-}
-
-function manufacturing() { 
-  
-  // loading data for the map to use
-  d3.json("data/jobDataHeatmap/manufacturing.json", function(json) {
-      data = json;
-      counties.selectAll("path").attr("class", quantize);
-  });
-}
-
-function education() {  
-  // loading data for the map to use
-  d3.json("data/jobDataHeatmap/education.json", function(json) {
-      data = json;
-      counties.selectAll("path").attr("class", quantize);
-  });
-}
-
-function construction() {
-   // loading data for the map to use
-  d3.json("data/jobDataHeatmap/construction.json", function(json) {
-      data = json;
-      counties.selectAll("path").attr("class", quantize);
-  });
-}
-// special function for all the jobs in ireland
-function quantizeAll(d){
-  if(data[d.properties.id] < 100){
-    return "q2-9";
-  }
-  else if(data[d.properties.id] < 300){
-    return "q4-9";
-  }
-  else if(data[d.properties.id] < 600){
-    return "q6-9";
-  }
-  else if(data[d.properties.id] < 750){
-    return "q7-9";
-  }
-  else if(data[d.properties.id] > 750){
-    return "q8-9";
-  }  
-}
 // normal color codes for normal maps
 function quantize(d) {
   if(data[d.properties.id] < 10){
