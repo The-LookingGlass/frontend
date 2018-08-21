@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<style>
+    @import url(mapStyle.css);
+</style>
+
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+	<head>
+		<title>Visualization</title>
+		<style>
+			path {
+				stroke: steelblue;
+				stroke-width: 1;
+				fill: none;
+			}
+			
+			.axis {
+			  shape-rendering: crispEdges;
+			}
+			.x.axis line {
+			  stroke: lightgrey;
+			}
+			.x.axis .minor {
+			  stroke-opacity: .5;
+			}
+			.x.axis path {
+			  display: none;
+			}
+			.y.axis line, .y.axis path {
+			  fill: none;
+			  stroke: #000;
+			}
+		</style>
+</head>
+<body>
+
+	<div id="graph" class="aGraph" style="position:absolute;top:20px;left:0; float:left;">
+	<select id="sectors" style="width: 100px;">
+</select>
+</br>
+	<select size="20" id="country">
+</select>
+</div>
+<svg width="960" height="500"></svg>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script>
+var svg = d3.select("svg"),
+    margin = {top: 20, right: 20, bottom: 30, left: 150},
+    width = +svg.attr("width") - margin.left - margin.right,
+    height = +svg.attr("height") - margin.top - margin.bottom,
+    g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+var parseTime = d3.timeParse("%y");
+
+
+
+//Load in CSV data
+d3.csv("cso_industry_data.csv", function (data) {
+	var sector=data.map(function(d){return d.Activity});
+var uniqsec = sector.reduce(function(a,b){if (a.indexOf(b) < 0 ) a.push(b);
+					return a;},[]);
+var dropdown = document.getElementById("sectors");
+for (var i = 0; i < uniqsec.length; ++i) {
+    // Append the element to the end of Array list
+    dropdown[dropdown.length] = new Option(uniqsec[i]);
+}
+addData();
+	
+function addData(){
+var dat=data.filter(regionfilter)
+removeOptions(document.getElementById("country"));
+var county=dat.map(function(d){
+	return d.County});
+
+var uniqCo = county.reduce(function(a,b){if (a.indexOf(b) < 0 ) a.push(b);
+					return a;},[]);
+var ListView = document.getElementById("country");
+
+for (var i = 0; i < uniqCo.length; ++i) {
+    // Append the element to the end of Array list
+    ListView[ListView.length] = new Option(uniqCo[i]);
+}
+}	
+
+function removeOptions(selectbox)
+{
+    var i;
+    for(i = selectbox.options.length - 1 ; i >= 0 ; i--)
+    {
+        selectbox.remove(i);
+    }
+}
+
+function regionfilter(value){
+					return (value.Activity ==document.getElementById("sectors").value && value.value !="")
+				}	
+
+function regionfilter1(value){
+					return (value.Activity ==document.getElementById("sectors").value && value.County ==document.getElementById("country").value && value.value !="" )
+				}		
+function generateVis(){	
+var dat1=data.filter(regionfilter1)
+console.log(dat1)
+
+d3.select("g").remove();
+    g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+var x = d3.scaleTime()
+    .rangeRound([0, width]);
+
+var y = d3.scaleLinear()
+    .rangeRound([height, 0]);
+	
+	
+
+ x.domain(d3.extent(dat1, function (d) { return d.Year; }));
+	  y.domain([0, d3.max(dat1, function(d) { return parseInt(d.value); })]);
+	var line = d3.line()
+    .x(function(d) { return x(d.Year); })
+    .y(function(d) { return y(d.value); });
+	
+	g.append("g")
+      .attr("transform", "translate(0," + height + ")")
+      .call(d3.axisBottom(x))
+      .append("text")
+      .attr("fill", "#000")
+      .attr("x", 7)
+      .attr("dx", "84em")
+      .attr("text-anchor", "end")
+      .text("Year");
+
+
+  g.append("g")
+      .call(d3.axisLeft(y))
+    .append("text")
+      .attr("fill", "#000")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 6)
+      .attr("dy", "0.71em")
+      .attr("text-anchor", "end")
+      .text("Price ($)");
+
+  g.append("path")
+      .datum(dat1)
+      .attr("fill", "none")
+      .attr("stroke", "steelblue")
+      .attr("stroke-linejoin", "round")
+      .attr("stroke-linecap", "round")
+      .attr("stroke-width", 1.5)
+      .attr("d", line);
+	
+
+}
+
+document.getElementById("sectors").addEventListener('change',function (){
+							addData();
+							generateVis();
+							});
+document.getElementById("country").addEventListener('change',function (){
+							generateVis();
+							});
+
+});
+</script>
+</body>
+</html>

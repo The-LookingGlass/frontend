@@ -1,0 +1,1 @@
+This is the frontend code for project JobMap displaying job situation in Ireland
