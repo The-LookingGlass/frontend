@@ -1,0 +1,109 @@
+
+
+Job to first House:
+Distance using google Api (in kms) = 2.576243581463
+Distance using manual algorithm used in jobMap (in kms) = 3.966778671371285:
+Difference = 1.3905350899082851
+
+Job to second House
+Distance using google Api (in kms) = 3.166599401843
+Distance using manual algorithm used in jobMap (in kms) = 3.180043671240639
+Difference = 0.01344426939763889
+
+==== NEW JOB ====
+
+Job to first House
+Distance using google Api (in kms) = 3.889839035724
+Distance using manual algorithm used in jobMap (in kms) = 4.275559676892698
+Difference = 0.385720641168698
+
+Job to second House
+Distance using google Api (in kms) = 1.176138742542
+Distance using manual algorithm used in jobMap (in kms) = 1.1770044465850784
+Difference = 0.0008657040430782672
+
+==== NEW JOB ====
+
+Job to first House
+Distance using google Api (in kms) = 2.1077682021390003
+Distance using manual algorithm used in jobMap (in kms) = 3.141786267917585
+Difference = 1.034018065778585
+
+Job to second House
+Distance using google Api (in kms) = 2.3148588992179997
+Distance using manual algorithm used in jobMap (in kms) = 2.5157752010039154
+Difference = 0.2009163017859155
+
+==== NEW JOB ====
+
+Job to first House
+Distance using google Api (in kms) = 3.778676867392
+Distance using manual algorithm used in jobMap (in kms) = 4.7542079197627745
+Difference = 0.9755310523707744
+
+Job to second House
+Distance using google Api (in kms) = 4.402385694695
+Distance using manual algorithm used in jobMap (in kms) = 6.04905317509668
+Difference = 1.6466674804016803
+
+==== NEW JOB ====
+
+Job to first House
+Distance using google Api (in kms) = 0.7749674161560001
+Distance using manual algorithm used in jobMap (in kms) = 1.1865349695922245
+Difference = 0.41156755343622453
+
+Job to second House
+Distance using google Api (in kms) = 3.1352523843170004
+Distance using manual algorithm used in jobMap (in kms) = 4.554694160602266
+Difference = 1.4194417762852662
+
+==== NEW JOB ====
+
+Job to first House
+Distance using google Api (in kms) = 0.697792638915
+Distance using manual algorithm used in jobMap (in kms) = 0.8288951272769515
+Difference = 0.13110248836195149
+
+Job to second Houses
+Distance using google Api (in kms) = 2.070919512025
+Distance using manual algorithm used in jobMap (in kms) = 2.7150032423194213
+Difference = 0.644083730294421
+
+==== NEW JOB ====
+
+Job to first House
+Distance using google Api (in kms) = 4.01841194059
+Distance using manual algorithm used in jobMap (in kms) = 4.0653905442311515
+Difference = 0.046978603641151494
+
+Job to second House
+Distance using google Api (in kms) = 5.0806272314930006
+Distance using manual algorithm used in jobMap (in kms) = 5.43296674131574
+Difference = 0.35233950982273926
+
+==== NEW JOB ====
+
+Job to first House
+Distance using google Api (in kms) = 0.343381335958
+Distance using manual algorithm used in jobMap (in kms) = 0.34540117208210463
+Difference = 0.002019836124104586
+
+Job to second House
+Distance using google Api (in kms) = 0.598617219924
+Distance using manual algorithm used in jobMap (in kms) = 0.5989597816675797
+Difference = 0.0003425617435797221
+
+==== NEW JOB ====
+
+Job to first House
+Distance using google Api (in kms) = 3.3536123492830003
+Distance using manual algorithm used in jobMap (in kms) = 3.40000579857824
+Difference = 0.046393449295239864
+
+Job to second House
+Distance using google Api (in kms) = 2.497661982861
+Distance using manual algorithm used in jobMap (in kms) = 3.4135077366779596
+Difference = 0.9158457538169595
+
+==== NEW JOB ====

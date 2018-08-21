@@ -415,11 +415,10 @@ function markerpPlacement(data, map, county, priceRange){
     
                 // event listener for when the user clicks on the marker
                 google.maps.event.addListener(markerObj,'click', function (e) {
+                    /* Recreate the map to display 1 company and nearby houses */
                 
-                /* Recreate the map to display 1 company and nearby houses */
-                
-                // storing currently selected marker in a variable to use for filtering
-                markerObjGlobal = this;
+                    // storing currently selected marker in a variable to use for filtering
+                    markerObjGlobal = this;
                 
                 // if marker has been clicked once then show website for job the next click 
                     if(!singleClick){
@@ -636,9 +635,10 @@ function autoDistance(prop, map, county, jobLocation, price, houseThreshold){
                 aMarkers.push(markerObj);
     
                 // event listener for when the user clicks on the marker
-                google.maps.event.addListener(markerObj, 'click', function () {
+                google.maps.event.addListener(markerObj, 'click', function (e) {
                 // launches google maps while sharing the county clicked on
                     window.open(this.url, "_blank");
+                  
                 });
             }
         }
